@@ -1,5 +1,6 @@
 ---
 name: customer-discovery-and-synthesis
+description: Draft a Mom Test discovery interview guide; synthesize pasted interview notes into themes with verbatim quotes, signal vs. anecdote.
 role: pmt
 status: built
 created: 2026-11-22

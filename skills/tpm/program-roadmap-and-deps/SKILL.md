@@ -1,5 +1,6 @@
 ---
 name: program-roadmap-and-deps
+description: Build a program roadmap: milestones, cross-team dependency table, critical path named end to end, slack per link.
 role: tpm
 status: built
 created: 2026-11-22

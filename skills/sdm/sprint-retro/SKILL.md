@@ -1,5 +1,6 @@
 ---
 name: sprint-retro
+description: Run a retrospective from the last 2 sprints done-ticket exports: went-well, hurt, and change with receipts, plus action items.
 role: sdm
 status: built
 created: 2026-11-22

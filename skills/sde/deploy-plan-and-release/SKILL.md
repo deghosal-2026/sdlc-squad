@@ -1,5 +1,6 @@
 ---
 name: deploy-plan-and-release
+description: Write a deploy and release plan: deploy/release split, canary ladder with promote criteria, automatic-first rollback triggers, flag ledger.
 role: sde
 status: built
 created: 2026-11-22

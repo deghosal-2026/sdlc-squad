@@ -1,5 +1,6 @@
 ---
 name: pr-plan-and-rollback-notes
+description: Write a GitHub PR description: merge-order checklist, verification commands with expected outputs, migration order, rollback with its limits.
 role: sde
 status: built
 created: 2026-11-22

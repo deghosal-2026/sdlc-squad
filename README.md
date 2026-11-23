@@ -61,7 +61,12 @@ sdlc-squad/
 ├── CODE_OF_CONDUCT.md
 ├── SECURITY.md
 ├── SUPPORT.md
-├── USER-GUIDE.md
+├── usage/                            # How to run the kit
+│   ├── USER-GUIDE.md                 # The 60-second run sheet
+│   ├── prompts-pmt.md                # Ready-to-paste prompts, all 6 PMT skills
+│   ├── prompts-tpm.md                # Ready-to-paste prompts, all 4 TPM skills
+│   ├── prompts-sdm.md                # Ready-to-paste prompts, all 5 SDM skills
+│   └── prompts-sde.md                # Ready-to-paste prompts, all 5 SDE skills
 ├── LICENSE                           # MIT
 ├── .github/
 │   ├── ISSUE_TEMPLATE/

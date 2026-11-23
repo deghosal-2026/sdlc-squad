@@ -1,5 +1,6 @@
 ---
 name: sprint-planning-and-capacity
+description: Plan a sprint from real capacity: per-engineer net focus arithmetic shown, commitment split, flagged risks.
 role: sdm
 status: built
 created: 2026-11-22

@@ -1,5 +1,6 @@
 ---
 name: risk-raid-and-mitigations
+description: Draft a RAID log: risks with early-warning signals, mitigations and fallbacks; assumptions with verification owners.
 role: tpm
 status: built
 created: 2026-11-22

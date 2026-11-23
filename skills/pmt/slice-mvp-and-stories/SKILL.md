@@ -1,5 +1,6 @@
 ---
 name: slice-mvp-and-stories
+description: Slice an accepted PRD into a Jira-ready epic plus vertically sliced user stories with Given/When/Then acceptance criteria.
 role: pmt
 status: built
 created: 2026-11-22

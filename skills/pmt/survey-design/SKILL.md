@@ -1,5 +1,6 @@
 ---
 name: survey-design
+description: Design a bias-checked survey instrument; read back pasted results as distributions and quotes, never extrapolated.
 role: pmt
 status: built
 created: 2026-11-22

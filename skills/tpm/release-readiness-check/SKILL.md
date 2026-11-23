@@ -1,5 +1,6 @@
 ---
 name: release-readiness-check
+description: Run a go/no-go launch checklist: flags, migrations, monitoring, rollback steps, support runbook, sign-offs.
 role: tpm
 status: built
 created: 2026-11-22

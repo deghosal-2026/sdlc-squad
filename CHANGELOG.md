@@ -26,6 +26,17 @@ v0.1.0.
 - ROADMAP restructured: v0.1.0 is the full kit (v0.2.0 absorbed); README badge, tree, and
   skill table now say 20/built.
 
+### Added — 2026-11-22 (usage directory + executable frontmatter)
+
+- `usage/` created: `USER-GUIDE.md` moved in (links fixed in README, SUPPORT, CHANGELOG), plus
+  four prompt books — `prompts-pmt.md`, `prompts-tpm.md`, `prompts-sdm.md`, `prompts-sde.md` —
+  one ready-to-paste prompt per skill, all 20, with load order, realistic sample input, and
+  import targets.
+- Frontmatter made harness-executable: `description:` added to all 20 `SKILL.md` files (the
+  field agent harnesses route on; name/role/status/created were already consistent).
+- `skills/_TEMPLATE.md` added — the canonical skill stencil (frontmatter incl. description,
+  contracts, steps, output binding, import target, worked example) with the standing rules.
+
 ### Changed — 2026-11-22 (public flip, in v0.1.0)
 
 - The repo flipped **public** as part of v0.1.0 (the former v1.0.0 milestone absorbed into
@@ -41,7 +52,7 @@ v0.1.0.
 - Initial private scaffold: repo, MIT license, community files
   (CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT).
 - Kit governance: `WHAT-THIS-IS.md` (charter), `AGENTS.md`, `CONVENTIONS.md`, `ROADMAP.md`,
-  this changelog, `USER-GUIDE.md`.
+  this changelog, `usage/USER-GUIDE.md`.
 - Shared contracts: `shared/system-conventions.md`, `shared/glossary-and-org.md`.
 - Five canonical output schemas in `shared/output-schemas/`: `confluence-prd-or-rfc.md`,
   `jira-epic-and-stories.md`, `sprint-plan-and-capacity.md`, `technical-design-doc.md`,

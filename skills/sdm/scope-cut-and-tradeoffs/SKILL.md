@@ -1,5 +1,6 @@
 ---
 name: scope-cut-and-tradeoffs
+description: Generate ranked keep/defer/cut options when capacity misses the date, each costed on customer value, risk, and milestones.
 role: sdm
 status: built
 created: 2026-11-22

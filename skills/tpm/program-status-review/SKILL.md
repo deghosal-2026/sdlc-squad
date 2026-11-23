@@ -1,5 +1,6 @@
 ---
 name: program-status-review
+description: Produce the bi-weekly or monthly program status report: every item red/yellow/green against objectives or Jira milestones, with evidence.
 role: tpm
 status: built
 created: 2026-11-22

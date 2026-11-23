@@ -1,5 +1,6 @@
 ---
 name: generate-test-ideas-and-cases
+description: Build a layered test matrix: unit, integration, contract, E2E, failure injection, with REQ trace and coverage notes.
 role: sde
 status: built
 created: 2026-11-22

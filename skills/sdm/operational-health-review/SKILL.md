@@ -1,5 +1,6 @@
 ---
 name: operational-health-review
+description: Review ops health from pasted evidence: recurring bugs, toil, flaky tests, review bottlenecks; remediation tickets with DoDs.
 role: sdm
 status: built
 created: 2026-11-22

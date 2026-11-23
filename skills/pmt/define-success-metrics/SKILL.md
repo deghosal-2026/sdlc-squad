@@ -1,5 +1,6 @@
 ---
 name: define-success-metrics
+description: Define north-star, supporting, and guardrail metrics, with the instrumentation events each needs and post-launch criteria.
 role: pmt
 status: built
 created: 2026-11-22

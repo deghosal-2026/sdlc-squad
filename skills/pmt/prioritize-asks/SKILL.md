@@ -1,5 +1,6 @@
 ---
 name: prioritize-asks
+description: Rank a raw pile of asks on a stated framework (RICE default) with every score traceable, plus the not-ranked tail.
 role: pmt
 status: built
 created: 2026-11-22
