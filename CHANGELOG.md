@@ -49,6 +49,8 @@ v0.1.0.
 
 ### Added — 2026-11-22 (docs + README tree fix)
 
+- README status badge: `private scaffold` → `v0.1.0 public` (stale from the scaffold era — the
+  Status section, tree, skills table, and license line were already current).
 - `docs/EXTENDING.md`: how to expand and customize — four paths (customize for your org via
   `shared/glossary-and-org.md`; add a skill; add a role; change a schema), the five standing
   rules (one canonical copy, mirror rule, CONFIRM-over-invention, honest statuses, one role

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![100% Markdown](https://img.shields.io/badge/100%25_Markdown-2ea44f)](#what-it-does)
 [![Privacy](https://img.shields.io/badge/Privacy-local_only,_no_telemetry-8b5cf6)](#what-it-does)
-[![Status: private scaffold](https://img.shields.io/badge/status-private_scaffold-8b5cf6)](#status)
+[![Status: v0.1.0](https://img.shields.io/badge/status-v0.1.0_public-2ea44f)](#status)
 [![Roles](https://img.shields.io/badge/roles-4-2ea44f)](#the-squad)
 [![Skills](https://img.shields.io/badge/skills-20_built-2ea44f)](#skills)
 
