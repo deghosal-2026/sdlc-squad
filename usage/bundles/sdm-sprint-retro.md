@@ -308,7 +308,7 @@ load-bearing this sprint? Does carry-over keep its old sizes or re-estimate?
 
 ---
 name: sprint-retro
-description: Run a retrospective from the last 2 sprints done-ticket exports: went-well, hurt, and change with receipts, plus action items.
+description: Run a retrospective from the last two sprints' done-ticket exports — went-well, hurt, and change with receipts, plus action items. Use at the end of a sprint.
 role: sdm
 status: built
 created: 2026-11-22

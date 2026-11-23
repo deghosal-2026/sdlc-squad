@@ -306,7 +306,7 @@ is there none? What date has Checkout itself committed to?
 
 ---
 name: program-status-review
-description: Produce the bi-weekly or monthly program status report: every item red/yellow/green against objectives or Jira milestones, with evidence.
+description: Produce the bi-weekly or monthly program status report — every item red/yellow/green against objectives or Jira milestones, with evidence. Use for recurring program reporting.
 role: tpm
 status: built
 created: 2026-11-22

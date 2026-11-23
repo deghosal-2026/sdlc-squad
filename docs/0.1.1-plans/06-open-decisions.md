@@ -1,7 +1,7 @@
 # 06 — Open decisions: the user's calls
 
-> **Status (2026-11-23):** G1, G2, G5 T1, G6 **done**; G3 **blocked** (needs real pastes);
-> G4 **declined**; G7 **deferred**. Master table: [`README`](README.md).
+> **Status (2026-11-23):** G1, G2, G3, G5 T1, G6 **done**; G4 **declined**; G7 **deferred**.
+> Master table: [`README`](README.md).
 
 Theme: nothing in this file is scheduled until the owner decides. Taking a decision
 means amending this file and the affected plan files first, then working the item per

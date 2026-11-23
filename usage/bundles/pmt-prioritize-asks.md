@@ -312,7 +312,7 @@ which step do they hit a wall on? If this shipped and nothing changed, which num
 
 ---
 name: prioritize-asks
-description: Rank a raw pile of asks on a stated framework (RICE default) with every score traceable, plus the not-ranked tail.
+description: Rank a raw pile of asks on a stated framework (RICE default), every score traceable, plus the not-ranked tail. Use when there are more asks than capacity.
 role: pmt
 status: built
 created: 2026-11-22

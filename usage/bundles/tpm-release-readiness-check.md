@@ -306,7 +306,7 @@ is there none? What date has Checkout itself committed to?
 
 ---
 name: release-readiness-check
-description: Run a go/no-go launch checklist: flags, migrations, monitoring, rollback steps, support runbook, sign-offs.
+description: Run a go/no-go launch checklist — flags, migrations, monitoring, rollback steps, support runbook, sign-offs. Use before a launch.
 role: tpm
 status: built
 created: 2026-11-22

@@ -306,7 +306,7 @@ is there none? What date has Checkout itself committed to?
 
 ---
 name: program-roadmap-and-deps
-description: Build a program roadmap: milestones, cross-team dependency table, critical path named end to end, slack per link.
+description: Build a program roadmap — milestones, a cross-team dependency table, the critical path named end to end, and slack per link. Use when multiple teams must be sequenced.
 role: tpm
 status: built
 created: 2026-11-22

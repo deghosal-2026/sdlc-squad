@@ -311,7 +311,7 @@ on a partial write — is there an outbox? Can the schema migration run backward
 
 ---
 name: pr-plan-and-rollback-notes
-description: Write a GitHub PR description: merge-order checklist, verification commands with expected outputs, migration order, rollback with its limits.
+description: Write a GitHub PR description — merge-order checklist, verification commands with expected outputs, migration order, rollback with its limits. Use when opening a PR for a risky change.
 role: sde
 status: built
 created: 2026-11-22

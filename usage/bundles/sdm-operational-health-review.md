@@ -308,7 +308,7 @@ load-bearing this sprint? Does carry-over keep its old sizes or re-estimate?
 
 ---
 name: operational-health-review
-description: Review ops health from pasted evidence: recurring bugs, toil, flaky tests, review bottlenecks; remediation tickets with DoDs.
+description: Review ops health from pasted evidence — recurring bugs, toil, flaky tests, review bottlenecks — with remediation tickets that carry DoDs. Use when operational pain needs a review.
 role: sdm
 status: built
 created: 2026-11-22

@@ -312,7 +312,7 @@ which step do they hit a wall on? If this shipped and nothing changed, which num
 
 ---
 name: survey-design
-description: Design a bias-checked survey instrument; read back pasted results as distributions and quotes, never extrapolated.
+description: Design a bias-checked survey instrument and read back pasted results as distributions and quotes, never extrapolated. Use when you need to measure something at scale.
 role: pmt
 status: built
 created: 2026-11-22

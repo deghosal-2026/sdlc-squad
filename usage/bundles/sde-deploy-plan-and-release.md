@@ -311,7 +311,7 @@ on a partial write — is there an outbox? Can the schema migration run backward
 
 ---
 name: deploy-plan-and-release
-description: Write a deploy and release plan: deploy/release split, canary ladder with promote criteria, automatic-first rollback triggers, flag ledger.
+description: Write a deploy and release plan — deploy/release split, canary ladder with promote criteria, automatic-first rollback triggers, flag ledger. Use when a change is ready to ship.
 role: sde
 status: built
 created: 2026-11-22

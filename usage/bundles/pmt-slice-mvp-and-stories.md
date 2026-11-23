@@ -312,7 +312,7 @@ which step do they hit a wall on? If this shipped and nothing changed, which num
 
 ---
 name: slice-mvp-and-stories
-description: Slice an accepted PRD into a Jira-ready epic plus vertically sliced user stories with Given/When/Then acceptance criteria.
+description: Slice an accepted PRD into a Jira-ready epic plus vertically sliced user stories with Given/When/Then acceptance criteria. Use when requirements are agreed and work must be planned.
 role: pmt
 status: built
 created: 2026-11-22

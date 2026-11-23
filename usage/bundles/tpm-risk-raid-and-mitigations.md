@@ -306,7 +306,7 @@ is there none? What date has Checkout itself committed to?
 
 ---
 name: risk-raid-and-mitigations
-description: Draft a RAID log: risks with early-warning signals, mitigations and fallbacks; assumptions with verification owners.
+description: Draft a RAID log — risks with early-warning signals, mitigations and fallbacks; assumptions with verification owners. Use when a program needs risk tracking.
 role: tpm
 status: built
 created: 2026-11-22
