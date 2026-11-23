@@ -9,10 +9,12 @@ repo, including `AGENTS.md` and `CONVENTIONS.md`.
 
 - **Four roles.** PMT (Product Manager, Technical), TPM (Technical Program Manager), SDM
   (Software Development Manager), SDE (Software Development Engineer). Each role file defines its
-  persona: objective, lens, source-of-truth mapping, handoff contracts, boundaries.
-- **Twelve skills.** Each skill is a step-by-step playbook: required inputs, clarifying questions,
-  execution steps, and one exact output structure bound to a canonical schema in
-  `shared/output-schemas/`.
+  persona: objective, lens, source-of-truth mapping, consumes/produces/depends-on contracts,
+  decision rights (its RACI column), boundaries. One role per session — personas blur in a
+  shared context.
+- **Twenty skills.** PMT 6 · TPM 4 · SDM 5 · SDE 5. Each skill is a step-by-step playbook:
+  required inputs, clarifying questions, execution steps, and one exact output structure bound
+  to a canonical schema in `shared/output-schemas/`.
 - **Markdown contracts.** Every run of a skill produces one artifact — a PRD, a roadmap, a sprint
   plan, a design, a test matrix, a PR description — formatted for its import target: a Confluence
   page, a Jira epic/story set, or a GitHub issue/PR.
@@ -45,3 +47,6 @@ not prose, not screenshots, not vendor exports.
 3. Dates are ISO (`YYYY-MM-DD`); owners are real names or `[CONFIRM]`, never invented.
 4. No network. Nothing is fetched, clicked, opened, or transmitted.
 5. The artifact ends with its import-target block — where this Markdown is meant to be pasted.
+6. `status: built` means the skill's fixture exists under `tests/` and its run is recorded under
+   `tests/results/` — a status without evidence is a defect, and a `built` skill is never
+   presented as planned.

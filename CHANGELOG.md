@@ -49,6 +49,10 @@ v0.1.0.
 
 ### Added — 2026-11-22 (docs + README tree fix)
 
+- `WHAT-THIS-IS.md` (charter) caught up with the kit: twelve → twenty skills (PMT 6 · TPM 4 ·
+  SDM 5 · SDE 5), persona enumeration now includes the consumes/produces/depends-on contracts
+  and the RACI column + one-role-per-session rule, and the skill contract gains point 6 —
+  `built` means fixture + recorded run, a status without evidence is a defect.
 - README status badge: `private scaffold` → `v0.1.0 public` (stale from the scaffold era — the
   Status section, tree, skills table, and license line were already current).
 - `docs/EXTENDING.md`: how to expand and customize — four paths (customize for your org via
