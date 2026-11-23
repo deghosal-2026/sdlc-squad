@@ -137,7 +137,8 @@ sdlc-squad/
 │   ├── EXAMPLES.md                   # All 20 fixtures at a glance
 │   ├── TOOLS.md                      # Supported & adaptable matrix
 │   ├── COMPANION-SKILLS.md           # Wrap other skill sets in kit conventions
-│   └── 0.1.1-plans/                  # v0.1.1 patch plan, split by theme
+│   ├── 0.1.1-plans/                  # v0.1.1 patch plan, split by theme
+│   └── assets/                       # Repo social-preview card (social-preview.png + .svg)
 ├── LICENSE                           # MIT
 ├── .github/
 │   ├── ISSUE_TEMPLATE/

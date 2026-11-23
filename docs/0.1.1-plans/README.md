@@ -104,7 +104,7 @@ decision.
 | D6 evidence page | **Done** (`docs/EVIDENCE.md`) |
 | E1 PKG-README | **Done** (doc links + upgrade note) |
 | E2 README why-not | **Done** (README) |
-| E3 repo presentation | **Partial** — Mermaid loop + tagline done; social-preview image + GitHub topics need the owner (repo settings, not files) |
+| E3 repo presentation | **Done** — README Mermaid loop + tagline; social-preview card `docs/assets/social-preview.png` committed and **uploaded by the owner** (repo description/topics: owner's discretion) |
 | E4 examples gallery | **Done** (`docs/EXAMPLES.md`) |
 | F1 feedback template | **Done** (`.github/ISSUE_TEMPLATE/field-feedback.md`) |
 | F2 relay recipe | **Done** (`usage/RELAY.md`) |

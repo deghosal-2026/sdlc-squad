@@ -43,6 +43,9 @@ v0.1.0.
   closed accordingly; the import-target wording in README and USER-GUIDE updated to say
   what is paste-verified vs. still intended. (Jira Data Center and Confluence's
   storage-format path remain unobserved.)
+- `docs/assets/social-preview.png` (1280×640) + `docs/assets/social-preview.svg` — the
+  repo social-preview card (E3), listed in the README layout tree; uploaded to the repo
+  settings by the owner.
 
 ### Added — 2026-11-22 (detailed test log)
 
