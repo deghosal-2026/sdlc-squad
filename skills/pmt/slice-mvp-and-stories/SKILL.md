@@ -27,6 +27,10 @@ points or T-shirt, Description, Given/When/Then acceptance criteria, Dependencie
 - Which stories are enabled by others — and which only look ordered?
 - What scale do you size in, and what is its legend?
 
+## RACI row
+
+`Epic & story slicing` — **PMT A/R** (`shared/raci.md`); TPM I · SDM C · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Decompose into vertical slices → 2. Order by risk and value → 3. Write ACs

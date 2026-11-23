@@ -11,15 +11,22 @@ updates the matching role file(s) in the same commit, and vice versa — never l
 | PRD — requirements & non-goals | **A/R** | C | I | C |
 | Success metrics & guardrails | **A/R** | C | I | C |
 | Epic & story slicing | **A/R** | I | C | C |
+| Customer discovery & synthesis | **A/R** | I | I | C |
+| Survey design & results read-back | **A/R** | I | I | I |
+| Ask intake & prioritization | **A/R** | C | C | C |
 | Program roadmap & milestone sequence | C | **A/R** | C | I |
 | Cross-team dependency commitments | I | **A/R** | C | C |
 | RAID log & risk tracking | C | **A/R** | C | I |
 | Launch go/no-go checklist | C | **A/R** | C | C |
+| Program status review (bi-weekly/monthly, R/Y/G) | I | **A/R** | C | I |
 | Sprint commitment (capacity-fit) | I | C | **A/R** | C |
 | Scope-cut options & costs | C | C | **A/R** | C |
+| Operational health review & remediation tickets | I | C | **A/R** | C |
 | Technical design & breakdown | C | I | C | **A/R** |
 | Test plan & cases | I | I | C | **A/R** |
 | PR description & rollback notes | — | C | I | **A/R** |
+| Design & code reviews | I | I | C | **A/R** |
+| Deploy plan & release execution | I | C | C | **A/R** |
 
 ## Legend
 

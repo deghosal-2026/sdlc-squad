@@ -28,6 +28,11 @@ recommended remediation tickets ready for an upcoming sprint.
 - How many engineer-hours did this toil cost, and how did you count it?
 - Which flaky test last blocked a merge, and how often?
 
+## RACI row
+
+`Operational health review & remediation tickets` — **SDM A/R** (`shared/raci.md`); PMT I ·
+TPM C · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Cluster the evidence by hotspot → 2. Quantify with supplied numbers only →

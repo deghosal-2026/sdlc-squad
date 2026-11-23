@@ -33,6 +33,10 @@ engineers).
 - What carried over, and does it stay committed at its old size or re-estimate?
 - Who is on-call, and is on-call load load-bearing this sprint?
 
+## RACI row
+
+`Sprint commitment (capacity-fit)` — **SDM A/R** (`shared/raci.md`); PMT I · TPM C · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Build the capacity table with all arithmetic shown → 2. Ring-fence carry-over →

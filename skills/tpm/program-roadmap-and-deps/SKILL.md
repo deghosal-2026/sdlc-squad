@@ -27,6 +27,11 @@ Owner), and critical-path callouts naming the chain.
 - What is the slack on each link in the critical chain?
 - Which dependency is a wish (no owner, no date) today?
 
+## RACI row
+
+`Program roadmap & milestone sequence` + `Cross-team dependency commitments` — **TPM A/R** on
+both (`shared/raci.md`); one skill, two rows.
+
 ## Steps (to be written)
 
 1. (build ticket) Enumerate milestones → 2. Build the dependency table → 3. Trace the critical

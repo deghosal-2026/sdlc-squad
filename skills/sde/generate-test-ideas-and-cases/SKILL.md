@@ -29,6 +29,10 @@ coverage notes stating what is deliberately not covered.
 - What breaks loudly — and what breaks silently, and which layer catches silence?
 - What is too expensive/flaky to automate, and may it be listed as manual?
 
+## RACI row
+
+`Test plan & cases` — **SDE A/R** (`shared/raci.md`); PMT I · TPM I · SDM C.
+
 ## Steps (to be written)
 
 1. (build ticket) Enumerate scenarios per layer → 2. Pair each happy path with failure paths →

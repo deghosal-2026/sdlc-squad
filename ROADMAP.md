@@ -11,7 +11,7 @@ skills, a real feature run end-to-end, then the rest. Each milestone lands befor
 - [x] `shared/system-conventions.md` + `shared/glossary-and-org.md`
 - [x] Five canonical output schemas in `shared/output-schemas/`
 - [x] Four role personas in `roles/`
-- [x] Twelve skill skeletons in `skills/` (`status: planned`)
+- [x] Eighteen skill skeletons in `skills/` (`status: planned`), each naming its `shared/raci.md` row
 - [x] OSS-mandatory community files (CONTRIBUTING, SECURITY, SUPPORT, CODE_OF_CONDUCT, CHANGELOG)
 
 ### v0.1.0 — the core loop
@@ -30,15 +30,21 @@ One skill per role, built in ticket order, each with fixtures/examples and `stat
       → tests), inspect every artifact against its import target (real Confluence page, real Jira
       issue, real GitHub PR), and refine the schemas where they miss.
 
-### v0.2.0 — the remaining seven skills
+### v0.2.0 — the remaining thirteen skills
 
 - [ ] `pmt/slice-mvp-and-stories`
 - [ ] `pmt/define-success-metrics`
+- [ ] `pmt/customer-discovery-and-synthesis`
+- [ ] `pmt/survey-design`
+- [ ] `pmt/prioritize-asks`
 - [ ] `tpm/risk-raid-and-mitigations`
 - [ ] `tpm/release-readiness-check`
+- [ ] `tpm/program-status-review`
 - [ ] `sdm/scope-cut-and-tradeoffs`
 - [ ] `sdm/operational-health-review`
 - [ ] `sde/pr-plan-and-rollback-notes`
+- [ ] `sde/design-and-code-reviews`
+- [ ] `sde/deploy-plan-and-release`
 
 ### v1.0.0 — OSS release
 

@@ -26,6 +26,10 @@ with likelihood/impact rating, early-warning signal, mitigation action, fallback
 - What is the fallback if the mitigation does not land?
 - Which assumptions, if wrong, change the critical path?
 
+## RACI row
+
+`RAID log & risk tracking` — **TPM A/R** (`shared/raci.md`); PMT C · SDM C · SDE I.
+
 ## Steps (to be written)
 
 1. (build ticket) Elicit per category → 2. Rate and pair signals → 3. Assign owners or

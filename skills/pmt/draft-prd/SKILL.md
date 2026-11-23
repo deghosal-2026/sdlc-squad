@@ -29,6 +29,10 @@ Edge Cases · Open Questions · Rollout & Metrics.
 - What is explicitly a non-goal this phase?
 - What would "worked" measure, and who checks it?
 
+## RACI row
+
+`PRD — requirements & non-goals` — **PMT A/R** (`shared/raci.md`); TPM C · SDM I · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Elicit and pin inputs → 2. Draft per schema section order → 3. `[CONFIRM]`

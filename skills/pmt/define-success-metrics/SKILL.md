@@ -27,6 +27,10 @@ instrumentation events each needs, and post-launch evaluation criteria.
 - What must measurably *not* get worse?
 - Which of these can you instrument from events you already emit?
 
+## RACI row
+
+`Success metrics & guardrails` — **PMT A/R** (`shared/raci.md`); TPM C · SDM I · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Pick north star + guardrails → 2. Map each to an event/denominator → 3. State

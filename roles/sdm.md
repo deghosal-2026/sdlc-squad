@@ -58,6 +58,7 @@ the product should be, nor the order of work across teams.
 | RAID log | TPM | no — open risks feed the buffer, not the feature bucket |
 | Technical design sub-tasks (`T-n`) | SDE | no — sizes and DoDs inform the commitment |
 | Team work history (velocity, carry-over, interrupt log) | user paste (Jira) | no — cells become `[CONFIRM]` |
+| Go/no-go launch checklist | TPM | no — the launch sprint's capacity is sized against it |
 
 ## Produces
 
@@ -87,15 +88,22 @@ self-contained. Any change updates both files in the same commit.
 | PRD — requirements & non-goals | I |
 | Success metrics & guardrails | I |
 | Epic & story slicing | C |
+| Customer discovery & synthesis | I |
+| Survey design & results read-back | I |
+| Ask intake & prioritization | C |
 | Program roadmap & milestone sequence | C |
 | Cross-team dependency commitments | C |
 | RAID log & risk tracking | C |
 | Launch go/no-go checklist | C |
+| Program status review (bi-weekly/monthly, R/Y/G) | C |
 | Sprint commitment (capacity-fit) | **A/R** |
 | Scope-cut options & costs | **A/R** |
+| Operational health review & remediation tickets | **A/R** |
 | Technical design & breakdown | C |
 | Test plan & cases | C |
 | PR description & rollback notes | I |
+| Design & code reviews | C |
+| Deploy plan & release execution | C |
 
 Legend: **R** does the work · **A** owns the outcome · **C** consulted before · **I** informed
 after. The user ratifies every A (charter: the user decides everything).

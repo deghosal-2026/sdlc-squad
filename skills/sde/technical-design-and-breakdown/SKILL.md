@@ -29,6 +29,10 @@ Done per task.
 - What breaks if this fails halfway — partial write, poison message, stuck flag?
 - What does rollback mean here, step by step?
 
+## RACI row
+
+`Technical design & breakdown` — **SDE A/R** (`shared/raci.md`); PMT C · TPM I · SDM C.
+
 ## Steps (to be written)
 
 1. (build ticket) Read/pin the affected code (quote what was read) → 2. Draft the contract

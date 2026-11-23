@@ -28,6 +28,10 @@ risk, and TPM milestones, plus the capacity arithmetic that made the cut necessa
 - Which deferral quietly breaks a dependency downstream?
 - If only one thing ships, which one keeps the promise?
 
+## RACI row
+
+`Scope-cut options & costs` — **SDM A/R** (`shared/raci.md`); PMT C · TPM C · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Restate the gap in capacity days → 2. Generate options per bucket → 3. Cost

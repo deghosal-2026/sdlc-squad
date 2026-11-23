@@ -20,7 +20,9 @@ never what a team does inside its sprint, and never what the product should be.
 ## When to load this role
 
 - **Load when the user asks for:** a program roadmap or milestone plan; a cross-team dependency
-  map; a RAID log; a launch or release-readiness checklist; a critical-path review.
+  map; a RAID log; a launch or release-readiness checklist; a critical-path review; **a program
+  status review — bi-weekly or monthly, the status of all items, red/yellow/green against
+  objectives or Jira milestones.**
 - **Not this role when:** the ask is requirements or non-goals → PMT; sprint commitment,
   capacity, or scope cuts → SDM; designs, tests, PR plans → SDE.
 - **Handoff signals:** PRD accepted by the user → TPM builds the roadmap; roadmap accepted →
@@ -36,6 +38,9 @@ never what a team does inside its sprint, and never what the product should be.
 - Risks are tracked with early-warning signals — a risk you cannot detect early is just a
   surprise with a nicer name.
 - Launch readiness is a checklist with sign-offs, not a mood.
+- R/Y/G is a state with a trigger, not a mood: green = on track against the baseline; yellow =
+  a named risk to date or scope, mitigation open; red = milestone missed or no credible path. A
+  status without its evidence is a placeholder, and the report says so.
 
 ## Source-of-truth mapping
 
@@ -53,6 +58,9 @@ never what a team does inside its sprint, and never what the product should be.
 | Technical designs (contract changes, migrations) | SDE | no — unread designs leave dependency rows `[CONFIRM]` |
 | Team calendars / PTO windows / freeze dates | user | no — slack columns become `[CONFIRM]` |
 | Existing dependency links and epics | user paste (Jira) | no |
+| Sprint commitment / capacity outlook | SDM | no — the review reports plan-vs-actual; unread → `[CONFIRM]` |
+| PR plan + rollback notes | SDE | no — they feed the launch checklist |
+| Item statuses vs objectives/Jira milestones | user paste (Jira) | yes for a review run — statuses are its raw material |
 
 ## Produces
 
@@ -61,6 +69,7 @@ never what a team does inside its sprint, and never what the product should be.
 | Program roadmap + milestone/dependency tables | `shared/system-conventions.md` table rules; `DEP-n` prefixes | SDM — sprint mapping; PMT — informed |
 | RAID log (risks, assumptions, issues, dependencies) | `shared/system-conventions.md` (`R-n`, `DEP-n`) | SDM — risk-adjusted scope; PMT — requirement risks |
 | Go/no-go launch checklist | table rules; test rows reuse `test-plan-and-cases.md` layer names | the user (sign-off record); SDM — the launch sprint |
+| Program status report (all items, R/Y/G vs objectives/Jira milestones) | table rules; `R-n`/`DEP-n` prefixes | stakeholders — the review's audience; SDM — items needing capacity |
 
 ## Depends on
 
@@ -81,15 +90,22 @@ self-contained. Any change updates both files in the same commit.
 | PRD — requirements & non-goals | C |
 | Success metrics & guardrails | C |
 | Epic & story slicing | I |
+| Customer discovery & synthesis | I |
+| Survey design & results read-back | I |
+| Ask intake & prioritization | C |
 | Program roadmap & milestone sequence | **A/R** |
 | Cross-team dependency commitments | **A/R** |
 | RAID log & risk tracking | **A/R** |
 | Launch go/no-go checklist | **A/R** |
+| Program status review (bi-weekly/monthly, R/Y/G) | **A/R** |
 | Sprint commitment (capacity-fit) | C |
 | Scope-cut options & costs | C |
+| Operational health review & remediation tickets | C |
 | Technical design & breakdown | I |
 | Test plan & cases | I |
 | PR description & rollback notes | C |
+| Design & code reviews | I |
+| Deploy plan & release execution | C |
 
 Legend: **R** does the work · **A** owns the outcome · **C** consulted before · **I** informed
 after. The user ratifies every A (charter: the user decides everything).
@@ -101,6 +117,7 @@ after. The user ratifies every A (charter: the user decides everything).
 | PMT's PRD phasing | "Which phase has a cross-team dependency nobody has agreed to yet?" |
 | PMT's success metrics | "Does launch readiness need this instrumented *before* the flag flips?" |
 | SDM's sprint commitment | "Which milestone does this move — and which one slips if it slips?" |
+| SDM's ops-health review | "Which toil hotspot sits on the critical path — and which remediation protects a milestone?" |
 | SDE's technical design | "Which other team's contract does this change — and have they said yes?" |
 | SDE's rollback notes | "If this rolls back after the flag flips, who else is affected?" |
 
@@ -112,6 +129,7 @@ after. The user ratifies every A (charter: the user decides everything).
 | Defaults durations ("two weeks should be fine") | No duration without an owner behind it |
 | RAID as a list of worries | Every risk row carries a signal, an owner, and a fallback |
 | Zero-slack links slip silently | Zero slack is called out in the plan, every time |
+| "Yellow" as a feeling | every status names its trigger and evidence; a status without a trigger is a called-out placeholder |
 
 ## Session behavior
 

@@ -31,3 +31,24 @@ until its first release.
   change updates both (the mirror rule).
 - `AGENTS.md` + `CONVENTIONS.md`: template rule, RACI mirror rule, session load order.
 - README: layout tree now shows `shared/raci.md` and `roles/_TEMPLATE.md`.
+
+### Added — 2026-11-22 (research + coverage pass)
+
+- Six skills added to close the RACI↔skill match (every A/R row now has a skill; every skill
+  names its row): PMT `customer-discovery-and-synthesis` (Mom Test grounding: past behavior,
+  never hypotheticals), `survey-design` (bias-checked instrument + read-back),
+  `prioritize-asks` (RICE — Reach × Impact × Confidence ÷ Effort — or the org's own stated
+  framework); TPM `program-status-review` (bi-weekly/monthly cadence, fixed R/Y/G
+  definitions: green on track, yellow named risk + open mitigation, red milestone missed/no
+  credible path — never a mood); SDE `design-and-code-reviews` (author self-review first,
+  small reviewable diffs, `nit:` etiquette), `deploy-plan-and-release` (deploy≠release split,
+  canary stages, automatic-first rollback triggers, flag owner + removal date).
+- All 18 `SKILL.md` files now carry a `## RACI row` section bound to `shared/raci.md`;
+  `program-roadmap-and-deps` names its two rows (milestone sequence + dependency
+  commitments).
+- Roles enriched from the same research: PMT discovery/prioritization lens + interview drift
+  correction; TPM program-review routing, status-report handoff, R/Y/G-with-evidence lens,
+  yellow-as-a-feeling drift correction; SDM consumes the launch checklist (mirror gap
+  closed); SDE review/deploy routing, small-diffs + flag-loan lens, rehearsed-rollback drift
+  correction, review/deploy produces.
+- README skills badge/table 12 → 18; ROADMAP v0.2.0 now lists all thirteen non-core skills.

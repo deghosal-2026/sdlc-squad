@@ -28,6 +28,10 @@ A go/no-go checklist: feature flags (default state + flip plan), backfill/migrat
 - If you flip the flag and metrics scream, what is the first undo step?
 - Who is paged if this breaks at 2am, from which runbook?
 
+## RACI row
+
+`Launch go/no-go checklist` — **TPM A/R** (`shared/raci.md`); PMT C · SDM C · SDE C.
+
 ## Steps (to be written)
 
 1. (build ticket) Enumerate checklist sections → 2. Pair each item with its evidence or

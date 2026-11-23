@@ -29,6 +29,10 @@ formatted to paste straight into a GitHub PR body.
   undo (data, flags, caches)?
 - What is the reviewer's shortest path to confidence?
 
+## RACI row
+
+`PR description & rollback notes` — **SDE A/R** (`shared/raci.md`); PMT — · TPM C · SDM I.
+
 ## Steps (to be written)
 
 1. (build ticket) Draft the checklist in merge order → 2. Write verification with real
