@@ -4,6 +4,8 @@ All notable changes to sdlc-squad are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); releases are tagged, starting at
 v0.1.0.
 
+## [0.1.1] — 2026-11-23
+
 ### Added — 2026-11-23 (0.1.1 work in progress)
 
 - `docs/0.1.1-plans/` — the v0.1.1 patch plan, split by theme (launch article, first-run

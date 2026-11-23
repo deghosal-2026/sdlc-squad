@@ -35,6 +35,23 @@ Every skill shipped with its full step playbook, its fixture
       template verified rendering on the public repo
 - [x] Released: tag `v0.1.0` + GitHub release
 
+### v0.1.1 — first-run, destinations, paste-verified targets — DONE 2026-11-23
+
+- [x] First-run experience: `usage/WALKTHROUGH.md`, the five-minute run in
+      `usage/USER-GUIDE.md`, `docs/START-HERE.md`, `shared/glossary-and-org.EXAMPLE.md`
+- [x] Session bundles (`usage/bundles/`, 20) + `scripts/build-bundles.sh` and
+      `make bundles` / `make check-bundles`
+- [x] Upgrade safety (`docs/UPGRADING.md`): keep the org glossary outside the kit
+- [x] Trust surface: `docs/REVIEWING-OUTPUT.md`, `TROUBLESHOOTING.md`, `MODELS.md`,
+      `EVIDENCE.md`, a Data-path section, and `docs/EXPORTS.md` (input + redaction)
+- [x] Destination contracts `shared/destinations/{github,jira,confluence}.md`
+- [x] CLI: `sdlc-squad prompt` + `tests/cli/test_prompt.py` (`make test`)
+- [x] The 20 `SKILL.md` descriptions now state what + when
+- [x] Real-destination spot check: GitHub, Jira editor, Jira CSV import, Confluence page
+      all observed — `tests/results/run-2026-11-23-g3-real-paste.md`
+- [x] `docs/0.1.1-plans/` — the patch plan with a living build status
+- [ ] Launch article — still open (deferred to after this release; below)
+
 ### v0.1.x — end-to-end validation
 
 - [ ] Run one real feature/initiative through the core loop (PRD → roadmap → sprint plan → design

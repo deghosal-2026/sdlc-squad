@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sdlc-squad"
-version = "0.1.0"
+version = "0.1.1"
 description = "A software team in a box: four AI personas (PMT, TPM, SDM, SDE) whose skills turn any AI chat into an SDLC workhorse — Markdown contracts for GitHub, Jira, and Confluence. 100% Markdown, local-first, no telemetry."
 readme = "PKG-README.md"
 requires-python = ">=3.9"
