@@ -117,7 +117,7 @@ decision.
 | G5 T1 companion skills | **Done** (`docs/COMPANION-SKILLS.md`); T2/T3 = 0.2.x |
 | G6 destination contracts | **Done** (`shared/destinations/` — `README`, `github`, `jira`, `confluence`) |
 | G7 launch article | **Deferred** (after ship) |
-| I — release mechanics | Not started (runs at ship) |
+| I — release mechanics | **Done** — gate green; v0.1.1 on PyPI + tag + GitHub release (`tests/results/run-2026-11-23-v0.1.1.md`) |
 
 ## Work order
 

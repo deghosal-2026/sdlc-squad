@@ -1,7 +1,8 @@
 # 07 — Out of scope + release mechanics
 
-> **Status (2026-11-23):** H/I **not started** (release mechanics run at ship).
-> Master table: [`README`](README.md).
+> **Status (2026-11-23):** **I done** — v0.1.1 shipped
+> (`tests/results/run-2026-11-23-v0.1.1.md`); H is the out-of-scope / forward-pointer list,
+> unchanged. Master table: [`README`](README.md).
 
 Theme: the fence around the patch (what deliberately stays out, and why) and how the
 release actually ships. The out-of-scope list applies to every file in this directory.

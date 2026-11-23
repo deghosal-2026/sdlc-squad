@@ -203,7 +203,7 @@ sdlc-squad/
     ├── sdm/<skill>/fixture.md
     ├── sde/<skill>/fixture.md
     ├── cli/test_prompt.py            # the G1 CLI test (make test)
-    └── results/run-2026-11-22-v0.1.0.md
+    └── results/                      # recorded runs: run-2026-11-22-v0.1.0.md · run-2026-11-23-g3-real-paste.md · run-2026-11-23-v0.1.1.md
 ```
 
 ## Skills
