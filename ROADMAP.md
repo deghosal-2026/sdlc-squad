@@ -30,6 +30,10 @@ Every skill shipped with its full step playbook, its fixture
       pr-plan-and-rollback-notes · design-and-code-reviews · deploy-plan-and-release
 - [x] RACI: 21 decision rows, one Accountable each; every skill bound to its row(s); mirrors
       verified across `shared/raci.md` and all four role files
+- [x] History audit: 4 commits scanned for secrets and private material — clean
+- [x] Repo flipped **public** as part of this release; LICENSE, issue templates, and PR
+      template verified rendering on the public repo
+- [x] Released: tag `v0.1.0` + GitHub release
 
 ### v0.1.x — end-to-end validation
 
@@ -37,12 +41,10 @@ Every skill shipped with its full step playbook, its fixture
       → tests), inspect every artifact against its import target (real Confluence page, real Jira
       issue, real GitHub PR), and refine the schemas where they miss.
 
-### v1.0.0 — OSS release
+### Launch article — dev.to (open)
 
-- [ ] Flip the repo public; verify community files render (README badges, issue templates, PR
-      template).
-- [ ] Verify no private material in history (org names, real tickets, real people).
-- [ ] Publish the launch article (per the house pattern: every kit ships with its piece).
+- [ ] Publish the kit's launch article (house pattern: every kit ships with its piece) —
+      drafted from the kit's own worked examples and recorded runs.
 
 ## Rules
 

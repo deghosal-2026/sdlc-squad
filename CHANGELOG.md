@@ -1,8 +1,8 @@
 # CHANGELOG.md
 
 All notable changes to sdlc-squad are documented here. The format follows
-[Keep a Changelog](https://keepachangelog.com/en/1.1.0/); the kit uses no semantic version tags
-until its first release.
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/); releases are tagged, starting at
+v0.1.0.
 
 ## [0.1.0] — 2026-11-22
 
@@ -25,6 +25,14 @@ until its first release.
 - Roles: SDM routing + produces now cover standup and retro artifacts.
 - ROADMAP restructured: v0.1.0 is the full kit (v0.2.0 absorbed); README badge, tree, and
   skill table now say 20/built.
+
+### Changed — 2026-11-22 (public flip, in v0.1.0)
+
+- The repo flipped **public** as part of v0.1.0 (the former v1.0.0 milestone absorbed into
+  it): history audited clean (no secrets, no private material), community files verified
+  rendering on the public repo (LICENSE, issue templates, PR template), release notes
+  updated. README, AGENTS, ROADMAP, and this changelog re-framed: v0.1.0 is the major public
+  release. Open: v0.1.x end-to-end validation; the dev.to launch article.
 
 ## [Unreleased]
 

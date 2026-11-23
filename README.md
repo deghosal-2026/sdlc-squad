@@ -14,12 +14,12 @@
 
 ## Status
 
-**v0.1.0 — the full kit.** All twenty skills are built: full step playbooks, each with its
-fixture (`tests/<role>/<skill>/fixture.md`) and its recorded run
+**v0.1.0 — the full kit, released public.** All twenty skills are built: full step playbooks,
+each with its fixture (`tests/<role>/<skill>/fixture.md`) and its recorded run
 (`tests/results/run-2026-11-22-v0.1.0.md` — 20/20 pass, 13 defects found and fixed in the
-pass). Next milestone per [ROADMAP](ROADMAP.md): v0.1.x — one real feature run end-to-end
-through the loop. A public OSS release is planned at v1.0.0; the community files (LICENSE,
-CONTRIBUTING, SECURITY, SUPPORT, CODE_OF_CONDUCT) are already in place.
+pass). The repo is public as of this release; history audited clean; community files verified
+rendering. Next per [ROADMAP](ROADMAP.md): v0.1.x — one real feature run end-to-end through
+the loop, refining schemas against real pastes.
 
 ## What it does
 
@@ -144,4 +144,4 @@ sdlc-squad/
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Private today; public OSS release planned ([roadmap](ROADMAP.md)).
+MIT — see [LICENSE](LICENSE). Public as of v0.1.0.
