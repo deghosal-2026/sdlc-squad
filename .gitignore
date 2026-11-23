@@ -10,3 +10,4 @@ dist/
 build/
 *.egg-info/
 sdlc_squad/kit/
+__pycache__/
