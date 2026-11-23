@@ -41,8 +41,8 @@ Assessed from the fetched rendered page:
 
 ## Jira — EDITOR PASTE OBSERVED (CSV below)
 
-- **Target:** [SCRUM-5](https://deghosal.atlassian.net/browse/SCRUM-5) on the owner's
-  Jira Cloud (`deghosal.atlassian.net`) — description =
+- **Target:** [SCRUM-5](https://[jira-site].atlassian.net/browse/SCRUM-5) on the owner's
+  Jira Cloud (`[jira-site].atlassian.net`) — description =
   `output/g3/03-jira-issue-description.md`. (The export header shows the project as
   "MST" while the browse key is SCRUM — noted as-is, not smoothed.)
 - **Jira type:** **Cloud** — `atlassian.net` domain plus the export's Cloud snapshot
