@@ -16,13 +16,35 @@ The package is a file distribution — `pip install` only puts the Markdown on d
 1. Open any AI chat — including a fully local model; nothing leaves your machine.
 2. Paste three or four files in order:
    1. `shared/system-conventions.md` — the tool mapping and output standards,
-   2. `shared/glossary-and-org.md` — fill your org slots (Jira key, sprint length, on-call…),
+   2. `shared/glossary-and-org.md` — your org slots (Jira key, sprint length, on-call…).
+      Use the shipped template for a trial, or paste your own filled copy kept **outside
+      the kit** (`my-org.md` — see [`../docs/UPGRADING.md`](../docs/UPGRADING.md)) so
+      upgrades never clobber it,
    3. `roles/<role>.md` — the persona (say `roles/sdm.md`),
    4. `skills/<role>/<skill>/SKILL.md` — the playbook.
 3. Give the inputs the skill's **Inputs required** section asks for, and answer its clarifying
    questions (up to 3).
 4. You get one Markdown artifact, ending with an **Import target** block: paste it into the
    Confluence page, Jira issue, or GitHub PR it names.
+
+## Try it in five minutes (no real data needed)
+
+One skill, end to end, using the fictional sample in the prompt book — the company
+(Meridian Outfitters) is invented.
+
+1. `pip install sdlc-squad && sdlc-squad` — it prints the kit path and the load order.
+2. In any AI chat, paste four files in order: `shared/system-conventions.md`,
+   `shared/glossary-and-org.md` (or your `my-org.md`), `roles/sdm.md`,
+   `skills/sdm/sprint-planning-and-capacity/SKILL.md`.
+3. Paste the sample input from [`prompts-sdm.md`](prompts-sdm.md) §1.
+4. Answer the skill's ≤3 questions; you get one sprint-plan artifact.
+5. Resolve its `[CONFIRM]`s with real facts before pasting it where the import-target
+   block says.
+
+**Pre-flight for real runs:** four files in order (or one bundle) · glossary state known
+(template is fine to try; your `my-org.md` for real work, see
+[`../docs/UPGRADING.md`](../docs/UPGRADING.md)) · inputs redacted (the redaction recipe
+ships in `docs/EXPORTS.md` §Redaction, once that item lands).
 
 ## Copy-paste prompts for every task
 

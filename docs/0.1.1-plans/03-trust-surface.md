@@ -1,5 +1,7 @@
 # 03 — Trust surface: make the honesty discipline feel like quality
 
+> **Status (2026-11-23):** D1–D6 **not started**. Master table: [`README`](README.md).
+
 Theme: the kit's differentiator is anti-hallucination — but discipline a user can't
 see, verify, or recover from feels like friction. These items turn the honesty rules
 into visible, usable product qualities.
@@ -41,9 +43,14 @@ into visible, usable product qualities.
      "any proposal that adds a network call will be rejected on charter grounds") but
      does not state the kit-vs-provider distinction; enterprises read SECURITY.md
      before anything else.
+- **Single source (anti-drift):** the statement is owned by `usage/USER-GUIDE.md` (the
+  run-time doc an operator reads); `SECURITY.md` carries a one-line summary that
+  **links** to it, not a second full copy — the kit's mirror rule, applied to prose.
+  If the wording changes, it changes in one place.
 - **Acceptance:** a reader can tell which guarantees are the kit's and which belong to
-  the model/provider, without inferring a privacy promise the kit cannot make; both
-  files carry the same statement, not two versions of it.
+  the model/provider, without inferring a privacy promise the kit cannot make; the
+  statement lives once (USER-GUIDE) and `SECURITY.md` links to it — not two copies that
+  can drift.
 
 ## D3. Review-the-output guide — `docs/REVIEWING-OUTPUT.md`
 
@@ -119,6 +126,8 @@ into visible, usable product qualities.
   such number — it is provenance, the same evidence class as `tests/results/`. The line
   the kit does not cross: naming untested models as working, or printing
   performance/quality scores.
+- **Decided (2026-11-23):** name it — D5 states the recorded runs used the `GLM-5.3`
+  session model (as the run log already names it). Provenance, not a claim.
 - **Why:** harness-agnosticism is a strength the repo never explains; buyers ask "does
   this work with the AI I already use?" (gap P1: "publish observed model behavior and
   limitations, not unsupported claims").

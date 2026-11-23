@@ -1,7 +1,8 @@
 # Prompt book — TPM (Technical Program Manager)
 
 **Load first (every session):** `shared/system-conventions.md` → `shared/glossary-and-org.md`
-(fill your org slots) → `roles/tpm.md` → the skill's `SKILL.md`.
+(fill your org slots) → `roles/tpm.md` → the skill's `SKILL.md`. Or paste the one generated
+bundle `usage/bundles/tpm-<skill>.md` (regenerate with `make bundles`).
 **Redact personal data before pasting anything.** Every prompt below is a sample — swap in
 your real facts; anything you leave out comes back as `[CONFIRM: ...]`, never invented.
 The example company (Meridian Outfitters) is fictional.

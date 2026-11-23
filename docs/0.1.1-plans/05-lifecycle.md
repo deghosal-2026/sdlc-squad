@@ -1,5 +1,8 @@
 # 05 — Lifecycle: keep using without breakage
 
+> **Status (2026-11-23):** F3, F4 **done**; F1, F2 **not started**.
+> Master table: [`README`](README.md).
+
 Theme: what happens after the first artifact — relays between roles, surviving kit
 upgrades, sharing a setup across a team, and feeding evidence back. Includes the single
 most severe defect the research pass found (the upgrade clobber, F3).
@@ -25,12 +28,17 @@ most severe defect the research pass found (the upgrade clobber, F3).
   (`roles/sdm.md` and the other three) — but no user-facing recipe exists. "I finished
   the PRD; what exactly do I paste into the TPM's session?" is unanswered anywhere
   (gap P1: "manual relay risks losing context").
-- **What:** one row per transition — PMT→TPM, PMT→SDM (feasibility consult),
-  TPM→SDM, SDM→SDE, SDE→TPM (launch inputs), PMT↔SDM (scope-cut loop) — each stating:
-  which artifact to paste into the next session, which glossary facts to carry, which
-  open `[CONFIRM]`s must be resolved before hand-off (or explicitly carried as
-  unresolved), and what the next role will ask for first. Derived entirely from the
-  existing role contracts — quoting, not inventing.
+- **What:** one row per transition, **derived from the four role files' `Consumes` /
+  `Produces` / `Depends on` tables** — that is the authoritative set; do not hand-pick a
+  subset. Preliminary set to verify against those tables: PMT→TPM (PRD → milestones),
+  PMT→SDE (requirements → design feasibility), PMT→SDM (accepted stories → candidate
+  backlog), TPM→SDM (roadmap + launch checklist → sprint fit), TPM→SDE (design/deps →
+  build), SDM→SDE (committed scope → task breakdown), SDE→TPM (launch inputs),
+  SDE→SDM (task sizes/DoD → commitment), and the PMT↔SDM scope-cut loop. Each row
+  states: which artifact to paste into the next session, which glossary facts to carry,
+  which open `[CONFIRM]`s must be resolved before hand-off (or explicitly carried as
+  unresolved), and what the next role will ask for first — quoting the contracts, not
+  inventing.
 - **Competitive validation (from the scan, [08](08-competitive-landscape.md)):** two
   independent designs converged on the same answer — the closest competitor's
   "Recommended Flows" and Matt Pocock's composable skills with a `handoff` skill that
@@ -38,9 +46,10 @@ most severe defect the research pass found (the upgrade clobber, F3).
   same pattern with the user in the loop.
 - **Scope note:** this is the docs-only half of the gap review's handoff ask; the
   schema-level carry fields stay deferred ([07](07-scope-and-release.md)).
-- **Acceptance:** every transition row traces to a role-file contract; a user
-  completes a two-role hand-off by following one row without re-reading role files; no
-  schema or skill file touched.
+- **Acceptance:** the row set is complete against the four role files'
+  `Consumes`/`Produces`/`Depends on` tables (no hand-picked subset); every transition
+  row traces to a role-file contract; a user completes a two-role hand-off by following
+  one row without re-reading role files; no schema or skill file touched.
 
 ## F3. Upgrade safety — `docs/UPGRADING.md`: your data vs. the kit's
 

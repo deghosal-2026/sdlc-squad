@@ -1,5 +1,7 @@
 # 04 — Storefront & positioning
 
+> **Status (2026-11-23):** E1–E4 **not started**. Master table: [`README`](README.md).
+
 Theme: the surfaces where install intent forms — the README, the PyPI page, and the
 repo's own presentation. All additive; the fact-check verified these surfaces are
 already accurate for v0.1.0.

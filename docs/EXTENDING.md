@@ -13,7 +13,9 @@ govern every path below.
    lands in **one commit** — same for schemas and the skills that bind them.
 3. **`[CONFIRM]` over invention.** Anything your org hasn't supplied stays
    `[CONFIRM: ...]` — Jira keys, dates, owner names, SLAs, benchmarks. The kit ships
-   org-agnostic on purpose; your fork fills `shared/glossary-and-org.md`, not the skills.
+   org-agnostic on purpose; your fork fills the org glossary — keep your filled copy
+   **outside the kit** (`my-org.md`; see [`UPGRADING.md`](UPGRADING.md)) — not the
+   skills.
 4. **Statuses stay honest.** `status: planned` means skeleton; `built` means the fixture
    exists **and** the run is recorded under `tests/results/`. Never flip a status on
    intention.
@@ -24,11 +26,13 @@ govern every path below.
 
 The fastest path: fill the placeholders and rename nothing.
 
-1. **`shared/glossary-and-org.md`** — replace every `[CONFIRM: ...]` slot with your
+1. **The org glossary** — copy the shipped `shared/glossary-and-org.md` to your own file
+   **outside the kit** (`my-org.md`) and fill every `[CONFIRM: ...]` slot with your
    facts: Jira project key, Confluence space, sprint length, ceremonies and hours,
    on-call rotation, support expectations, escalation path, SLAs, estimate scale and
    its legend. This is the intended single customization point — skills and roles
-   read it at session start and never hardcode org facts.
+   read it at session start and never hardcode org facts. Keeping your copy outside the
+   kit is what survives upgrades ([`UPGRADING.md`](UPGRADING.md)).
 2. **`shared/system-conventions.md`** — only if your tooling differs: e.g. you use
    Azure DevOps + Confluence instead of GitHub + Jira. Edit the source-of-truth table
    and the import-target language; the skills inherit.

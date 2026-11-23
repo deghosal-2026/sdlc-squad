@@ -4,6 +4,23 @@ All notable changes to sdlc-squad are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); releases are tagged, starting at
 v0.1.0.
 
+### Added — 2026-11-23 (0.1.1 work in progress)
+
+- `docs/0.1.1-plans/` — the v0.1.1 patch plan, split by theme (launch article, first-run
+  experience, trust surface, storefront, lifecycle, open decisions, scope + release,
+  competitive landscape, mattpocock/skills analysis), with a living build-status table.
+- `docs/UPGRADING.md` — your files vs the kit's: keep the filled org glossary **outside**
+  the kit (`my-org.md`) so upgrades never clobber it; pip + clone paths; team usage.
+- `shared/destinations/` — paste-destination contracts `github.md`, `jira.md`,
+  `confluence.md`, written from the vendor specs (doc-derived; not yet
+  instance-validated — G3 closes the `[CONFIRM]`s).
+- `shared/glossary-and-org.EXAMPLE.md` — a filled (fictional) glossary example.
+- `usage/bundles/` — 20 generated session bundles, plus `scripts/build-bundles.sh` and
+  the Makefile's `make bundles` / `make check-bundles` (freshness gate).
+- `usage/USER-GUIDE.md` — a five-minute first run; the load step now points at your own
+  `my-org.md`. `docs/EXTENDING.md` and `PKG-README.md` aligned to the same convention;
+  the four prompt books' load-order headers name the bundle alternative.
+
 ### Added — 2026-11-22 (detailed test log)
 
 - `tests/results/run-2026-11-22-v0.1.0.md` expanded from summary to **detailed log**: per-skill

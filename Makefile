@@ -1,4 +1,20 @@
-.PHONY: sync build upload check clean
+.PHONY: sync bundles check-bundles build upload check clean
+
+# bundles: generate usage/bundles/ (one paste per skill) from the canonical files.
+# Generated artifacts, committed so pip users receive them; `make check-bundles`
+# guards freshness.
+bundles:
+	scripts/build-bundles.sh
+
+# check-bundles: fail if usage/bundles/ is stale vs the canonical files.
+check-bundles:
+	@tmp=$$(mktemp -d) && \
+	 scripts/build-bundles.sh "$$tmp" >/dev/null && \
+	 if diff -r usage/bundles "$$tmp" >/dev/null; then \
+	   echo "bundles: fresh"; rm -rf "$$tmp"; \
+	 else \
+	   echo "bundles: STALE — run 'make bundles'"; diff -rq usage/bundles "$$tmp"; rm -rf "$$tmp"; exit 1; \
+	 fi
 
 # sync: generate the package copy of the kit (build artifact, gitignored —
 # the repo root stays the single canonical copy; nothing is edited here)

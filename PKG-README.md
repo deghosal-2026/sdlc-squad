@@ -21,7 +21,8 @@ The package is a **file distribution**: `pip install` puts the whole kit on disk
 `sdlc-squad` prints where it landed plus the per-session load order. That is the entire CLI —
 no server, no code path beyond locating the files, no telemetry. Upgrade with
 `pip install --upgrade sdlc-squad`, or skip the package entirely and clone the repo: the kit
-is the Markdown, not the install.
+is the Markdown, not the install. Upgrades replace the kit files — keep your filled org
+glossary **outside** the kit (`my-org.md`; see `docs/UPGRADING.md`) so it survives.
 
 ## Run a session
 

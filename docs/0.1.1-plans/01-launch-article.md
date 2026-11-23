@@ -1,14 +1,27 @@
 # 01 — Launch article: fix the dev.to draft before publication
 
-Theme: every error and imprecision the fact-check found in the launch materials. These
-block publication of the ROADMAP's open "Launch article — dev.to" item. No repo files
-change here — the fixes land in the article draft, then it publishes.
+> **Status (2026-11-23):** A1–A3 · B4–B7 — **deferred** (article after ship, G7).
+> Master table: [`README`](README.md).
 
-- **Where the corrected draft lives (decision):** recommended in-repo as
-  `docs/launch-article.md` — ships with the release, gives the A/B fixes and the
-  pre-publish re-fact-check one addressable file, and lets the CHANGELOG cite it.
-  Alternative: keep the draft in scratch outside the repo. Owner's call; noted here
-  so the fixes have a home either way.
+Theme: every error and imprecision the fact-check found in the launch materials. These
+block publication of the ROADMAP's open "Launch article — dev.to" item. The A/B fixes
+land in the article draft; the only repo file this theme can touch is the draft itself
+(`docs/launch-article.md`, if that home is chosen — **G7** in
+[06](06-open-decisions.md)).
+
+- **Decided (2026-11-23, G7):** the article is **deferred to after ship** — build and
+  release 0.1.1 first, then apply the A/B fixes and publish. The release gate's
+  article re-fact-check ([07](07-scope-and-release.md), I.5) moves with it.
+
+- **Where the corrected draft lives — G7 ([06](06-open-decisions.md)):** recommended
+  in-repo as `docs/launch-article.md` — ships with the release, gives the A/B fixes and
+  the pre-publish re-fact-check one addressable file, and lets the CHANGELOG cite it.
+  Alternative: keep the draft in scratch outside the repo — then this theme changes no
+  repo file. Owner's call.
+- **Publishing mechanics (open):** the ROADMAP item closes on *publication*, but the
+  how is unset — dev.to account/author, target date, cross-post (repo README? release
+  notes?), and who presses publish. Resolve before the release gate re-fact-checks the
+  draft ([07](07-scope-and-release.md), I.5).
 
 ## A — Must-fix errors (block publication)
 

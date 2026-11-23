@@ -1,17 +1,37 @@
 # 06 — Open decisions: the user's calls
 
+> **Status (2026-11-23):** G6 **done**; G1–G3, G5 T1 **decided, not started**;
+> G4 **declined**; G7 **deferred**. Master table: [`README`](README.md).
+
 Theme: nothing in this file is scheduled until the owner decides. Taking a decision
 means amending this file and the affected plan files first, then working the item per
 the kit's rules (one skill per ticket, fixtures in the same change, status flips only
 when exercised).
 
+## Decisions — resolved 2026-11-23
+
+| # | Decision | Outcome | Effect |
+|---|---|---|---|
+| G1 | CLI `sdlc-squad prompt` assembler | **Add in 0.1.1** | new CLI behavior + a real test; amends the no-CLI-change rule; overlaps C6 (bundles stay, as static files) |
+| G2 | Description polish | **Do the pass** | edits all 20 `SKILL.md` `description:` fields only — no steps or fixtures; amends the no-`SKILL.md`-change rule |
+| G3 | Real-paste spot check | **Do it in 0.1.1** | real GitHub + Confluence + Jira (+ CSV) pastes, recorded under `tests/results/` |
+| G4 | skills.sh / Agent Skills publication | **Declined for now** | distribution stays GitHub + PyPI; no separate skill publication |
+| G5 | mattpocock/skills leverage | **All three tracks** | T1 `COMPANION-SKILLS.md` (0.1.1); T2 vendor `triage`/grilling/`to-questionnaire` (0.2.x, with attribution); T3 patterns fold into host items |
+| G6 | Destination format contracts | **Fetch real specs + draft docs** | fetch GitHub GFM + Atlassian Jira/Confluence docs; write `shared/destinations/{github,jira,confluence}.md`; skill binding deferred to 0.2.0 |
+| G7 | Launch article | **Deferred to after ship** | build + ship 0.1.1 first, then apply the A/B fixes and publish; the release gate's article re-fact-check moves with it |
+
+Sizing: see the proposed S/M/L table in [`README`](README.md) — a proposal for the
+owner to adjust, never a commitment.
+
 ## G1. CLI prompt assembly — `sdlc-squad prompt --role sdm --skill sprint-planning-and-capacity`
 
 Prints the four files concatenated in load order — one copy-paste instead of four.
 Charter-compatible (offline, no network, no behavior beyond relocating committed
-Markdown) and the single biggest friction reducer. But it is new CLI behavior: semver
-says minor (0.2.0), and it contradicts this patch's "no CLI behavior changes" scope
-line. Options: (a) keep 0.1.1 docs-only — C6's bundles already deliver one-paste loads
+Markdown). **Same friction C6 already targets:** C6's generated bundles are the
+reducer; this subcommand is only a convenience *over* the bundles — a live assembler
+that never needs the committed files regenerated. Not a second reducer. But it is new
+CLI behavior: semver says minor (0.2.0), and it contradicts this patch's "no CLI
+behavior changes" scope line. Options: (a) keep 0.1.1 docs-only — C6's bundles already deliver one-paste loads
 without runtime changes — and schedule the subcommand for 0.2.0 as an
 assembler/regenerator for bundles; (b) stretch 0.1.1 to include it — then amend the
 scope rules here, add a real test that the concatenated output matches the four files
@@ -33,7 +53,9 @@ decide them together. **Decision owner: user.**
 ## G3. One real-paste spot check
 
 Take one artifact (the C1 walkthrough's, for continuity) and paste it manually into a
-real GitHub issue/PR and one real Confluence page; record what rendered and what broke
+real GitHub issue/PR, one real Confluence page, **and one real Jira issue plus a
+bulk-import CSV attempt** — Jira is the riskiest format and the source of G6's CSV
+contract, so it belongs in the first spot check. Record what rendered and what broke
 under `tests/results/` as a supplementary note. It is the first slice of ROADMAP v0.1.x
 import validation; doing it inside 0.1.1 makes D1's paste-destination wording
 evidenced. Options: do it in 0.1.1, or leave it with v0.1.x where the roadmap already
@@ -97,7 +119,7 @@ has it. **Decision owner: user.**
      fillers into kit format — candidates: `triage` (binds the existing "Ask intake &
      prioritization" RACI row, PMT), `grilling` (an optional grill-first mode),
      `to-questionnaire` (async decision extraction). Each carries a Provenance block
-     + root `THIRD_PARTY_NOTOTICES` file (see 09 for exact mechanics). MIT permits
+     + root `THIRD_PARTY_NOTICES.md` file (see 09 for exact mechanics). MIT permits
      this; the kit's own evidence rules make it real work.
   3. **Pattern inspiration (no copying, any license):** fold his patterns into
      existing kit material — the grill-first preface, the PR one-way-door/blast-radius
@@ -107,6 +129,10 @@ has it. **Decision owner: user.**
   `tdd`/`wizard`/`diagnosing-bugs` (code generation — charter: "Not a code
   generator"), `research` (network), `setup-matt-pocock-skills` (repo mutation),
   the personal-brand skills. Fine as *user companions*; never shipped inside the kit.
+  **This is not "tell users not to run them":** Track 1
+  ([09](09-external-skills-mattpocock.md)) *recommends* users run
+  `/setup-matt-pocock-skills` in their own repo — "refused to ship" means the kit
+  bundles none of his files, not that users must avoid his setup.
 - **Decision owner: user** — which tracks run, and in which order. Track 1 is the
   recommended start: largest leverage, zero legal exposure, pure docs.
 
@@ -132,4 +158,20 @@ has it. **Decision owner: user.**
 - **Note:** G3 (one real-paste spot check) is the natural evidence source for (a) —
   contracts written from observed pastes, not guesses. The env-var/token half of the
   native-compatibility question is refused forever (charter; H table).
+- **Drafted 2026-11-23:** `shared/destinations/` written from the fetched specs —
+  `README.md`, `github.md`, `jira.md`, `confluence.md` (GitHub GFM; Atlassian ADF + Jira
+  CSV/editor + Confluence markdown/storage-format). Doc-derived, **not** instance-validated;
+  the files carry the open `[CONFIRM]`s and G3 closes them.
+- **Decision owner: user.**
+
+## G7. Where the corrected launch article lives
+
+- **What:** the A/B fixes ([01](01-launch-article.md)) need a home. Recommended:
+  in-repo `docs/launch-article.md` — ships with the release, one addressable file for
+  the pre-publish re-fact-check ([07](07-scope-and-release.md), I.5), and the CHANGELOG
+  can cite it. Alternative: keep the draft in scratch outside the repo — then
+  [01](01-launch-article.md) changes no repo file.
+- **Related open (publication mechanics):** dev.to account/author, target date,
+  cross-post, and who presses publish — unset ([01](01-launch-article.md)); resolve
+  before the release gate.
 - **Decision owner: user.**

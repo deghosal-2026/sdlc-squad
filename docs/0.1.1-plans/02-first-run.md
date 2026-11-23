@@ -1,5 +1,8 @@
 # 02 — First-run experience: install → first artifact
 
+> **Status (2026-11-23):** C2, C4, C6 **done**; C1, C3, C5, C7, C8 **not started**.
+> Master table: [`README`](README.md).
+
 Theme: everything between "landed on the README/PyPI page" and "first valid artifact in
 front of me." The research pass's measured core fact: a session load today is
 ~340–370 lines pasted in strict order, every session — these items kill that cost.
@@ -132,19 +135,36 @@ front of me." The research pass's measured core fact: a session load today is
   every session, for every skill.** A missed file or wrong order degrades the run
   silently. This is the kit's single largest recurring usability cost.
 - **What:** `usage/bundles/<role>-<skill>.md` — 20 generated files, each the skill's
-  full load (system-conventions + role + skill) pre-concatenated in load order, with a
-  clearly marked slot where the user's filled org glossary goes (F3's `my-org.md`). A
-  real run becomes: paste the bundle → paste your glossary → paste inputs. A trial run
-  is one paste total (the bundle carries the template glossary inline, marked "replace
-  with your own for real runs").
+  full load pre-concatenated in load order.
+- **Format decision (was ambiguous):** each bundle carries the **template** glossary
+  inline, at its load-order position, under a banner: *"replace this section with your
+  own `my-org.md` for real runs."* So the "slot" *is* the inline template section, not
+  an empty gap. A trial run is one paste (the bundle alone); a real run is two (bundle
+  + your glossary pasted after it).
+- **Mechanism (defined):** `make bundles` runs a small POSIX `sh` concatenator
+  committed as `scripts/build-bundles.sh` — the repo's first build script, alongside
+  the Makefile's existing `make sync`. Packaging tooling, not kit runtime: it never
+  runs in a session and the CLI stays inert. Shell only — no new language or
+  dependency. `make check-bundles` regenerates into a temp dir and `diff`s against
+  `usage/bundles/`.
 - **Generation discipline (no second canonical copy):** bundles are generated, never
   hand-edited; each carries a header: "Generated from the four canonical files by
-  `make bundles` — do not edit; regenerate on upgrade." Freshness is machine-checked at
-  release time (`make check-bundles`: regenerate + diff; a stale bundle fails the
-  gate). Same pattern as `sdlc_squad/kit/` via `make sync`, but committed so pip users
-  receive the bundles.
-- **Scope note:** the Makefile target is packaging tooling, not kit runtime — the CLI
-  stays inert (G1 remains the decision on whether the CLI also assembles on demand).
+  `make bundles` — do not edit; regenerate on upgrade." A stale bundle fails the
+  release gate (`make check-bundles`).
+- **Distribution (defined):** `usage/` already rides into the pip package — `make sync`
+  copies `shared/`, `roles/`, `skills/`, `tests/`, `usage/`, and `docs/` into the
+  gitignored `sdlc_squad/kit/` (verified in the v0.1.0 wheel, run log §3), and
+  `package-data` ships `kit/**/*.md`. Bundles are `.md` under `usage/`, so they need no
+  manifest change — confirm the `usage/bundles/` paths in the wheel during the release
+  gate (I.5).
+- **Size note:** 20 bundles each inline the 52-line template glossary — accepted,
+  because bundles are *generated* from the canonical files (the no-second-copy rule
+  forbids a hand-maintained copy, not a generated artifact); the freshness gate is what
+  keeps them honest.
+- **Scope note (updated 2026-11-23):** the Makefile target is packaging tooling, not
+  kit runtime. G1 is now **decided** — `sdlc-squad prompt` ships in 0.1.1 as a live
+  assembler; the committed bundles (this item) stay for pip users who want files on
+  disk. They overlap on purpose: bundles = static, CLI = on-demand.
 - **Why:** kills the paste burden without adding behavior; the four canonical files
   remain the single source of truth.
 - **Acceptance:** 20 bundles committed; one paste completes a session load (plus the
@@ -161,6 +181,10 @@ front of me." The research pass's measured core fact: a session load today is
     design-and-code-reviews).
   - **Confluence** — page exports of prior PRDs/status pages (feeds draft-prd revision,
     program-status-review).
+  - **Working data that is not in those three** — roster/PTO, capacity, ceremony hours,
+    and estimate scale usually live in a spreadsheet or an HRIS. The recipe here is a
+    paste-the-CSV/table recipe (redaction applied), not a system export; the org's
+    actual source stays `[CONFIRM]`.
   Each recipe states what the export looks like and which skills consume it — verified
   against real exports on first use (the same `[CONFIRM]`-style honesty the kit applies
   to itself; do not assert export menus no one has checked).
@@ -172,9 +196,11 @@ front of me." The research pass's measured core fact: a session load today is
 - **Why:** skills demand inputs (`[PASTE: roster / PTO calendar / candidate backlog
   with estimates]`) but no doc explains how to obtain them; the kit's privacy
   instruction is currently a warning with no method.
-- **Acceptance:** every skill's named inputs map to an acquisition recipe; the
-  redaction recipe is mechanical and complete for the data types skills ask for;
-  everything is user-operated; unverified export specifics are marked, not asserted.
+- **Acceptance:** every skill's named inputs map to an acquisition recipe — a system
+  export (Jira/GitHub/Confluence) or the working-data recipe for roster/PTO/capacity/
+  scale; the redaction recipe is mechanical and complete for the data types skills ask
+  for; everything is user-operated; unverified export specifics are marked, not
+  asserted.
 
 ## C8. Supported-and-adaptable matrix — `docs/TOOLS.md`
 
@@ -188,8 +214,9 @@ front of me." The research pass's measured core fact: a session load today is
     per `docs/EXTENDING.md` Path 1 — e.g., Azure DevOps + Confluence); org vocabulary
     (`my-org.md`, F3).
   - **Requires real changes:** import formats beyond paste (a validated Jira CSV
-    header contract — G6), new artifact shapes (new schemas, EXTENDING Path 4), any
-    API integration (never, per the charter).
+    header contract — G6), new artifact shapes (new schemas, EXTENDING Path 4).
+  - **Never (a hard boundary, not a gap):** any API integration, auto-import, or
+    telemetry — the charter's "not a client for anything."
 - **Why:** gap review P2 ("the supported-tool story may be narrower than customers
   expect… publish a clear supported and adaptable matrix") — buyers currently have to
   reverse-engineer this from EXTENDING.
