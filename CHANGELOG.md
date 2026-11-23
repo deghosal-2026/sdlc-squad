@@ -4,6 +4,15 @@ All notable changes to sdlc-squad are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); releases are tagged, starting at
 v0.1.0.
 
+### Added — 2026-11-22 (detailed test log)
+
+- `tests/results/run-2026-11-22-v0.1.0.md` expanded from summary to **detailed log**: per-skill
+  walkthrough (fixture, input, playbook steps, 97 checks itemized, recorded-pass defect, this-run
+  verdict), structural gates (fixtures/frontmatter/RACI/prompt books), packaging gates (build,
+  twine, wheel layout, sdist, clean-venv install + CLI — upload still deferred), security gates
+  (trufflehog 0/0 on the full 11-commit history, git audit clean). Verdict: 20/20, zero open
+  defects.
+
 ## [0.1.0] — 2026-11-22
 
 ### Added — the full kit
