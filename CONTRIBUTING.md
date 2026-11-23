@@ -1,8 +1,8 @@
 # Contributing to sdlc-squad
 
-sdlc-squad is a Markdown-only kit: instructions, rubrics, personas, and schemas. There is no code
-to build and no test suite to run — the "tests" are fixtures, and the product is a Markdown file
-that behaves the same in any AI chat.
+sdlc-squad is a Markdown-only kit: instructions, rubrics, personas, and schemas. There is no
+application to build; one small test guards the CLI (`make test`), the kit's "tests" are
+otherwise fixtures, and the product is a Markdown file that behaves the same in any AI chat.
 
 **Adding a skill, a role, or changing a schema?** Follow
 [`docs/EXTENDING.md`](docs/EXTENDING.md) — the four contribution paths, in the order to do them,

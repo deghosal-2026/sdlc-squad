@@ -14,7 +14,7 @@ The package is a file distribution — `pip install` only puts the Markdown on d
 ## The 60-second version
 
 1. Open any AI chat — including a fully local model; nothing leaves your machine.
-2. Paste three or four files in order:
+2. Paste four files in order:
    1. `shared/system-conventions.md` — the tool mapping and output standards,
    2. `shared/glossary-and-org.md` — your org slots (Jira key, sprint length, on-call…).
       Use the shipped template for a trial, or paste your own filled copy kept **outside

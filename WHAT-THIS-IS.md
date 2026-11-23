@@ -1,9 +1,11 @@
 # What this is — the sdlc-squad charter
 
 sdlc-squad is a Markdown-only kit of AI personas and work skills for the software development
-lifecycle. It has no code, no server, and no installer: the files are instructions, and any AI
-chat — including a fully local model — runs them. This charter overrides every other file in the
-repo, including `AGENTS.md` and `CONVENTIONS.md`.
+lifecycle. It ships no server, no daemon, and no workflow engine — the files are instructions, and
+any AI chat, including a fully local model, runs them. (The kit is distributed as Markdown; a
+small Python package and a build script only put the files on disk and regenerate the session
+bundles.) This charter overrides every other file in the repo, including `AGENTS.md` and
+`CONVENTIONS.md`.
 
 ## What it is
 

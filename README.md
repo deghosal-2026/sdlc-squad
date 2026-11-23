@@ -33,8 +33,8 @@ Next per [ROADMAP](ROADMAP.md): v0.1.x — one real feature run end-to-end throu
 GitHub holds code, Jira tracks work, Confluence stores documentation — and every AI helper wants to
 be an IDE plugin. sdlc-squad is harness-agnostic instead. The files are plain Markdown, so any
 runner — a CLI agent, an IDE chat, or a fully local model — loads a **role + shared context +
-skill** and emits deterministic Markdown you paste where the work already lives. No install, no
-account, no API keys. Nothing leaves your machine.
+skill** and emits deterministic Markdown you paste where the work already lives. No server, no
+daemon, no account, no API keys. Nothing leaves your machine.
 
 ## The squad
 
@@ -48,7 +48,8 @@ account, no API keys. Nothing leaves your machine.
 ## Quick start
 
 1. Open any AI chat — a fully local model works.
-2. Paste, in order: `shared/system-conventions.md`, the role file (`roles/sde.md`), and the skill
+2. Paste, in order: `shared/system-conventions.md`, `shared/glossary-and-org.md` (or your own
+   `my-org.md`), the role file (`roles/sde.md`), and the skill
    (`skills/sde/technical-design-and-breakdown/SKILL.md`).
 3. Give the inputs the skill asks for; answer its clarifying questions.
 4. Get one Markdown contract, shaped by its output schema.
