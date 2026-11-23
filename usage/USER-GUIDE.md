@@ -1,6 +1,15 @@
 # User guide — running sdlc-squad in any AI chat
 
-No install, no account, no API key. The kit is a set of Markdown files; your chat is the runtime.
+No account, no API key, nothing leaves your machine. The kit is a set of Markdown files; your
+chat is the runtime. Get the files either way:
+
+```bash
+pip install sdlc-squad && sdlc-squad   # prints the kit path + the load order below
+# or: git clone https://github.com/deghosal-2026/sdlc-squad
+```
+
+The package is a file distribution — `pip install` only puts the Markdown on disk
+([PyPI](https://pypi.org/project/sdlc-squad/)); there is no server, no runner, no telemetry.
 
 ## The 60-second version
 

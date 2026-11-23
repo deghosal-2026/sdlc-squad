@@ -47,6 +47,16 @@ v0.1.0.
 
 ## [Unreleased]
 
+### Added — 2026-11-22 (PyPI distribution)
+
+- `sdlc-squad` on [PyPI](https://pypi.org/project/sdlc-squad/): `pyproject.toml` +
+  `PKG-README.md` + `MANIFEST.in` + `Makefile` (`make sync` copies the kit into the package
+  as a generated, gitignored build artifact — the repo root stays the single canonical copy).
+- `sdlc_squad/` — the Python package: `sdlc-squad` CLI prints the kit path and the per-session
+  load order. No server, no runner, no telemetry — a file distribution.
+- `usage/USER-GUIDE.md` + README quick start: the optional `pip install sdlc-squad` path,
+  alongside clone-and-paste. PyPI badge added.
+
 ### Added — 2026-11-22 (docs + README tree fix)
 
 - `WHAT-THIS-IS.md` (charter) caught up with the kit: twelve → twenty skills (PMT 6 · TPM 4 ·

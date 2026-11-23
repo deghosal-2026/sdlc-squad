@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdlc-squad"
+version = "0.1.0"
+description = "A software team in a box: four AI personas (PMT, TPM, SDM, SDE) whose skills turn any AI chat into an SDLC workhorse — Markdown contracts for GitHub, Jira, and Confluence. 100% Markdown, local-first, no telemetry."
+readme = "PKG-README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Debashish Ghosal" }]
+keywords = ["sdlc", "ai-kit", "markdown", "personas", "agile", "scrum", "product-management", "program-management", "engineering-management", "jira", "confluence", "github"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/deghosal-2026/sdlc-squad"
+Changelog = "https://github.com/deghosal-2026/sdlc-squad/blob/main/CHANGELOG.md"
+Releases = "https://github.com/deghosal-2026/sdlc-squad/releases"
+Issues = "https://github.com/deghosal-2026/sdlc-squad/issues"
+
+[project.scripts]
+sdlc-squad = "sdlc_squad.cli:main"
+
+[tool.setuptools]
+packages = ["sdlc_squad"]
+
+[tool.setuptools.package-data]
+sdlc_squad = ["kit/**/*.md", "kit/**/fixture.md", "kit/**/*.sql"]

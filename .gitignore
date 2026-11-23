@@ -6,3 +6,7 @@ Thumbs.db
 !.env.example
 output/
 my-files/
+dist/
+build/
+*.egg-info/
+sdlc_squad/kit/
