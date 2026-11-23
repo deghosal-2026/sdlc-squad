@@ -54,5 +54,9 @@ or PR body. The schemas' Markdown is GFM-native, so it renders without conversio
 - GitHub Docs — "Basic writing and formatting syntax"
   (`https://docs.github.com/en/get-started/writing-on-github/.../basic-writing-and-formatting-syntax`):
   headings, tables, task lists, alerts, footnotes, emoji codes, relative links, anchors
-- `[CONFIRM: none outstanding — GitHub's rendering is documented and stable; verify on
-  first paste per G3]`
+- **Observed 2026-11-23 (G3):** pasted into a real GitHub issue
+  ([sdlc-squad#1](https://github.com/deghosal-2026/sdlc-squad/issues/1)) — headings,
+  both tables (including empty trailing cells), bold, ISO dates, and `−`/`≤`/`→`
+  rendered; `[CONFIRM: …]` appears **literally**. Not visually confirmed: column
+  alignment, outline/TOC. Spot check — one artifact, one issue
+  (`tests/results/run-2026-11-23-g3-real-paste.md`).

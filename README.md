@@ -87,9 +87,10 @@ flowchart LR
 One role per session; the artifact is the hand-off — see [`usage/RELAY.md`](usage/RELAY.md).
 
 > **Import target = paste destination.** Artifacts name where they are meant to be pasted
-> (a Jira issue, a Confluence page, a GitHub PR). Fit against those tools is what the
-> v0.1.x validation checks; until then, treat each as an intended destination, not a
-> validated import format ([`shared/destinations/`](shared/destinations/)).
+> (a Jira issue, a Confluence page, a GitHub PR). GitHub and the Jira editor are
+> paste-verified (spot check, Nov 2026 — `tests/results/run-2026-11-23-g3-real-paste.md`);
+> Confluence and the Jira CSV import remain intended destinations until v0.1.x validates
+> them ([`shared/destinations/`](shared/destinations/)).
 
 ## Layout
 

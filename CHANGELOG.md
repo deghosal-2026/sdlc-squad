@@ -34,6 +34,15 @@ v0.1.0.
   `PKG-README.md` — links to the new docs, and the upgrade-safety note.
 - The 20 `SKILL.md` `description:` fields now state what each skill does **and when to
   use it** — no step or fixture changes.
+- `tests/results/run-2026-11-23-g3-real-paste.md` — the G3 real-destination spot check:
+  GitHub issue paste, Jira Cloud editor paste, the Jira CSV bulk import, **and the
+  Confluence Cloud page paste all observed** — headings/tables/bold/lists convert,
+  `[CONFIRM: …]` literal everywhere; CSV: 3/3 stories landed, priority values must match
+  the instance's scheme (P1/P2 → Medium), Size needs a custom-field target (landed in
+  Labels). `shared/destinations/github.md` / `jira.md` / `confluence.md` `[CONFIRM]`s
+  closed accordingly; the import-target wording in README and USER-GUIDE updated to say
+  what is paste-verified vs. still intended. (Jira Data Center and Confluence's
+  storage-format path remain unobserved.)
 
 ### Added — 2026-11-22 (detailed test log)
 

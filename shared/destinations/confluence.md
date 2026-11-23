@@ -13,9 +13,10 @@ notes, launch checklists, retros. A kit artifact is **pasted into the page edito
 - **Under the hood** Confluence stores pages in the **storage format** — an XHTML-based XML
   (with custom elements for macros). That matters only for API/macro authors; the human
   path is editor paste. `[CONFIRM: storage format only if you later script page creation]`.
-- **Markdown coverage is not full.** The Cloud editor officially supports a specific subset
-  of Markdown; some constructs convert, some do not. `[CONFIRM: verify your page's tables
-  and code blocks on first paste]`.
+- **Markdown coverage is not full.** The Cloud editor officially supports a specific
+  subset of Markdown; some constructs convert, some do not. **Observed 2026-11-23 (G3,
+  Cloud):** headings, a bullet list, and pipe-tables all converted (no literal pipes
+  remained; every table column survived). `[CONFIRM: code-block paste — unobserved]`.
 
 ### Do / Avoid (editor paste)
 
@@ -51,5 +52,8 @@ notes, launch checklists, retros. A kit artifact is **pasted into the page edito
   notes)
 - Paste-converts-Markdown behavior — Atlassian Community threads + independent write-ups
   (2026)
-- **Open `[CONFIRM]`s:** exact Markdown subset the editor converts; table fidelity on paste;
-  storage format only if page creation is scripted — resolved by G3's real paste.
+- **Observed 2026-11-23 (G3, Cloud):** pasted into a real page — headings, a bullet list,
+  and tables converted (no literal pipes), `[CONFIRM: …]` literal, `−`/`≤`/`→` preserved
+  (`tests/results/run-2026-11-23-g3-real-paste.md`).
+- **Open `[CONFIRM]`s:** code-block paste (unobserved); the storage-format path for
+  scripted page creation (out of scope for a manual paste); Data Center editor behavior.

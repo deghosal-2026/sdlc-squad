@@ -62,8 +62,9 @@ inputs in the prompt books exist so a first run needs **no real data**. (This is
 statement; [`../SECURITY.md`](../SECURITY.md) links here rather than repeat it.)
 
 > **Import target = the paste destination.** The artifact names where it is meant to be
-> pasted. Fit against the real tools is what v0.1.x validates — treat each target as an
-> intended destination, not a validated import format.
+> pasted. GitHub and the Jira editor are paste-verified (spot check, Nov 2026 —
+> `tests/results/run-2026-11-23-g3-real-paste.md`); Confluence and the Jira CSV import
+> remain intended destinations until v0.1.x validates them.
 
 ## Copy-paste prompts for every task
 

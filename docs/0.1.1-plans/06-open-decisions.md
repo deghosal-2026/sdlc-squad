@@ -52,6 +52,12 @@ decide them together. **Decision owner: user.**
 
 ## G3. One real-paste spot check
 
+> **Done 2026-11-23 — all four destinations observed:** GitHub, Jira Cloud editor, Jira
+> CSV import, Confluence Cloud page — results in
+> `tests/results/run-2026-11-23-g3-real-paste.md`; findings folded into
+> `shared/destinations/`. (Jira Data Center and Confluence's storage-format path remain
+> out of scope for manual pastes.)
+
 Take one artifact (the C1 walkthrough's, for continuity) and paste it manually into a
 real GitHub issue/PR, one real Confluence page, **and one real Jira issue plus a
 bulk-import CSV attempt** — Jira is the riskiest format and the source of G6's CSV

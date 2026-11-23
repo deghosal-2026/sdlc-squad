@@ -112,7 +112,7 @@ decision.
 | F4 team-usage | **Done** (section in `docs/UPGRADING.md`) |
 | G1 CLI prompt assembler | **Done** (`sdlc_squad/cli.py` `prompt` + `tests/cli/test_prompt.py` · `make test`) |
 | G2 description polish (20) | **Done** (20 `SKILL.md` descriptions now state what + when) |
-| G3 real GitHub/Confluence/Jira pastes | **Blocked** — needs authenticated pastes against a real instance; not doable in this environment |
+| G3 real GitHub/Confluence/Jira pastes | **Done** — all four destinations observed (GitHub · Jira editor · Jira CSV · Confluence); results: `tests/results/run-2026-11-23-g3-real-paste.md` |
 | G4 skills.sh publication | **Declined** |
 | G5 T1 companion skills | **Done** (`docs/COMPANION-SKILLS.md`); T2/T3 = 0.2.x |
 | G6 destination contracts | **Done** (`shared/destinations/` — `README`, `github`, `jira`, `confluence`) |
