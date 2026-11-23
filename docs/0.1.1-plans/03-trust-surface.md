@@ -1,6 +1,6 @@
 # 03 — Trust surface: make the honesty discipline feel like quality
 
-> **Status (2026-11-23):** D1–D6 **not started**. Master table: [`README`](README.md).
+> **Status (2026-11-23):** D1–D6 **done**. Master table: [`README`](README.md).
 
 Theme: the kit's differentiator is anti-hallucination — but discipline a user can't
 see, verify, or recover from feels like friction. These items turn the honesty rules

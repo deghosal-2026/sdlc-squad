@@ -1,6 +1,7 @@
 # 04 — Storefront & positioning
 
-> **Status (2026-11-23):** E1–E4 **not started**. Master table: [`README`](README.md).
+> **Status (2026-11-23):** E1, E2, E4 **done**; E3 **partial** (Mermaid loop done;
+> social-preview image + GitHub topics need the owner). Master table: [`README`](README.md).
 
 Theme: the surfaces where install intent forms — the README, the PyPI page, and the
 repo's own presentation. All additive; the fact-check verified these surfaces are

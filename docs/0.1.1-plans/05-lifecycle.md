@@ -1,7 +1,6 @@
 # 05 — Lifecycle: keep using without breakage
 
-> **Status (2026-11-23):** F3, F4 **done**; F1, F2 **not started**.
-> Master table: [`README`](README.md).
+> **Status (2026-11-23):** F1–F4 **done**. Master table: [`README`](README.md).
 
 Theme: what happens after the first artifact — relays between roles, surviving kit
 upgrades, sharing a setup across a team, and feeding evidence back. Includes the single

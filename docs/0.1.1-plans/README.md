@@ -88,25 +88,33 @@ decision.
 | Item | Status |
 |---|---|
 | A1–A3 · B4–B7 — launch-article fixes | **Deferred** (article after ship, G7) |
-| C1 walkthrough | Not started |
+| C1 walkthrough | **Done** (`usage/WALKTHROUGH.md`) |
 | C2 five-minute run | **Done** (`usage/USER-GUIDE.md`) |
-| C3 chooser + recipes | Not started |
+| C3 chooser + recipes | **Done** (`docs/START-HERE.md`) |
 | C4 glossary example | **Done** (`shared/glossary-and-org.EXAMPLE.md`) |
-| C5 two-ways-to-run | Not started |
+| C5 two-ways-to-run | **Done** (README + `usage/USER-GUIDE.md`) |
 | C6 bundles | **Done** (`usage/bundles/` ×20 · `scripts/build-bundles.sh` · `make bundles` / `make check-bundles`; prompt-book headers link it) |
-| C7 exports + redaction | Not started |
-| C8 tools matrix | Not started |
-| D1–D6 trust surface | Not started |
-| E1–E4 storefront | Not started |
-| F1 feedback template | Not started |
-| F2 relay recipe | Not started |
+| C7 exports + redaction | **Done** (`docs/EXPORTS.md`) |
+| C8 tools matrix | **Done** (`docs/TOOLS.md`) |
+| D1 paste-destination wording | **Done** (`usage/USER-GUIDE.md` + README) |
+| D2 data-path | **Done** (`usage/USER-GUIDE.md` + `SECURITY.md`) |
+| D3 reviewing output | **Done** (`docs/REVIEWING-OUTPUT.md`) |
+| D4 troubleshooting | **Done** (`docs/TROUBLESHOOTING.md`) |
+| D5 model notes | **Done** (`docs/MODELS.md` — names `GLM-5.3`) |
+| D6 evidence page | **Done** (`docs/EVIDENCE.md`) |
+| E1 PKG-README | **Done** (doc links + upgrade note) |
+| E2 README why-not | **Done** (README) |
+| E3 repo presentation | **Partial** — Mermaid loop + tagline done; social-preview image + GitHub topics need the owner (repo settings, not files) |
+| E4 examples gallery | **Done** (`docs/EXAMPLES.md`) |
+| F1 feedback template | **Done** (`.github/ISSUE_TEMPLATE/field-feedback.md`) |
+| F2 relay recipe | **Done** (`usage/RELAY.md`) |
 | F3 upgrade safety | **Done** (`docs/UPGRADING.md`; alignments in `docs/EXTENDING.md`, `usage/USER-GUIDE.md`, `PKG-README.md`) |
 | F4 team-usage | **Done** (section in `docs/UPGRADING.md`) |
-| G1 CLI prompt assembler | Decided — Not started |
-| G2 description polish (20) | Decided — Not started |
-| G3 real GitHub/Confluence/Jira pastes | Decided — Not started |
+| G1 CLI prompt assembler | **Done** (`sdlc_squad/cli.py` `prompt` + `tests/cli/test_prompt.py` · `make test`) |
+| G2 description polish (20) | **Done** (20 `SKILL.md` descriptions now state what + when) |
+| G3 real GitHub/Confluence/Jira pastes | **Blocked** — needs authenticated pastes against a real instance; not doable in this environment |
 | G4 skills.sh publication | **Declined** |
-| G5 T1 companion skills | Decided — Not started (`docs/COMPANION-SKILLS.md`); T2/T3 = 0.2.x |
+| G5 T1 companion skills | **Done** (`docs/COMPANION-SKILLS.md`); T2/T3 = 0.2.x |
 | G6 destination contracts | **Done** (`shared/destinations/` — `README`, `github`, `jira`, `confluence`) |
 | G7 launch article | **Deferred** (after ship) |
 | I — release mechanics | Not started (runs at ship) |

@@ -1,6 +1,6 @@
 ---
 name: define-success-metrics
-description: Define north-star, supporting, and guardrail metrics, with the instrumentation events each needs and post-launch criteria.
+description: Define north-star, supporting, and guardrail metrics with the instrumentation events each needs. Use when a product goal needs measurable success and guardrails.
 role: pmt
 status: built
 created: 2026-11-22

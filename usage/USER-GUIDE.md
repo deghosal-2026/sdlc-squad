@@ -46,6 +46,25 @@ One skill, end to end, using the fictional sample in the prompt book — the com
 [`../docs/UPGRADING.md`](../docs/UPGRADING.md)) · inputs redacted (the redaction recipe
 ships in `docs/EXPORTS.md` §Redaction, once that item lands).
 
+## Two ways to run
+
+1. **Any chat (paste)** — the load in "The 60-second version" above.
+2. **A repo-reading agent** — open the kit repo and just ask; the repo's own agent files
+   (`.github/copilot-instructions.md` → `AGENTS.md`) carry the load order.
+
+## Data path — what leaves your machine
+
+The kit transmits nothing and stores nothing: no network, no telemetry, no files written.
+But the **runtime is the chat you choose** — if it is a hosted service, that provider's
+data handling applies to whatever you paste. For sensitive input, use a fully local model,
+or redact first (recipe: [`../docs/EXPORTS.md`](../docs/EXPORTS.md) §Redaction). The sample
+inputs in the prompt books exist so a first run needs **no real data**. (This is the full
+statement; [`../SECURITY.md`](../SECURITY.md) links here rather than repeat it.)
+
+> **Import target = the paste destination.** The artifact names where it is meant to be
+> pasted. Fit against the real tools is what v0.1.x validates — treat each target as an
+> intended destination, not a validated import format.
+
 ## Copy-paste prompts for every task
 
 [`prompts-pmt.md`](prompts-pmt.md) · [`prompts-tpm.md`](prompts-tpm.md) ·

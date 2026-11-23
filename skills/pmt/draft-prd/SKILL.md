@@ -1,6 +1,6 @@
 ---
 name: draft-prd
-description: Draft a Confluence-ready PRD from a problem statement: goals and non-goals, requirements, edge cases, rollout and metrics.
+description: Draft a Confluence-ready PRD from a problem statement — goals and non-goals, requirements, edge cases, rollout and metrics. Use when a fuzzy problem needs agreed requirements.
 role: pmt
 status: built
 created: 2026-11-22

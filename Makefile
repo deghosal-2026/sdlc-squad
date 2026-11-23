@@ -1,4 +1,8 @@
-.PHONY: sync bundles check-bundles build upload check clean
+.PHONY: sync bundles check-bundles test build upload check clean
+
+# test: the G1 CLI test — `sdlc-squad prompt` output == the canonical files in order.
+test:
+	python3 tests/cli/test_prompt.py
 
 # bundles: generate usage/bundles/ (one paste per skill) from the canonical files.
 # Generated artifacts, committed so pip users receive them; `make check-bundles`

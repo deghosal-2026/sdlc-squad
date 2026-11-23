@@ -20,6 +20,20 @@ v0.1.0.
 - `usage/USER-GUIDE.md` — a five-minute first run; the load step now points at your own
   `my-org.md`. `docs/EXTENDING.md` and `PKG-README.md` aligned to the same convention;
   the four prompt books' load-order headers name the bundle alternative.
+- `docs/` — `START-HERE.md` (task chooser + scenario recipes), `EXPORTS.md` (getting input
+  in + a redaction recipe), `REVIEWING-OUTPUT.md`, `TROUBLESHOOTING.md`, `MODELS.md`,
+  `EVIDENCE.md`, `EXAMPLES.md`, `TOOLS.md` (supported & adaptable matrix),
+  `COMPANION-SKILLS.md` (wrapping other skill sets in kit conventions).
+- `usage/WALKTHROUGH.md` (one full run), `usage/RELAY.md` (role-to-role hand-off),
+  `.github/ISSUE_TEMPLATE/field-feedback.md` (opt-in feedback).
+- CLI: `sdlc-squad prompt --role <role> --skill <skill>` prints a skill's full session
+  load, concatenated; `tests/cli/test_prompt.py` (`make test`) proves it equals the four
+  canonical files, in order. The default CLI output now names the subcommand.
+- `README` — two-ways-to-run, a "why not just ask the chat directly?" section, and the
+  Mermaid relay loop; `SECURITY.md` — a Data-path section (kit vs. provider);
+  `PKG-README.md` — links to the new docs, and the upgrade-safety note.
+- The 20 `SKILL.md` `description:` fields now state what each skill does **and when to
+  use it** — no step or fixture changes.
 
 ### Added — 2026-11-22 (detailed test log)
 

@@ -1,6 +1,6 @@
 ---
 name: design-and-code-reviews
-description: Produce the author gate, the reviewer pass, and the review etiquette for a PR: small diffs, self-review, nit labels, confusion as comments.
+description: Produce the author gate, reviewer pass, and review etiquette for a PR — small diffs, self-review, nit labels, confusion as comments. Use when reviewing or preparing a change.
 role: sde
 status: built
 created: 2026-11-22

@@ -1,6 +1,6 @@
 ---
 name: standup-execution
-description: Run the daily standup: board-order round plus a blocker log with aging, escalation, and carry-risk flags.
+description: Run the daily standup — a board-order round plus a blocker log with aging, escalation, and carry-risk flags. Use for the daily team sync.
 role: sdm
 status: built
 created: 2026-11-22

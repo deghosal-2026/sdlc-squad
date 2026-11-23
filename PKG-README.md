@@ -32,8 +32,10 @@ glossary **outside** the kit (`my-org.md`; see `docs/UPGRADING.md`) so it surviv
 3. Paste the skill's inputs — redact personal data first — and answer its ≤3 clarifying questions.
 4. Take the one artifact and paste it where its **Import target** block says.
 
-`usage/prompts-<role>.md` ships a ready-to-paste prompt for **every** skill (20).
-`docs/EXTENDING.md` covers customizing for your org, adding skills, roles, and schemas.
+`usage/WALKTHROUGH.md` — one full run, start to finish. `usage/prompts-<role>.md` — a
+ready-to-paste prompt for **every** skill (20). `docs/START-HERE.md` — find your skill by
+task. `docs/EVIDENCE.md` — how the kit catches itself. `docs/EXTENDING.md` — customize for
+your org, add skills, roles, and schemas. Upgrade safely: `docs/UPGRADING.md`.
 
 ## What it never does
 

@@ -25,3 +25,10 @@ Do not open a public issue with the details.
 - The kit runs offline; any proposal that adds a network call will be rejected on charter grounds
   before it is a security question.
 - Reports are acknowledged within a week (volunteer maintainer, best effort).
+
+## Data path
+
+The kit makes no network calls, sends no telemetry, and writes no files — it is Markdown
+you paste. Your **chat provider's** handling of what you paste is separate, and yours to
+verify; the kit cannot promise anything about a hosted model's data use. Full statement:
+[`usage/USER-GUIDE.md`](usage/USER-GUIDE.md) §"Data path" — kept in one place on purpose.

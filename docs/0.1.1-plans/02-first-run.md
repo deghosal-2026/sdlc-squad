@@ -1,7 +1,6 @@
 # 02 — First-run experience: install → first artifact
 
-> **Status (2026-11-23):** C2, C4, C6 **done**; C1, C3, C5, C7, C8 **not started**.
-> Master table: [`README`](README.md).
+> **Status (2026-11-23):** C1–C8 **done**. Master table: [`README`](README.md).
 
 Theme: everything between "landed on the README/PyPI page" and "first valid artifact in
 front of me." The research pass's measured core fact: a session load today is

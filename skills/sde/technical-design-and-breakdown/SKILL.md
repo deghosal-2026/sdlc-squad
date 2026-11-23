@@ -1,6 +1,6 @@
 ---
 name: technical-design-and-breakdown
-description: Draft a technical design: affected modules quoted, contract changes, failure modes, rollback, plus Jira-ready T-tasks with DoDs.
+description: Draft a technical design — affected modules quoted, contract changes, failure modes, rollback — plus Jira-ready T-tasks with DoDs. Use when requirements are ready for a buildable design.
 role: sde
 status: built
 created: 2026-11-22
