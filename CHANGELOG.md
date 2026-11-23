@@ -65,6 +65,10 @@ v0.1.0.
   load order. No server, no runner, no telemetry — a file distribution.
 - `usage/USER-GUIDE.md` + README quick start: the optional `pip install sdlc-squad` path,
   alongside clone-and-paste. PyPI badge added.
+- **v0.1.0 published to PyPI** (user's go, ~22:40 PST): `twine upload` → live at
+  https://pypi.org/project/sdlc-squad/0.1.0/ → verified from the public index (JSON API +
+  clean-venv `pip install sdlc-squad` → CLI exit 0). Test log section 3 records the ship +
+  post-ship verification.
 
 ### Added — 2026-11-22 (docs + README tree fix)
 
