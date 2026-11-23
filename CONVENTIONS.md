@@ -6,15 +6,22 @@ this file. When a skill's playbook and this file disagree, the charter decides.
 ## Repo layout
 
 ```
+roles/_TEMPLATE.md                  # the canonical role format; new roles are filled from it
 roles/<role>.md                     # one persona file per role: pmt, tpm, sdm, sde
 skills/<role>/<skill>/SKILL.md      # one folder per skill; SKILL.md is the playbook
 shared/system-conventions.md        # tool mapping + Markdown output standards
 shared/glossary-and-org.md          # domain terms + org placeholders
+shared/raci.md                      # canonical decision-rights matrix (one A per row)
 shared/output-schemas/<name>.md     # canonical templates; skills bind to these, never re-invent
 ```
 
 - A **role** file defines perspective, priorities, decision boundaries, tone, default
   assumptions, and handoff contracts. It never contains steps.
+- New roles are filled from `roles/_TEMPLATE.md`; every section ships filled — no `[brackets]`
+  in a shipped role file.
+- `shared/raci.md` is the canonical decision-rights matrix; each role mirrors **only its own
+  column** under `## Decision rights (RACI)`. The same change updates the matrix and every
+  affected role file — never a second matrix.
 - A **skill** file defines steps, required inputs, clarifying questions, and its output binding.
   It never redefines the persona; it inherits the role.
 

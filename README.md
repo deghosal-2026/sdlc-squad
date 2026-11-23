@@ -71,13 +71,14 @@ sdlc-squad/
 ├── shared/
 │   ├── system-conventions.md        # Tool mapping (GitHub/Jira/Confluence), MD standards
 │   ├── glossary-and-org.md          # Domain terms + org placeholders ([CONFIRM])
+│   ├── raci.md                      # Decision-rights matrix (each role mirrors its column)
 │   └── output-schemas/              # Canonical templates for downstream import
 │       ├── confluence-prd-or-rfc.md
 │       ├── jira-epic-and-stories.md
 │       ├── sprint-plan-and-capacity.md
 │       ├── technical-design-doc.md
 │       └── test-plan-and-cases.md
-├── roles/                            # Persona definitions
+├── roles/                            # Persona definitions (_TEMPLATE.md is the format)
 │   ├── pmt.md
 │   ├── tpm.md
 │   ├── sdm.md

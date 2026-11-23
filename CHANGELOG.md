@@ -19,3 +19,15 @@ until its first release.
 - Four role personas in `roles/`: `pmt.md`, `tpm.md`, `sdm.md`, `sde.md`.
 - Twelve skill skeletons in `skills/` — frontmatter `status: planned`, purpose, required inputs,
   output bindings, import targets. Not yet playable playbooks; see ROADMAP.md for the build order.
+
+### Changed — 2026-11-22 (roles restructure)
+
+- All four roles (`roles/`) restructured onto the canonical `roles/_TEMPLATE.md` format:
+  when-to-load routing, consumes/produces/depends-on contracts, per-role RACI column,
+  reviews-in-others'-artifacts, failure modes & corrections, session behavior, tone &
+  vocabulary, worked examples (synthetic, `[CONFIRM]`-demonstrating).
+- Added `shared/raci.md` — the canonical decision-rights matrix: one **A** per decision, C/I
+  kept minimal, the user ratifies every A. Each role file mirrors only its own column; the same
+  change updates both (the mirror rule).
+- `AGENTS.md` + `CONVENTIONS.md`: template rule, RACI mirror rule, session load order.
+- README: layout tree now shows `shared/raci.md` and `roles/_TEMPLATE.md`.

@@ -17,7 +17,8 @@ believing or running anything under `skills/`.
    do not guess.
 3. Load, in order: `shared/system-conventions.md`, `shared/glossary-and-org.md` (placeholders are
    `[CONFIRM]` inputs, not facts), the role file (`roles/<role>.md`), then the skill
-   (`skills/<role>/<skill>/SKILL.md`).
+   (`skills/<role>/<skill>/SKILL.md`). `shared/raci.md` loads when a decision crosses roles —
+   the role file already carries its own column under `## Decision rights (RACI)`.
 4. Run the skill per its own steps; ask its clarifying questions when inputs are missing.
 5. Emit exactly one artifact, bound to its `shared/output-schemas/` schema, ending with its
    import-target block.
