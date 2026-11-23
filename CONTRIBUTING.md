@@ -4,6 +4,10 @@ sdlc-squad is a Markdown-only kit: instructions, rubrics, personas, and schemas.
 to build and no test suite to run — the "tests" are fixtures, and the product is a Markdown file
 that behaves the same in any AI chat.
 
+**Adding a skill, a role, or changing a schema?** Follow
+[`docs/EXTENDING.md`](docs/EXTENDING.md) — the four contribution paths, in the order to do them,
+with the standing rules (mirror rule, one canonical copy, honest statuses) baked in.
+
 ## The ground rules
 
 1. Read [`WHAT-THIS-IS.md`](WHAT-THIS-IS.md) (the charter) and [`CONVENTIONS.md`](CONVENTIONS.md)

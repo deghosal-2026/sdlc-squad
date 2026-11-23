@@ -67,6 +67,8 @@ sdlc-squad/
 │   ├── prompts-tpm.md                # Ready-to-paste prompts, all 4 TPM skills
 │   ├── prompts-sdm.md                # Ready-to-paste prompts, all 5 SDM skills
 │   └── prompts-sde.md                # Ready-to-paste prompts, all 5 SDE skills
+├── docs/
+│   └── EXTENDING.md                  # How to expand/customize: org, skill, role, schema
 ├── LICENSE                           # MIT
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
@@ -87,7 +89,8 @@ sdlc-squad/
 │   ├── tpm.md
 │   ├── sdm.md
 │   └── sde.md
-└── skills/                           # One folder per skill; SKILL.md is the playbook
+├── skills/                           # One folder per skill; SKILL.md is the playbook
+    ├── _TEMPLATE.md                  # The canonical skill stencil (new skills fill it)
     ├── pmt/
     │   ├── draft-prd/SKILL.md
     │   ├── slice-mvp-and-stories/SKILL.md
@@ -112,6 +115,13 @@ sdlc-squad/
         ├── pr-plan-and-rollback-notes/SKILL.md
         ├── design-and-code-reviews/SKILL.md
         └── deploy-plan-and-release/SKILL.md
+└── tests/                            # Kit evidence: fixtures + recorded runs
+    ├── README.md
+    ├── pmt/<skill>/fixture.md        # one fixture per skill (20 total)
+    ├── tpm/<skill>/fixture.md
+    ├── sdm/<skill>/fixture.md
+    ├── sde/<skill>/fixture.md
+    └── results/run-2026-11-22-v0.1.0.md
 ```
 
 ## Skills

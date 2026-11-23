@@ -57,3 +57,9 @@ of this repo, use the git-ignored `output/` folder — its contents are never co
 Every `SKILL.md` says `status` in its frontmatter. All twenty are `built` at
 [`v0.1.0`](https://github.com/deghosal-2026/sdlc-squad/releases/tag/v0.1.0) — each with its
 fixture under `tests/` and its recorded run under `tests/results/`.
+
+## Extending and customizing
+
+Filling the kit for your org, adding a skill, adding a role, or changing an artifact schema —
+see [`docs/EXTENDING.md`](../docs/EXTENDING.md): the four paths, the standing rules, and the
+failure modes each path is prone to.

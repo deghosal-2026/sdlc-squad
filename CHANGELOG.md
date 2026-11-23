@@ -47,6 +47,17 @@ v0.1.0.
 
 ## [Unreleased]
 
+### Added — 2026-11-22 (docs + README tree fix)
+
+- `docs/EXTENDING.md`: how to expand and customize — four paths (customize for your org via
+  `shared/glossary-and-org.md`; add a skill; add a role; change a schema), the five standing
+  rules (one canonical copy, mirror rule, CONFIRM-over-invention, honest statuses, one role
+  per session), and the what-not-to-do list. Linked from CONTRIBUTING and the usage guide.
+- README layout tree caught up with the repo: `tests/` (fixtures + recorded runs) and
+  `skills/_TEMPLATE.md` (the skill stencil) added to the tree — both existed on disk since the
+  v0.1.0 and usage commits but were missing from the tree. Badge (20 built), status (public),
+  skills table, and usage/ block verified current against the audit.
+
 ### Added — 2026-11-22
 
 - Initial private scaffold: repo, MIT license, community files
