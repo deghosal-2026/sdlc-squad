@@ -103,6 +103,8 @@ self-contained. Any change updates both files in the same commit.
 | Sprint commitment (capacity-fit) | C |
 | Scope-cut options & costs | C |
 | Operational health review & remediation tickets | C |
+| Sprint retrospective & action items | C |
+| Standup execution & blocker log | C |
 | Technical design & breakdown | **A/R** |
 | Test plan & cases | **A/R** |
 | PR description & rollback notes | **A/R** |

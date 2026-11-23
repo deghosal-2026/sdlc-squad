@@ -1,13 +1,11 @@
 ---
 name: program-status-review
 role: tpm
-status: planned
+status: built
 created: 2026-11-22
 ---
 
 # program-status-review — R/Y/G status of all items
-
-> **Status: planned — skeleton, not yet a playbook.** Builds in v0.2.0 per ROADMAP.
 
 ## What it produces
 
@@ -39,15 +37,31 @@ A status without its evidence is a placeholder, and the report says so.
 
 ## Clarifying questions when inputs are missing
 
-- Which objectives or Jira milestones does this review report against?
-- What changed since the last review — and what did we promise then?
-- Which yellow needs a decision from this meeting, not just a glance?
+1. Which objectives or Jira milestones does this review report against?
+2. What changed since the last review — and what did we promise then?
+3. Which yellow needs a decision from this meeting, not just a glance?
 
-## Steps (to be written)
+## Steps
 
-1. (build ticket) Pin cadence + objectives → 2. Table every item with status + evidence →
-3. Mark deltas since last review → 4. Write the asks → 5. Read-back: no status without
-evidence; no green without a check.
+1. **Pin the cadence and window.** Review date, the period covered, and the objectives
+   reported against. An item with no objective to roll up to is not in scope — say so.
+2. **Table every item.** Per item: `M-n`/epic/`DEP-n`/`R-n` · owner (or `[CONFIRM]`) · status
+   (R/Y/G per the fixed definitions above) · **evidence** (the fact that makes the status
+   true — "M2 done 2026-12-11, tagged release-14") · delta since last review.
+3. **Never status without evidence.** Every R/Y/G cell carries its evidence in the same row.
+   A status with no evidence is written as `[CONFIRM: evidence]` and called out in the
+   report's header — not smoothed to green.
+4. **Deltas, not a re-run.** What changed since the last report: items that moved status,
+   new items, items closed. A report that re-states last month with no deltas says so in
+   its header.
+5. **Write the asks.** The decisions this review must make, each with its owner and the
+   cost of not deciding ("yellow M2 → needs the staff call by Fri or M3 slips").
+6. **Roll up honestly.** An overall program status exists only if the org's convention asks
+   for one — and it is never greener than its reddest critical-path item.
+7. **Read-back pass.** Every status has evidence; every delta traces to the last report or
+   `[CONFIRM]`; every ask has an owner and a by-when.
+8. **Hand over.** Emit the report ending with its Import-target block. Answer questions.
+   Wait.
 
 ## Output binding
 
@@ -56,3 +70,8 @@ evidence; no green without a check.
 ## Import target
 
 Confluence — the program status page; the review itself runs from it.
+
+## Worked example
+
+`tests/tpm/program-status-review/fixture.md` — full input + expected artifact (synthetic).
+Recorded run: `tests/results/run-2026-11-22-v0.1.0.md`.

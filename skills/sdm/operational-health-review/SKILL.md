@@ -1,19 +1,22 @@
 ---
 name: operational-health-review
 role: sdm
-status: planned
+status: built
 created: 2026-11-22
 ---
 
 # operational-health-review — ops health summary + remediation tickets
 
-> **Status: planned — skeleton, not yet a playbook.** Builds in v0.2.0 per ROADMAP.
-
 ## What it produces
 
 An ops-health artifact: recurring bugs, toil hotspots, flaky tests, and review bottlenecks —
-each with its evidence (counts, examples, timestamps as supplied), its capacity cost story, and
+each with its evidence (counts, examples, timestamps as supplied), its capacity cost, and
 recommended remediation tickets ready for an upcoming sprint.
+
+## RACI row
+
+`Operational health review & remediation tickets` — **SDM A/R** (`shared/raci.md`); PMT I ·
+TPM C · SDE C.
 
 ## Inputs required
 
@@ -24,25 +27,43 @@ recommended remediation tickets ready for an upcoming sprint.
 
 ## Clarifying questions when inputs are missing
 
-- Which of these recurs — same signature, or same person paged?
-- How many engineer-hours did this toil cost, and how did you count it?
-- Which flaky test last blocked a merge, and how often?
+Ask up to 3, then run with `[CONFIRM]`:
 
-## RACI row
+1. Which of these recurs — same signature, or same person paged?
+2. How many engineer-hours did this toil cost, and how was it counted?
+3. Which flaky test last blocked a merge, and how often?
 
-`Operational health review & remediation tickets` — **SDM A/R** (`shared/raci.md`); PMT I ·
-TPM C · SDE C.
+## Steps
 
-## Steps (to be written)
-
-1. (build ticket) Cluster the evidence by hotspot → 2. Quantify with supplied numbers only →
-3. Draft remediation tickets with DoD → 4. Size their capacity cost for the next sprint plan.
+1. **Pin the period and the evidence.** Which weeks, which exports pasted. Every number
+   below traces to a paste or is `[CONFIRM]`.
+2. **Cluster recurring bugs by signature.** Same error, same path, same page — one cluster
+   with a count. Two bugs that share nothing but a day are two clusters.
+3. **Quantify toil.** Hours × frequency, arithmetic shown, from supplied numbers only.
+   Toil is capacity stolen from features; the artifact says how much, in days.
+4. **Name the flaky tests.** Each with failure count and the last merge it blocked (from the
+   paste). A flaky test is a false alarm tax — priced like one.
+5. **Measure the review bottleneck.** Turnaround as measured (timestamps from the paste),
+   not as felt. If unmeasured, the row says `[CONFIRM: unmeasured]` and proposes the
+   measurement first.
+6. **Rank hotspots by capacity stolen**, descending — the review's own priority order.
+7. **Draft remediation tickets.** `T-n` rows: scope, DoD observable by someone else, and the
+   sprint bucket they enter (the debt-buffer, via `sprint-planning-and-capacity`).
+8. **Read-back pass.** Every count traced; every ticket has owner-or-CONFIRM + DoD; no blame
+   — hotspots, never culprits.
+9. **Hand over.** Emit the review ending with its Import-target block. Answer questions.
+   Wait.
 
 ## Output binding
 
-Summary tables follow `shared/system-conventions.md`; remediation tickets follow the
-`T-n` task rows of `shared/output-schemas/technical-design-doc.md`.
+`shared/system-conventions.md` table rules; remediation tickets follow the `T-n` task rows
+of `shared/output-schemas/technical-design-doc.md`.
 
 ## Import target
 
 Confluence — the team retro/ops doc. Jira — the maintenance tickets.
+
+## Worked example
+
+`tests/sdm/operational-health-review/fixture.md` — full input + expected artifact (synthetic).
+Recorded run: `tests/results/run-2026-11-22-v0.1.0.md`.

@@ -21,7 +21,9 @@ the product should be, nor the order of work across teams.
 
 - **Load when the user asks for:** a sprint plan or capacity calculation; a commitment from a
   backlog; what fits and what does not; scope-cut or trade-off options; an operational health
-  review (toil, flaky tests, recurring bugs, review bottlenecks).
+  review (toil, flaky tests, recurring bugs, review bottlenecks); **a daily standup run
+  (the round format + the blocker log); a sprint retrospective — the last two sprints' done
+  tickets read back into went-well/hurt/change + action items.**
 - **Not this role when:** the ask is requirements, non-goals, or metrics → PMT; milestones,
   cross-team dependencies, RAID, launch readiness → TPM; designs, test matrices, PR plans →
   SDE.
@@ -67,6 +69,8 @@ the product should be, nor the order of work across teams.
 | Capacity table + sprint commitment (carry-over / core / debt-buffer) | `shared/output-schemas/sprint-plan-and-capacity.md` | TPM — milestone feasibility; the team — the commitment |
 | Ranked scope-cut options with costs | same schema, §commitment | PMT — value trade-offs; TPM — milestone impact |
 | Ops-health review + remediation tickets | `shared/output-schemas/technical-design-doc.md` `T-n` rows | the team — next sprint's maintenance items |
+| Standup blocker log (aging, escalations, carry-risk flags) | `shared/system-conventions.md` table rules; `R-n` prefix when program-visible | the next sprint plan + `sprint-retro`; TPM — program status |
+| Sprint retro + `T-n` action items | `T-n` rows per `technical-design-doc.md` | the team — next sprint's debt-buffer; PMT — value-adjacent asks |
 
 ## Depends on
 
@@ -99,6 +103,8 @@ self-contained. Any change updates both files in the same commit.
 | Sprint commitment (capacity-fit) | **A/R** |
 | Scope-cut options & costs | **A/R** |
 | Operational health review & remediation tickets | **A/R** |
+| Sprint retrospective & action items | **A/R** |
+| Standup execution & blocker log | **A/R** |
 | Technical design & breakdown | C |
 | Test plan & cases | C |
 | PR description & rollback notes | I |

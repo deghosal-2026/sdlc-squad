@@ -14,37 +14,28 @@ skills, a real feature run end-to-end, then the rest. Each milestone lands befor
 - [x] Eighteen skill skeletons in `skills/` (`status: planned`), each naming its `shared/raci.md` row
 - [x] OSS-mandatory community files (CONTRIBUTING, SECURITY, SUPPORT, CODE_OF_CONDUCT, CHANGELOG)
 
-### v0.1.0 — the core loop
+### v0.1.0 — the full kit (all 20 skills) — DONE 2026-11-22
 
-One skill per role, built in ticket order, each with fixtures/examples and `status: built`:
+Every skill shipped with its full step playbook, its fixture
+(`tests/<role>/<skill>/fixture.md`), and its recorded run
+(`tests/results/run-2026-11-22-v0.1.0.md` — 20/20 pass; 13 defects found and fixed in the pass):
 
-- [ ] `pmt/draft-prd`
-- [ ] `tpm/program-roadmap-and-deps`
-- [ ] `sdm/sprint-planning-and-capacity`
-- [ ] `sde/technical-design-and-breakdown`
-- [ ] `sde/generate-test-ideas-and-cases`
+- [x] PMT (6): draft-prd · slice-mvp-and-stories · define-success-metrics ·
+      customer-discovery-and-synthesis · survey-design · prioritize-asks
+- [x] TPM (4): program-roadmap-and-deps · risk-raid-and-mitigations · release-readiness-check ·
+      program-status-review
+- [x] SDM (5): sprint-planning-and-capacity · standup-execution · scope-cut-and-tradeoffs ·
+      operational-health-review · sprint-retro
+- [x] SDE (5): technical-design-and-breakdown · generate-test-ideas-and-cases ·
+      pr-plan-and-rollback-notes · design-and-code-reviews · deploy-plan-and-release
+- [x] RACI: 21 decision rows, one Accountable each; every skill bound to its row(s); mirrors
+      verified across `shared/raci.md` and all four role files
 
 ### v0.1.x — end-to-end validation
 
 - [ ] Run one real feature/initiative through the core loop (PRD → roadmap → sprint plan → design
       → tests), inspect every artifact against its import target (real Confluence page, real Jira
       issue, real GitHub PR), and refine the schemas where they miss.
-
-### v0.2.0 — the remaining thirteen skills
-
-- [ ] `pmt/slice-mvp-and-stories`
-- [ ] `pmt/define-success-metrics`
-- [ ] `pmt/customer-discovery-and-synthesis`
-- [ ] `pmt/survey-design`
-- [ ] `pmt/prioritize-asks`
-- [ ] `tpm/risk-raid-and-mitigations`
-- [ ] `tpm/release-readiness-check`
-- [ ] `tpm/program-status-review`
-- [ ] `sdm/scope-cut-and-tradeoffs`
-- [ ] `sdm/operational-health-review`
-- [ ] `sde/pr-plan-and-rollback-notes`
-- [ ] `sde/design-and-code-reviews`
-- [ ] `sde/deploy-plan-and-release`
 
 ### v1.0.0 — OSS release
 

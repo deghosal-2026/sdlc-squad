@@ -4,6 +4,28 @@ All notable changes to sdlc-squad are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); the kit uses no semantic version tags
 until its first release.
 
+## [0.1.0] — 2026-11-22
+
+### Added — the full kit
+
+- All 20 skills built: full step playbooks replacing the skeletons, frontmatter `status: built`.
+- New since the scaffold: PMT discovery trio (`customer-discovery-and-synthesis`,
+  `survey-design`, `prioritize-asks`); TPM `program-status-review` (bi-weekly/monthly R/Y/G
+  against objectives/Jira milestones, fixed definitions); SDM `sprint-retro` (last 2 sprints'
+  done tickets → retro + action items) and `standup-execution` (daily round format + blocker
+  log with aging/escalation); SDE `design-and-code-reviews` (author gate + reviewer pass +
+  etiquette) and `deploy-plan-and-release` (deploy/release split, canary ladder,
+  automatic-first rollback triggers, flag ledger).
+- `tests/`: 20 synthetic fixtures (input + expected artifact + checks list per skill) and
+  `tests/results/run-2026-11-22-v0.1.0.md` — 20/20 pass, 13 defects found and fixed in the
+  same pass, none shipped open. `tests/README.md` added.
+- RACI: 19 → 21 decision rows (`Sprint retrospective & action items`;
+  `Standup execution & blocker log`); mirrors verified in `shared/raci.md` and all four role
+  files; every skill's `## RACI row` section bound to its row(s).
+- Roles: SDM routing + produces now cover standup and retro artifacts.
+- ROADMAP restructured: v0.1.0 is the full kit (v0.2.0 absorbed); README badge, tree, and
+  skill table now say 20/built.
+
 ## [Unreleased]
 
 ### Added — 2026-11-22

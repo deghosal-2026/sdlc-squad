@@ -22,6 +22,8 @@ updates the matching role file(s) in the same commit, and vice versa — never l
 | Sprint commitment (capacity-fit) | I | C | **A/R** | C |
 | Scope-cut options & costs | C | C | **A/R** | C |
 | Operational health review & remediation tickets | I | C | **A/R** | C |
+| Sprint retrospective & action items | I | I | **A/R** | C |
+| Standup execution & blocker log | — | I | **A/R** | C |
 | Technical design & breakdown | C | I | C | **A/R** |
 | Test plan & cases | I | I | C | **A/R** |
 | PR description & rollback notes | — | C | I | **A/R** |
