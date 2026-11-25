@@ -66,11 +66,15 @@ Every skill shipped with its full step playbook, its fixture
       I1·I4·I5·I6·I7, R1·R2·R3·R5–R9, CI) — see `docs/0.1.2-plans/`
 - [x] `docs/0.1.2-plans/` — the plan with a living build status and the remediation tracker
 
-### v0.1.x — end-to-end validation
+### v0.1.x — end-to-end validation — DONE 2026-11-25
 
-- [ ] Run one real feature/initiative through the core loop (PRD → roadmap → sprint plan → design
+- [x] Run one real feature/initiative through the core loop (PRD → roadmap → sprint plan → design
       → tests), inspect every artifact against its import target (real Confluence page, real Jira
-      issue, real GitHub PR), and refine the schemas where they miss.
+      issue, real GitHub PR), and refine the schemas where they miss. — **Done at 4× scale in
+      v0.1.2**: the `field-test/` run (Kubernetes · Grafana · Deno · Rust) with the real-paste
+      observations (`tests/results/run-2026-11-25-x2-real-paste.md`) and the schema refinements
+      shipped in the release (the 11 field-test gaps; see
+      [`docs/0.1.2-plans/`](docs/0.1.2-plans/README.md)).
 
 ### Launch article — dev.to (open)
 

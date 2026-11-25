@@ -1,8 +1,9 @@
 # 10 — Implementation plan: working all of 0.1.2
 
-> **Status (2026-11-25):** **in progress.** Phases 1–5 done and green (trust, integrations,
-> friction, model, adoption); D2·D4·D5·D7 decided. Phase 6 (carry-over **+ the field-test
-> remediation line items**) and Phase 7 (release) pending. Master table: [`README`](README.md).
+> **Status (2026-11-25):** **v0.1.2 shipped.** All phases done — Phases 1–5, the Phase 6
+> field-test remediation (F/C/A **+** the 11 T/R/N items), and Phase 7 release (security, docs,
+> gate, PyPI, tag). **Seq 31 (X4 landscape refresh)** is optional / not done; **Seq 38 (launch
+> article)** is parked. Master table: [`README`](README.md).
 
 The themed files ([01](01-verification.md)–[09](09-gaps.md)) say **what** and **why**.
 This file says **in what order, touching which files, done when** — the executable form
@@ -52,15 +53,15 @@ column names what proves the step; **new** marks a test this plan adds.
 | 27 | 5 Adoption | R1 — CI checks (commit + release pack) | [04](04-adoption.md) | `.github/workflows/checks.yml` *(new)* | runs `make gate` on push/PR; build + `twine check` on tag/release | ✅ |
 | 28 | 5 Adoption | I2 — puller boundary line | [03](03-integrations.md) | `docs/EXPORTS.md` | link check | ✅ |
 | 29 | 5 Adoption | Phase verify | — | — | `make test` · `make check-bundles` | ✅ |
-| 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `field-test/` + `tests/results/run-<date>-v0.1.x-validation.md` *(new)* | recorded run | ❌ |
-| 31 | 6 Carry-over | X4 — landscape refresh *(optional)* | [05](05-carry-over.md) | `docs/LANDSCAPE.md` *(new)* | link check | ❌ |
-| 32 | 7 Release | Security scans | [07](07-scope-and-release.md) | — | `make security` (trufflehog + gitleaks) | ❌ |
-| 33 | 7 Release | Update all relevant docs for release readiness | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, `ROADMAP.md`, `CHANGELOG.md`, badges | `make check-links` | ❌ |
-| 34 | 7 Release | Release gate (repo rule) — all checks green | [07](07-scope-and-release.md) | — | `make test` · `check-bundles` · `check-links` · `check-frontmatter` · `twine check` | ❌ |
-| 35 | 7 Release | Post to PyPI | [07](07-scope-and-release.md) | `dist/` | verify from the index | ❌ |
-| 36 | 7 Release | Update the docs to the new release | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, version refs | `make check-links` | ❌ |
-| 37 | 7 Release | GitHub version tag | [07](07-scope-and-release.md) | tag `v0.1.2` + release notes | tag + notes present | ❌ |
-| 38 | 7 Release | Article drafting (X1) | [05](05-carry-over.md) | `docs/launch-article.md` *(per G7)* | pre-publish re-fact-check | ❌ |
+| 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `field-test/` + `tests/results/run-2026-11-25-x2-real-paste.md` | recorded run | ✅ |
+| 31 | 6 Carry-over | X4 — landscape refresh *(optional)* | [05](05-carry-over.md) | `docs/LANDSCAPE.md` *(new)* | link check | ❌ *(optional)* |
+| 32 | 7 Release | Security scans | [07](07-scope-and-release.md) | — | `make security` (trufflehog + gitleaks) | ✅ |
+| 33 | 7 Release | Update all relevant docs for release readiness | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, `ROADMAP.md`, `CHANGELOG.md`, badges | `make check-links` | ✅ |
+| 34 | 7 Release | Release gate (repo rule) — all checks green | [07](07-scope-and-release.md) | — | `make test` · `check-bundles` · `check-links` · `check-frontmatter` · `twine check` | ✅ |
+| 35 | 7 Release | Post to PyPI | [07](07-scope-and-release.md) | `dist/` | verify from the index | ✅ |
+| 36 | 7 Release | Update the docs to the new release | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, version refs | `make check-links` | ✅ |
+| 37 | 7 Release | GitHub version tag | [07](07-scope-and-release.md) | tag `v0.1.2` + release notes | tag + notes present | ✅ |
+| 38 | 7 Release | Article drafting (X1) | [05](05-carry-over.md) | `docs/launch-article.md` *(per G7)* | pre-publish re-fact-check | ❌ *(parked)* |
 
 ## Scope
 

@@ -136,12 +136,12 @@ classified as 0.2.0 forward-pointer; **Refused** = no work by charter.
 | R7 docs index / navigation | 0.1.2 | **Done** (`docs/README.md` + `tests/docs/test_docs_index.py`) |
 | R8 cookbook provenance mechanism | 0.1.2 | **Done** (`docs/ANTI-PATTERNS.md`) |
 | R9 `UPGRADING.md` 0.1.2 migration note | 0.1.2 | **Done** (`docs/UPGRADING.md`) |
-| X1 launch article (A/B fixes) + publish | 0.1.2 | **Carried from 0.1.1** |
-| X2 ROADMAP v0.1.x end-to-end validation run | 0.1.2 / 0.2.0 | **Not started** (D4) |
+| X1 launch article (A/B fixes) + publish | 0.1.2 | **Parked** (owner, 2026-11-25) |
+| X2 ROADMAP v0.1.x end-to-end validation run | 0.1.2 / 0.2.0 | **Done** (`field-test/` + `tests/results/run-2026-11-25-x2-real-paste.md`) |
 | X3 feedback / adoption analysis | v0.1.x | **Not started** |
-| X4 refresh the competitive-landscape scan (optional) | 0.1.2 | **Not started** |
-| D2·D4·D5·D7 decided; D1·D3·D6 open | — | **Decided** |
-| S release mechanics | — | **Not started** |
+| X4 refresh the competitive-landscape scan (optional) | 0.1.2 | **Not started** *(optional — skipped)* |
+| D2·D4·D5·D6·D7 decided; D1·D3 open | — | **Decided** |
+| S release mechanics | — | **Done** — v0.1.2 live on PyPI + tag `v0.1.2`; recorded run `tests/results/run-2026-11-25-v0.1.2.md` |
 
 ## Work order
 
@@ -192,8 +192,8 @@ Scale: **S** ≤ half a day · **M** = 1–2 days · **L** > 2 days (or your own
 | R2 pilot kit | M | one playbook |
 | R3 examples across sizes | M | 3 synthetic scenarios |
 | R5 anti-pattern cookbook | M | catalog mapped to rules |
-| X1 launch article | M | A/B fixes + publish |
-| X2 validation run | L | one real feature, recorded |
+| X1 launch article | M | parked — A/B fixes + publish when unparked |
+| X2 validation run | L | **Done** — four features, recorded |
 | V8 clean-artifact guidance | S | one section |
 | V9 PII pre-paste check | S | one section |
 | W8 long-load recipe | S | extends TROUBLESHOOTING |

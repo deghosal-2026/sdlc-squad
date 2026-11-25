@@ -4,6 +4,95 @@ All notable changes to sdlc-squad are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); releases are tagged, starting at
 v0.1.0.
 
+## [Unreleased]
+
+_Nothing unreleased — the current release is [0.1.2](https://pypi.org/project/sdlc-squad/0.1.2/)._
+
+## [0.1.2] — 2026-11-25
+
+**Shipped:** https://pypi.org/project/sdlc-squad/0.1.2/ · tag `v0.1.2`. Recorded run:
+[`tests/results/run-2026-11-25-v0.1.2.md`](tests/results/run-2026-11-25-v0.1.2.md).
+
+### Changed — 2026-11-25 (0.1.2 schema work — driven by the field test)
+
+The X2 field test surfaced 11 kit gaps; by owner decision they are folded into **0.1.2** (a
+deliberate fence exception, like 0.1.1's G1 — schema-shape work would normally be a minor).
+
+- `shared/output-schemas/technical-design-doc.md` — **T-1/T-3**: "cite file paths/symbols or
+  `[CONFIRM]`" and mandatory failure-mode **Detection** made explicit; sub-tasks carry
+  `REQ-n → US-n → T-n` **traceability** (R-4).
+- `shared/output-schemas/confluence-prd-or-rfc.md` — **T-4/R-1/R-2**: journey rows require a
+  user action; **milestones are TPM-owned** (the PRD references the roadmap, not asserts);
+  the PRD carries the **product** metric, the design the engineering one.
+- `shared/output-schemas/jira-epic-and-stories.md` — **T-5/R-3/R-4**: the stories table holds
+  **stories only**; dependencies reference the TPM's `DEP-n`; a **`Serves`** column adds `REQ-n`.
+- `shared/output-schemas/program-roadmap.md` *(new)* — **T-2**: the TPM program plan
+  (milestones + `DEP-n` + critical path) — the sixth schema, previously unbound.
+- `shared/output-schemas/decision-record.md` *(new)* — **N-1**: a lightweight ADR schema.
+- `usage/RELAY.md` — **N-2**: a **cross-team mode** (TPM owns the roadmap; the SDM sprint plan is
+  scoped to one squad or `N/A`).
+
+### Added — 2026-11-25 (field test — X2)
+
+- `field-test/` — the **X2 validation**: four real, popular OSS features run through the kit's
+  whole loop (PMT → TPM → SDM → SDE) with the project's own record held back as an answer key —
+  Kubernetes **KEP-1287** (in-place Pod resize), Grafana **#77704** (Go back to x), Deno
+  **#8327** (Node-compatible loader API), Rust **RFC 3137** (`let-else`). Each folder carries
+  `input.md`, `answer-key.md`, `artifacts/` (six schema-bound artifacts), and `findings.md`.
+- `field-test/FINDINGS.md` — the deep review: template (T-1…T-5) and RACI (R-1…R-4) findings
+  plus the second-pass corrections and remedy actions.
+- `tests/results/run-2026-11-25-x2-real-paste.md` — the real-paste half of X2: the artifacts
+  pasted into **GitHub, Jira (editor + CSV), and Confluence** and observed. GitHub and Jira
+  render cleanly; **Confluence drops bold, bullet lists, and inline code**; the **Jira CSV
+  import** maps structure but not fields (`Priority` → default, `Size` → `Labels`) and is not
+  idempotent.
+- `.gitignore` — `.firecrawl/` (the local PDF/Word parse cache).
+
+### Added — 2026-11-25 (0.1.2 work in progress)
+
+- `docs/REVIEWING-OUTPUT.md` — claim-to-source tagging (review by exception), the
+  assumption-vs-fact separation, the clean-artifact rule (when zero `[CONFIRM]`s is
+  correct), and a PII/hostname pre-paste check (V2 · V7 · V8 · V9).
+- `docs/ANTI-PATTERNS.md` — the failure-mode catalog mapped to the rule that catches each,
+  seeded from the recorded pass; every entry traces to a recorded run, field feedback, or
+  `EVIDENCE.md` (R5 · R8).
+- `scripts/check-links.py` + `scripts/check-frontmatter.py` + `tests/docs/test_doc_checks.py`
+  and the Makefile's `check-links` / `check-frontmatter` targets; `make test` now runs the
+  doc-check tests alongside the CLI test (I7).
+- `docs/DESTINATION-PROFILES.md` — the instance-profile pattern (`my-jira.md`,
+  `my-confluence.md`, `my-github.md`), kept outside the kit, mapping priority names,
+  estimate unit, and formatting rules (I1).
+- `docs/GITHUB-TEMPLATES.md` — ready-to-copy `.github/` PR and design-issue templates
+  aligned with the SDE skills (I5).
+- `shared/destinations/confluence.md` — callouts / status-badge / code-block guidance (I4);
+  `shared/destinations/README.md` — the observed/unobserved **validation ledger** (I6).
+- `usage/RELAY.md` — the **Handoff Block** (from / carried-open / next), making a role
+  hand-off mechanical (W7); `usage/FEATURE-RELAY.md` — the order-status feature threaded
+  PMT → TPM → SDM → SDE (W6).
+- `docs/TROUBLESHOOTING.md` §4 — the **long-load recipe** (which files are droppable, which
+  are not); `docs/MODELS.md` cross-links it (W8).
+- `Makefile` — a `gate` target aggregating the release checks (`check-bundles` ·
+  `check-links` · `check-frontmatter` · `test`); `README.md` and `docs/START-HERE.md` link
+  `usage/FEATURE-RELAY.md` (closes the I7 gate and the W6 README-link acceptance).
+- `docs/MODELS.md` — a 60-second benchmark prompt and an evidence-gated failure-mode table
+  (V5); `docs/LIMITATIONS.md` — the honest limits, each with its mitigation (R6).
+- `docs/README.md` — the docs index; `tests/docs/test_docs_index.py` proves every page is
+  listed (R7); `docs/PILOT.md` — the 2-week, one-team trial (R2); `docs/EXAMPLES.md` — three
+  scenarios by company size (R3); `docs/UPGRADING.md` — the 0.1.2 migration note (R9).
+- `.github/workflows/checks.yml` — CI on commit + release pack (D2/D6); `docs/EXPORTS.md` —
+  the no-puller boundary (I2). `make test` now also runs the docs-index test.
+
+### Added — 2026-11-25 (0.1.2 planning)
+
+- `docs/0.1.2-plans/` — the v0.1.2 plan, split by theme, derived from the external
+  review of the launch post + this repo at v0.1.1: verification (`01`), workflow (`02`),
+  integrations (`03`), adoption (`04`), carry-over (`05`), open decisions (`06`),
+  scope + release (`07`), the review reproduced and enumerated (`08`), the gaps the
+  review left unnamed (`09`), and the sequenced implementation plan with a Done (Y/N)
+  tracker (`10`). Every review idea is classified **0.1.2 (docs-only)** /
+  **0.2.0 (forward-pointer)** / **refused**, per `CONVENTIONS.md` — no schema, skill, or
+  CLI change is scheduled in the patch without a decision.
+
 ## [0.1.1] — 2026-11-23
 
 ### Added — 2026-11-23 (0.1.1 work in progress)
@@ -98,93 +187,6 @@ v0.1.0.
   rendering on the public repo (LICENSE, issue templates, PR template), release notes
   updated. README, AGENTS, ROADMAP, and this changelog re-framed: v0.1.0 is the major public
   release. Open: v0.1.x end-to-end validation; the dev.to launch article.
-
-## [0.1.2] — 2026-11-25
-
-**Shipped:** https://pypi.org/project/sdlc-squad/0.1.2/ · tag `v0.1.2`. Recorded run:
-[`tests/results/run-2026-11-25-v0.1.2.md`](tests/results/run-2026-11-25-v0.1.2.md).
-
-### Changed — 2026-11-25 (0.1.2 schema work — driven by the field test)
-
-The X2 field test surfaced 11 kit gaps; by owner decision they are folded into **0.1.2** (a
-deliberate fence exception, like 0.1.1's G1 — schema-shape work would normally be a minor).
-
-- `shared/output-schemas/technical-design-doc.md` — **T-1/T-3**: "cite file paths/symbols or
-  `[CONFIRM]`" and mandatory failure-mode **Detection** made explicit; sub-tasks carry
-  `REQ-n → US-n → T-n` **traceability** (R-4).
-- `shared/output-schemas/confluence-prd-or-rfc.md` — **T-4/R-1/R-2**: journey rows require a
-  user action; **milestones are TPM-owned** (the PRD references the roadmap, not asserts);
-  the PRD carries the **product** metric, the design the engineering one.
-- `shared/output-schemas/jira-epic-and-stories.md` — **T-5/R-3/R-4**: the stories table holds
-  **stories only**; dependencies reference the TPM's `DEP-n`; a **`Serves`** column adds `REQ-n`.
-- `shared/output-schemas/program-roadmap.md` *(new)* — **T-2**: the TPM program plan
-  (milestones + `DEP-n` + critical path) — the sixth schema, previously unbound.
-- `shared/output-schemas/decision-record.md` *(new)* — **N-1**: a lightweight ADR schema.
-- `usage/RELAY.md` — **N-2**: a **cross-team mode** (TPM owns the roadmap; the SDM sprint plan is
-  scoped to one squad or `N/A`).
-
-### Added — 2026-11-25 (field test — X2)
-
-- `field-test/` — the **X2 validation**: four real, popular OSS features run through the kit's
-  whole loop (PMT → TPM → SDM → SDE) with the project's own record held back as an answer key —
-  Kubernetes **KEP-1287** (in-place Pod resize), Grafana **#77704** (Go back to x), Deno
-  **#8327** (Node-compatible loader API), Rust **RFC 3137** (`let-else`). Each folder carries
-  `input.md`, `answer-key.md`, `artifacts/` (six schema-bound artifacts), and `findings.md`.
-- `field-test/FINDINGS.md` — the deep review: template (T-1…T-5) and RACI (R-1…R-4) findings
-  plus the second-pass corrections and remedy actions.
-- `tests/results/run-2026-11-25-x2-real-paste.md` — the real-paste half of X2: the artifacts
-  pasted into **GitHub, Jira (editor + CSV), and Confluence** and observed. GitHub and Jira
-  render cleanly; **Confluence drops bold, bullet lists, and inline code**; the **Jira CSV
-  import** maps structure but not fields (`Priority` → default, `Size` → `Labels`) and is not
-  idempotent.
-- `.gitignore` — `.firecrawl/` (the local PDF/Word parse cache).
-
-### Added — 2026-11-25 (0.1.2 work in progress)
-
-- `docs/REVIEWING-OUTPUT.md` — claim-to-source tagging (review by exception), the
-  assumption-vs-fact separation, the clean-artifact rule (when zero `[CONFIRM]`s is
-  correct), and a PII/hostname pre-paste check (V2 · V7 · V8 · V9).
-- `docs/ANTI-PATTERNS.md` — the failure-mode catalog mapped to the rule that catches each,
-  seeded from the recorded pass; every entry traces to a recorded run, field feedback, or
-  `EVIDENCE.md` (R5 · R8).
-- `scripts/check-links.py` + `scripts/check-frontmatter.py` + `tests/docs/test_doc_checks.py`
-  and the Makefile's `check-links` / `check-frontmatter` targets; `make test` now runs the
-  doc-check tests alongside the CLI test (I7).
-- `docs/DESTINATION-PROFILES.md` — the instance-profile pattern (`my-jira.md`,
-  `my-confluence.md`, `my-github.md`), kept outside the kit, mapping priority names,
-  estimate unit, and formatting rules (I1).
-- `docs/GITHUB-TEMPLATES.md` — ready-to-copy `.github/` PR and design-issue templates
-  aligned with the SDE skills (I5).
-- `shared/destinations/confluence.md` — callouts / status-badge / code-block guidance (I4);
-  `shared/destinations/README.md` — the observed/unobserved **validation ledger** (I6).
-- `usage/RELAY.md` — the **Handoff Block** (from / carried-open / next), making a role
-  hand-off mechanical (W7); `usage/FEATURE-RELAY.md` — the order-status feature threaded
-  PMT → TPM → SDM → SDE (W6).
-- `docs/TROUBLESHOOTING.md` §4 — the **long-load recipe** (which files are droppable, which
-  are not); `docs/MODELS.md` cross-links it (W8).
-- `Makefile` — a `gate` target aggregating the release checks (`check-bundles` ·
-  `check-links` · `check-frontmatter` · `test`); `README.md` and `docs/START-HERE.md` link
-  `usage/FEATURE-RELAY.md` (closes the I7 gate and the W6 README-link acceptance).
-- `docs/MODELS.md` — a 60-second benchmark prompt and an evidence-gated failure-mode table
-  (V5); `docs/LIMITATIONS.md` — the honest limits, each with its mitigation (R6).
-- `docs/README.md` — the docs index; `tests/docs/test_docs_index.py` proves every page is
-  listed (R7); `docs/PILOT.md` — the 2-week, one-team trial (R2); `docs/EXAMPLES.md` — three
-  scenarios by company size (R3); `docs/UPGRADING.md` — the 0.1.2 migration note (R9).
-- `.github/workflows/checks.yml` — CI on commit + release pack (D2/D6); `docs/EXPORTS.md` —
-  the no-puller boundary (I2). `make test` now also runs the docs-index test.
-
-### Added — 2026-11-25 (0.1.2 planning)
-
-- `docs/0.1.2-plans/` — the v0.1.2 plan, split by theme, derived from the external
-  review of the launch post + this repo at v0.1.1: verification (`01`), workflow (`02`),
-  integrations (`03`), adoption (`04`), carry-over (`05`), open decisions (`06`),
-  scope + release (`07`), the review reproduced and enumerated (`08`), the gaps the
-  review left unnamed (`09`), and the sequenced implementation plan with a Done (Y/N)
-  tracker (`10`). Every review idea is classified **0.1.2 (docs-only)** /
-  **0.2.0 (forward-pointer)** / **refused**, per `CONVENTIONS.md` — no schema, skill, or
-  CLI change is scheduled in the patch without a decision.
-
-## [Unreleased]
 
 ### Added — 2026-11-22 (PyPI distribution)
 

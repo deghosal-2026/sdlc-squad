@@ -1,7 +1,7 @@
 # 06 — Open decisions: the owner's calls
 
-> **Status (2026-11-25):** **D2, D4, D5, D7 resolved** (below); D1, D3, D6 remain open
-> (they concern the 0.2.0 enforcement half and CI detail). Master table: [`README`](README.md).
+> **Status (2026-11-25):** **D2, D4, D5, D6, D7 resolved** (below); D1 and D3 remain open
+> (they concern the 0.2.0 enforcement half). Master table: [`README`](README.md).
 
 Theme: nothing in this file is scheduled until the owner decides. Taking a decision
 means amending the affected plan file first, then working the item per the kit's rules
