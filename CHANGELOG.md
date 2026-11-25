@@ -124,6 +124,9 @@ v0.1.0.
   PMT → TPM → SDM → SDE (W6).
 - `docs/TROUBLESHOOTING.md` §4 — the **long-load recipe** (which files are droppable, which
   are not); `docs/MODELS.md` cross-links it (W8).
+- `Makefile` — a `gate` target aggregating the release checks (`check-bundles` ·
+  `check-links` · `check-frontmatter` · `test`); `README.md` and `docs/START-HERE.md` link
+  `usage/FEATURE-RELAY.md` (closes the I7 gate and the W6 README-link acceptance).
 
 ### Added — 2026-11-25 (0.1.2 planning)
 

@@ -1,9 +1,13 @@
-.PHONY: sync bundles check-bundles check-links check-frontmatter test security build upload check clean
+.PHONY: sync bundles check-bundles check-links check-frontmatter test security gate build upload check clean
 
 # test: the CLI test + the doc-check tests.
 test:
 	python3 tests/cli/test_prompt.py
 	python3 tests/docs/test_doc_checks.py
+
+# gate: the release gate — bundles fresh, links resolve, frontmatter valid, tests pass.
+# Phase 7 adds the security scan and the packaging/upload steps on top of this.
+gate: check-bundles check-links check-frontmatter test
 
 # check-links: fail on any broken relative Markdown link (I7).
 check-links:

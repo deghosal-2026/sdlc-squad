@@ -91,7 +91,8 @@ flowchart LR
   SDE -->|RFC, tests, PR plan, deploy| TPM
 ```
 
-One role per session; the artifact is the hand-off — see [`usage/RELAY.md`](usage/RELAY.md).
+One role per session; the artifact is the hand-off — see [`usage/RELAY.md`](usage/RELAY.md),
+and the full chain in [`usage/FEATURE-RELAY.md`](usage/FEATURE-RELAY.md).
 
 > **Import target = paste destination.** Artifacts name where they are meant to be pasted
 > (a Jira issue, a Confluence page, a GitHub PR). GitHub and the Jira editor are
@@ -127,6 +128,7 @@ sdlc-squad/
 │   ├── USER-GUIDE.md                 # The 60-second run sheet + five-minute first run
 │   ├── WALKTHROUGH.md                # One full run, start to finish
 │   ├── RELAY.md                      # Moving an artifact role to role
+│   ├── FEATURE-RELAY.md              # One feature across all four roles
 │   ├── prompts-pmt.md                # Ready-to-paste prompts, all 6 PMT skills
 │   ├── prompts-tpm.md                # Ready-to-paste prompts, all 4 TPM skills
 │   ├── prompts-sdm.md                # Ready-to-paste prompts, all 5 SDM skills

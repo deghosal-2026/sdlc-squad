@@ -13,55 +13,55 @@ artifacts, repo presentation, and tooling. The enforcement half is 0.2.0
 
 ## The sequence (done tracker)
 
-Rows run top-to-bottom; work them in order. **Done** flips to `Y` only when the item's
+Rows run top-to-bottom; work them in order. **Done** flips to **✅** only when the item's
 Acceptance line in its plan file is actually met — `built` means exercised, per the
-evidence rule (`WHAT-THIS-IS.md` contract point 6). The **Test / verify** column names
-what proves the step; **new** marks a test this plan adds.
+evidence rule (`WHAT-THIS-IS.md` contract point 6). **❌** = not done. The **Test / verify**
+column names what proves the step; **new** marks a test this plan adds.
 
 | Seq | Phase | Item | Plan | Target file(s) | Test / verify | Done |
 |---|---|---|---|---|---|---|
-| 0a | 0 Decide | D2 — adopt CI | [06](06-open-decisions.md) | — | — | N |
-| 0b | 0 Decide | D4 — validation run placement | [06](06-open-decisions.md) | — | — | N |
-| 0c | 0 Decide | D5 — context pullers refused | [06](06-open-decisions.md) | — | — | N |
-| 0d | 0 Decide | D7 — overlay file type | [06](06-open-decisions.md) | — | — | N |
-| 1 | 1 Trust | V2 — claim-to-source tagging | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
-| 2 | 1 Trust | V7 — assumption-vs-fact split | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
-| 3 | 1 Trust | V8 — clean-artifact (false-positive) rule | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
-| 4 | 1 Trust | V9 — PII / hostname pre-paste check | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
-| 5 | 1 Trust | R5 — anti-pattern cookbook | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` *(new)* | link check | Y |
-| 6 | 1 Trust | R8 — cookbook provenance header | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` | link check | Y |
-| 7 | 1 Trust | Phase verify | — | — | `make check-links` | Y |
-| 8 | 2 Instance | I1 — profile overlays | [03](03-integrations.md) | `docs/DESTINATION-PROFILES.md` *(new)* | link check | Y |
-| 9 | 2 Instance | I4 — Confluence compatibility mode | [03](03-integrations.md) | `shared/destinations/confluence.md` | link check | Y |
-| 10 | 2 Instance | I6 — destination validation ledger | [03](03-integrations.md) | `shared/destinations/README.md` | link check | Y |
-| 11 | 2 Instance | I5 — GitHub SDE template pack | [03](03-integrations.md) | `docs/GITHUB-TEMPLATES.md` *(new)* | link check | Y |
-| 12 | 2 Instance | I7a — add `check-links` + `check-frontmatter` scripts | [03](03-integrations.md) | `scripts/check-links.py`, `scripts/check-frontmatter.py` *(new)* | — | Y |
-| 13 | 2 Instance | I7b — add doc-check tests | [03](03-integrations.md) | `tests/docs/test_doc_checks.py` *(new)* | **new test** (seed-break) | Y |
-| 14 | 2 Instance | I7c — wire Makefile targets + extend `make test` | [03](03-integrations.md) | `Makefile` | `make test` | Y |
-| 15 | 2 Instance | Phase verify | — | — | `make test` · `check-links` · `check-frontmatter` | Y |
-| 16 | 3 Friction | W7 — handoff block | [02](02-workflow.md) | `usage/RELAY.md` | link check | Y |
-| 17 | 3 Friction | W6 — Feature Relay pack | [02](02-workflow.md) | `usage/FEATURE-RELAY.md` *(new)* | link check | Y |
-| 18 | 3 Friction | W8 — long-load recipe | [02](02-workflow.md) | `docs/TROUBLESHOOTING.md` | link check | Y |
-| 19 | 3 Friction | Phase verify | — | — | `make check-links` | Y |
-| 20 | 4 Model | V5 — benchmark + evidence-gated table | [01](01-verification.md) | `docs/MODELS.md` | link check | N |
-| 21 | 5 Adoption | R6 — `LIMITATIONS.md` | [04](04-adoption.md) | `docs/LIMITATIONS.md` *(new)* | link check | N |
-| 22 | 5 Adoption | R7 — docs index | [04](04-adoption.md) | `docs/README.md` *(new)* | — | N |
-| 23 | 5 Adoption | R7b — add docs-index completeness test | [04](04-adoption.md) | `tests/docs/test_docs_index.py` *(new)* | **new test** | N |
-| 24 | 5 Adoption | R2 — pilot kit | [04](04-adoption.md) | `docs/PILOT.md` *(new)* | link check | N |
-| 25 | 5 Adoption | R3 — examples across company sizes | [04](04-adoption.md) | `docs/EXAMPLES.md` | link check | N |
-| 26 | 5 Adoption | R9 — upgrade migration note | [04](04-adoption.md) | `docs/UPGRADING.md` | link check | N |
-| 27 | 5 Adoption | R1 — CI drift checks | [04](04-adoption.md) | `.github/workflows/checks.yml` *(new)* | CI runs the gates | N |
-| 28 | 5 Adoption | I2 — puller boundary line | [03](03-integrations.md) | `docs/EXPORTS.md` | link check | N |
-| 29 | 5 Adoption | Phase verify | — | — | `make test` · `make check-bundles` | N |
-| 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `tests/results/run-<date>-v0.1.x-validation.md` *(new)* | recorded run | N |
-| 31 | 6 Carry-over | X4 — landscape refresh *(optional)* | [05](05-carry-over.md) | `docs/LANDSCAPE.md` *(new)* | link check | N |
-| 32 | 7 Release | Security scans | [07](07-scope-and-release.md) | — | `make security` (trufflehog + gitleaks) | N |
-| 33 | 7 Release | Update all relevant docs for release readiness | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, `ROADMAP.md`, `CHANGELOG.md`, badges | `make check-links` | N |
-| 34 | 7 Release | Release gate (repo rule) — all checks green | [07](07-scope-and-release.md) | — | `make test` · `check-bundles` · `check-links` · `check-frontmatter` · `twine check` | N |
-| 35 | 7 Release | Post to PyPI | [07](07-scope-and-release.md) | `dist/` | verify from the index | N |
-| 36 | 7 Release | Update the docs to the new release | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, version refs | `make check-links` | N |
-| 37 | 7 Release | GitHub version tag | [07](07-scope-and-release.md) | tag `v0.1.2` + release notes | tag + notes present | N |
-| 38 | 7 Release | Article drafting (X1) | [05](05-carry-over.md) | `docs/launch-article.md` *(per G7)* | pre-publish re-fact-check | N |
+| 0a | 0 Decide | D2 — adopt CI | [06](06-open-decisions.md) | — | — | ❌ |
+| 0b | 0 Decide | D4 — validation run placement | [06](06-open-decisions.md) | — | — | ❌ |
+| 0c | 0 Decide | D5 — context pullers refused | [06](06-open-decisions.md) | — | — | ❌ |
+| 0d | 0 Decide | D7 — overlay file type | [06](06-open-decisions.md) | — | — | ❌ |
+| 1 | 1 Trust | V2 — claim-to-source tagging | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
+| 2 | 1 Trust | V7 — assumption-vs-fact split | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
+| 3 | 1 Trust | V8 — clean-artifact (false-positive) rule | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
+| 4 | 1 Trust | V9 — PII / hostname pre-paste check | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
+| 5 | 1 Trust | R5 — anti-pattern cookbook | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` *(new)* | link check | ✅ |
+| 6 | 1 Trust | R8 — cookbook provenance header | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` | link check | ✅ |
+| 7 | 1 Trust | Phase verify | — | — | `make check-links` | ✅ |
+| 8 | 2 Instance | I1 — profile overlays | [03](03-integrations.md) | `docs/DESTINATION-PROFILES.md` *(new)* | link check | ✅ |
+| 9 | 2 Instance | I4 — Confluence compatibility mode | [03](03-integrations.md) | `shared/destinations/confluence.md` | link check | ✅ |
+| 10 | 2 Instance | I6 — destination validation ledger | [03](03-integrations.md) | `shared/destinations/README.md` | link check | ✅ |
+| 11 | 2 Instance | I5 — GitHub SDE template pack | [03](03-integrations.md) | `docs/GITHUB-TEMPLATES.md` *(new)* | link check | ✅ |
+| 12 | 2 Instance | I7a — add `check-links` + `check-frontmatter` scripts | [03](03-integrations.md) | `scripts/check-links.py`, `scripts/check-frontmatter.py` *(new)* | — | ✅ |
+| 13 | 2 Instance | I7b — add doc-check tests | [03](03-integrations.md) | `tests/docs/test_doc_checks.py` *(new)* | **new test** (seed-break) | ✅ |
+| 14 | 2 Instance | I7c — wire Makefile targets + extend `make test` | [03](03-integrations.md) | `Makefile` | `make test` | ✅ |
+| 15 | 2 Instance | Phase verify | — | — | `make test` · `check-links` · `check-frontmatter` | ✅ |
+| 16 | 3 Friction | W7 — handoff block | [02](02-workflow.md) | `usage/RELAY.md` | link check | ✅ |
+| 17 | 3 Friction | W6 — Feature Relay pack | [02](02-workflow.md) | `usage/FEATURE-RELAY.md` *(new)* | link check | ✅ |
+| 18 | 3 Friction | W8 — long-load recipe | [02](02-workflow.md) | `docs/TROUBLESHOOTING.md` | link check | ✅ |
+| 19 | 3 Friction | Phase verify | — | — | `make check-links` | ✅ |
+| 20 | 4 Model | V5 — benchmark + evidence-gated table | [01](01-verification.md) | `docs/MODELS.md` | link check | ❌ |
+| 21 | 5 Adoption | R6 — `LIMITATIONS.md` | [04](04-adoption.md) | `docs/LIMITATIONS.md` *(new)* | link check | ❌ |
+| 22 | 5 Adoption | R7 — docs index | [04](04-adoption.md) | `docs/README.md` *(new)* | — | ❌ |
+| 23 | 5 Adoption | R7b — add docs-index completeness test | [04](04-adoption.md) | `tests/docs/test_docs_index.py` *(new)* | **new test** | ❌ |
+| 24 | 5 Adoption | R2 — pilot kit | [04](04-adoption.md) | `docs/PILOT.md` *(new)* | link check | ❌ |
+| 25 | 5 Adoption | R3 — examples across company sizes | [04](04-adoption.md) | `docs/EXAMPLES.md` | link check | ❌ |
+| 26 | 5 Adoption | R9 — upgrade migration note | [04](04-adoption.md) | `docs/UPGRADING.md` | link check | ❌ |
+| 27 | 5 Adoption | R1 — CI drift checks | [04](04-adoption.md) | `.github/workflows/checks.yml` *(new)* | CI runs the gates | ❌ |
+| 28 | 5 Adoption | I2 — puller boundary line | [03](03-integrations.md) | `docs/EXPORTS.md` | link check | ❌ |
+| 29 | 5 Adoption | Phase verify | — | — | `make test` · `make check-bundles` | ❌ |
+| 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `tests/results/run-<date>-v0.1.x-validation.md` *(new)* | recorded run | ❌ |
+| 31 | 6 Carry-over | X4 — landscape refresh *(optional)* | [05](05-carry-over.md) | `docs/LANDSCAPE.md` *(new)* | link check | ❌ |
+| 32 | 7 Release | Security scans | [07](07-scope-and-release.md) | — | `make security` (trufflehog + gitleaks) | ❌ |
+| 33 | 7 Release | Update all relevant docs for release readiness | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, `ROADMAP.md`, `CHANGELOG.md`, badges | `make check-links` | ❌ |
+| 34 | 7 Release | Release gate (repo rule) — all checks green | [07](07-scope-and-release.md) | — | `make test` · `check-bundles` · `check-links` · `check-frontmatter` · `twine check` | ❌ |
+| 35 | 7 Release | Post to PyPI | [07](07-scope-and-release.md) | `dist/` | verify from the index | ❌ |
+| 36 | 7 Release | Update the docs to the new release | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, version refs | `make check-links` | ❌ |
+| 37 | 7 Release | GitHub version tag | [07](07-scope-and-release.md) | tag `v0.1.2` + release notes | tag + notes present | ❌ |
+| 38 | 7 Release | Article drafting (X1) | [05](05-carry-over.md) | `docs/launch-article.md` *(per G7)* | pre-publish re-fact-check | ❌ |
 
 ## Scope
 
@@ -210,6 +210,7 @@ These steps happen at release time — **not** during Phases 0–6. Order as giv
 | `scripts/build-bundles.sh` + `make check-bundles` | exists (C6) | bundles fresh vs the canonical files | `make check-bundles` |
 | fixtures + recorded runs | exists (evidence rule) | each skill exercised | `tests/results/` |
 | `make security` | Phase 7, Seq 32 | secrets in the tree + git history | trufflehog + gitleaks |
+| `make gate` | I7 | bundles fresh + links resolve + frontmatter valid + tests pass | `make gate` |
 
 ## File inventory
 
@@ -240,7 +241,7 @@ These steps happen at release time — **not** during Phases 0–6. Order as giv
 
 ## Definition of done for 0.1.2
 
-- [ ] Every 0.1.2 item's Acceptance line is met (sequence **Done** = `Y`).
+- [ ] Every 0.1.2 item's Acceptance line is met (sequence **Done** = ✅).
 - [ ] The 0.2.0 items remain forward-pointers — none shipped early.
 - [ ] New tests authored and green: `make test` (CLI + doc-check + docs-index).
 - [ ] Gates green: `check-bundles`, `check-links`, `check-frontmatter`, `test`.

@@ -33,7 +33,8 @@ and each `SKILL.md`'s **Inputs required** section. Ready-to-paste prompts live i
 ## Scenario recipes
 
 Named chains for the common jobs — read each hop's hand-off in
-[`RELAY.md`](../usage/RELAY.md).
+[`RELAY.md`](../usage/RELAY.md), and the **order-status** feature threaded end to end in
+[`FEATURE-RELAY.md`](../usage/FEATURE-RELAY.md).
 
 - **New feature** — `draft-prd` → `slice-mvp-and-stories` → `sprint-planning-and-capacity` →
   `technical-design-and-breakdown` → `generate-test-ideas-and-cases`

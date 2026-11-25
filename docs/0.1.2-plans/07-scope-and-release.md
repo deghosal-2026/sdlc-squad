@@ -61,8 +61,8 @@ The review's four strengths, and the kit's own recorded honesty, are load-bearin
    `docs/UPGRADING.md` (R9), `docs/EXAMPLES.md` (R3), `usage/RELAY.md` (W7),
    `.github/` templates (I5), `README.md` / `PKG-README.md` (links).
 2. **Release gate (recorded, per the v0.1.0/v0.1.1 run-log precedent)** — everything
-   below runs *before* the tag and *before* any upload: `make check-bundles` green;
-   `make check-links` and `make check-frontmatter` green (I7); `make test` green;
+   below runs *before* the tag and *before* any upload: `make gate` green
+   (check-bundles · check-links · check-frontmatter · test);
    README layout tree vs disk; trufflehog + git audit re-run; a synthetic-data check on
    all new content (Meridian Outfitters only — no real org data). Then the
    packaging/upload sequence: `make sync` → `python -m build` → `twine check` → (on
