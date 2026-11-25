@@ -101,6 +101,9 @@ v0.1.0.
 
 ## [0.1.2] — 2026-11-25
 
+**Shipped:** https://pypi.org/project/sdlc-squad/0.1.2/ · tag `v0.1.2`. Recorded run:
+[`tests/results/run-2026-11-25-v0.1.2.md`](tests/results/run-2026-11-25-v0.1.2.md).
+
 ### Changed — 2026-11-25 (0.1.2 schema work — driven by the field test)
 
 The X2 field test surfaced 11 kit gaps; by owner decision they are folded into **0.1.2** (a
