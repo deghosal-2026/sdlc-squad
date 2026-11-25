@@ -101,6 +101,17 @@ v0.1.0.
 
 ## [Unreleased]
 
+### Added — 2026-11-25 (0.1.2 planning)
+
+- `docs/0.1.2-plans/` — the v0.1.2 plan, split by theme, derived from the external
+  review of the launch post + this repo at v0.1.1: verification (`01`), workflow (`02`),
+  integrations (`03`), adoption (`04`), carry-over (`05`), open decisions (`06`),
+  scope + release (`07`), the review reproduced and enumerated (`08`), the gaps the
+  review left unnamed (`09`), and the sequenced implementation plan with a Done (Y/N)
+  tracker (`10`). Every review idea is classified **0.1.2 (docs-only)** /
+  **0.2.0 (forward-pointer)** / **refused**, per `CONVENTIONS.md` — no schema, skill, or
+  CLI change is scheduled in the patch without a decision.
+
 ### Added — 2026-11-22 (PyPI distribution)
 
 - `sdlc-squad` on [PyPI](https://pypi.org/project/sdlc-squad/): `pyproject.toml` +
