@@ -4,6 +4,10 @@ Every skill asks for inputs. This is how to get them **out** of the systems the 
 toward and into a pastable form — user-operated, offline (the inbound mirror of the
 import-target story: the kit never fetches; you paste).
 
+**No puller ships.** The kit includes no script that calls `gh`, Jira, Confluence, or any API
+on your behalf. Every step below is something **you** run and paste — the manual path is the
+only path, by design (`../WHAT-THIS-IS.md`, `../SECURITY.md`).
+
 ## From the three systems
 
 ### Jira → pasteable text

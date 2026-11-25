@@ -107,7 +107,7 @@ classified as 0.2.0 forward-pointer; **Refused** = no work by charter.
 | V2 claim-to-source tagging (practice) | 0.1.2 | **Done** (`docs/REVIEWING-OUTPUT.md`) |
 | V3 arithmetic / capacity self-audit block | 0.2.0 | **Forward** (docs precursor in V2) |
 | V4 confidence & ambiguity scoring | 0.2.0 | **Forward** |
-| V5 model behavioral profiles + 60s benchmark | 0.1.2 | **Not started** |
+| V5 model behavioral profiles + 60s benchmark | 0.1.2 | **Done** (`docs/MODELS.md`) |
 | V6 model regression harness | 0.2.0 | **Forward** |
 | V7 assumption-vs-fact separation (practice) | 0.1.2 | **Done** (`docs/REVIEWING-OUTPUT.md`) |
 | V8 clean-artifact (false-positive) guidance | 0.1.2 | **Done** (`docs/REVIEWING-OUTPUT.md`) |
@@ -121,26 +121,26 @@ classified as 0.2.0 forward-pointer; **Refused** = no work by charter.
 | W7 handoff block / checklist (practice) | 0.1.2 | **Done** (`usage/RELAY.md`) |
 | W8 long-load / context-budget recipe | 0.1.2 | **Done** (`docs/TROUBLESHOOTING.md`) |
 | I1 instance profile overlays (`my-jira.md` …) | 0.1.2 | **Done** (`docs/DESTINATION-PROFILES.md`) |
-| I2 read-only context pullers | Refused | **Refused** (D5) |
+| I2 read-only context pullers | Refused | **Refused** + boundary line (`docs/EXPORTS.md`) |
 | I3 Jira CSV dry-run exporter | 0.2.0 | **Forward** |
 | I4 Confluence compatibility mode (docs) | 0.1.2 | **Done** (`shared/destinations/confluence.md`) |
 | I5 GitHub PR/issue template pack | 0.1.2 | **Done** (`docs/GITHUB-TEMPLATES.md`) |
 | I6 destination validation ledger | 0.1.2 | **Done** (`shared/destinations/README.md`) |
 | I7 `make check-links` / `check-frontmatter` | 0.1.2 | **Done** (`scripts/check-links.py`, `check-frontmatter.py`, `tests/docs/`, `Makefile`) |
-| R1 CI doc-to-code + bundle drift checks | 0.1.2 | **Not started** (D2) |
-| R2 pilot kit / 2-week rollout playbook | 0.1.2 | **Not started** |
-| R3 examples across company sizes (synthetic) | 0.1.2 | **Not started** |
+| R1 CI doc-to-code + bundle drift checks | 0.1.2 | **Done** (`.github/workflows/checks.yml`) |
+| R2 pilot kit / 2-week rollout playbook | 0.1.2 | **Done** (`docs/PILOT.md`) |
+| R3 examples across company sizes (synthetic) | 0.1.2 | **Done** (`docs/EXAMPLES.md`) |
 | R4 skill maturity / verification badges | 0.2.0 | **Forward** (D3) |
 | R5 anti-pattern & hallucination cookbook | 0.1.2 | **Done** (`docs/ANTI-PATTERNS.md`) |
-| R6 `docs/LIMITATIONS.md` | 0.1.2 | **Not started** |
-| R7 docs index / navigation | 0.1.2 | **Not started** |
+| R6 `docs/LIMITATIONS.md` | 0.1.2 | **Done** (`docs/LIMITATIONS.md`) |
+| R7 docs index / navigation | 0.1.2 | **Done** (`docs/README.md` + `tests/docs/test_docs_index.py`) |
 | R8 cookbook provenance mechanism | 0.1.2 | **Done** (`docs/ANTI-PATTERNS.md`) |
-| R9 `UPGRADING.md` 0.1.2 migration note | 0.1.2 | **Not started** |
+| R9 `UPGRADING.md` 0.1.2 migration note | 0.1.2 | **Done** (`docs/UPGRADING.md`) |
 | X1 launch article (A/B fixes) + publish | 0.1.2 | **Carried from 0.1.1** |
 | X2 ROADMAP v0.1.x end-to-end validation run | 0.1.2 / 0.2.0 | **Not started** (D4) |
 | X3 feedback / adoption analysis | v0.1.x | **Not started** |
 | X4 refresh the competitive-landscape scan (optional) | 0.1.2 | **Not started** |
-| D1–D7 decisions | — | **Open** |
+| D2·D4·D5·D7 decided; D1·D3·D6 open | — | **Decided** |
 | S release mechanics | — | **Not started** |
 
 ## Work order

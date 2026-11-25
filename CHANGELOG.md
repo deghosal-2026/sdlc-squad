@@ -127,6 +127,13 @@ v0.1.0.
 - `Makefile` — a `gate` target aggregating the release checks (`check-bundles` ·
   `check-links` · `check-frontmatter` · `test`); `README.md` and `docs/START-HERE.md` link
   `usage/FEATURE-RELAY.md` (closes the I7 gate and the W6 README-link acceptance).
+- `docs/MODELS.md` — a 60-second benchmark prompt and an evidence-gated failure-mode table
+  (V5); `docs/LIMITATIONS.md` — the honest limits, each with its mitigation (R6).
+- `docs/README.md` — the docs index; `tests/docs/test_docs_index.py` proves every page is
+  listed (R7); `docs/PILOT.md` — the 2-week, one-team trial (R2); `docs/EXAMPLES.md` — three
+  scenarios by company size (R3); `docs/UPGRADING.md` — the 0.1.2 migration note (R9).
+- `.github/workflows/checks.yml` — CI on commit + release pack (D2/D6); `docs/EXPORTS.md` —
+  the no-puller boundary (I2). `make test` now also runs the docs-index test.
 
 ### Added — 2026-11-25 (0.1.2 planning)
 

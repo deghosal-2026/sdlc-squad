@@ -43,12 +43,27 @@ avoiding.
 | Yours | The kit's |
 |---|---|
 | Your filled org glossary (`my-org.md`) | Every file in the repo/package |
+| Your destination profiles (`my-jira.md`, `my-confluence.md`, `my-github.md` — [`DESTINATION-PROFILES.md`](DESTINATION-PROFILES.md)) | The profile *templates* the kit ships |
 | Generated artifacts and saved outputs (`output/`, git-ignored) | `shared/`, `roles/`, `skills/`, `usage/`, `docs/` |
 
 - **Extend in place, never fork** the kit's files — the standing rules in
   [`EXTENDING.md`](EXTENDING.md) apply (one canonical copy; the RACI mirror rule).
 - If you *do* customize more than the glossary (a schema, a role, a skill), you have a
   fork — and you own its upgrade and regression routine (EXTENDING Paths 2–4).
+
+## What 0.1.2 adds
+
+Upgrading from 0.1.1 to 0.1.2 adds docs and tooling; **nothing of yours moves.**
+
+- New pages: [`LIMITATIONS.md`](LIMITATIONS.md), [`PILOT.md`](PILOT.md),
+  [`DESTINATION-PROFILES.md`](DESTINATION-PROFILES.md),
+  [`GITHUB-TEMPLATES.md`](GITHUB-TEMPLATES.md), [`ANTI-PATTERNS.md`](ANTI-PATTERNS.md), and
+  this docs [`index`](README.md).
+- `docs/REVIEWING-OUTPUT.md` gains the claim tags, the assumption-vs-fact split, the
+  clean-artifact rule, and a PII pre-paste check; `docs/MODELS.md` gains a 60-second
+  benchmark and an evidence-gated failure table.
+- Your `my-org.md` — and any destination profiles — are **untouched** (they live outside the
+  kit). No schema, skill, or CLI behaviour changed.
 
 ## After an upgrade
 

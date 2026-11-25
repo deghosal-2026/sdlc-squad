@@ -17,6 +17,9 @@ one CI candidate.
 - **Guard — supply chain:** the kit's promise is "no network, no telemetry"; a CI
   workflow runs on GitHub's runners and must use **pinned, first-party actions only**,
   hold **no secrets**, and contact nothing but GitHub itself. [D6](06-open-decisions.md).
+- **Resolved (2026-11-25): adopted.** `.github/workflows/checks.yml` runs `make gate` on
+  every push/PR, and the release-pack job (build + `twine check` + upload `dist/`) on a
+  `v*` tag / published release — first-party actions only, **no schedule** (D2, D6).
 - **Acceptance:** a workflow runs `make check-bundles`, `check-links`,
   `check-frontmatter`, and `test` on PRs; fails on drift; uses only pinned actions.
 

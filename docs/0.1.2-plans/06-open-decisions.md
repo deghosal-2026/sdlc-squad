@@ -1,10 +1,20 @@
 # 06 — Open decisions: the owner's calls
 
-> **Status (2026-11-25):** all open. Master table: [`README`](README.md).
+> **Status (2026-11-25):** **D2, D4, D5, D7 resolved** (below); D1, D3, D6 remain open
+> (they concern the 0.2.0 enforcement half and CI detail). Master table: [`README`](README.md).
 
 Theme: nothing in this file is scheduled until the owner decides. Taking a decision
 means amending the affected plan file first, then working the item per the kit's rules
 (one change per ticket, evidence in the same change, status flips only when exercised).
+
+## Decisions — resolved 2026-11-25
+
+| # | Decision | Outcome | Effect |
+|---|---|---|---|
+| D2 | Adopt CI (R1) | **Yes — CI on commit + release** | `.github/workflows/checks.yml` runs the local gates (`make gate`) on every push/PR, and the **release-pack** job (build + `twine check` + upload `dist/`) on a `v*` tag / published release. Local `make gate` stays too |
+| D4 | Validation run in 0.1.2 | **Record the run; forward schema fixes to 0.2.0** | X2 records under `tests/results/`; schema misses become 0.2.0 forward-pointers |
+| D5 | Context pullers (I2) | **Refused** | No puller script; a one-line boundary statement in `docs/EXPORTS.md` |
+| D7 | Overlay file type (I1) | **Markdown overlays outside the kit** | I1 shipped as `docs/DESTINATION-PROFILES.md` (`my-jira.md` / `my-confluence.md` / `my-github.md`) |
 
 ## D1. Is 0.1.2 a docs-only patch, or does it absorb minor-version work?
 
@@ -30,7 +40,10 @@ means amending the affected plan file first, then working the item per the kit's
     release gate.)*
   - (b) Defer CI to 0.2.0; keep the release gate manual.
   - (c) Never — keep every check manual.
-- **Decision owner: user.**
+- **Resolved (2026-11-25): Yes — CI, running the local gates.** `.github/workflows/checks.yml`
+  runs `make gate` on every push and PR, and the **release-pack** job (build + `twine check`
+  + upload `dist/`) on a `v*` tag / published release. The local `make gate` stays the
+  pre-commit habit.
 
 ## D3. Skill maturity / verification badges (R4) — which shape?
 
@@ -50,7 +63,7 @@ means amending the affected plan file first, then working the item per the kit's
     *(Recommended: the run is evidence, not behaviour; the fixes are schema-shape work.)*
   - (b) Leave the whole v0.1.x milestone to 0.2.0.
   - (c) Pull the schema fixes into 0.1.2 (makes 0.1.2 a minor).
-- **Decision owner: user.**
+- **Resolved (2026-11-25): record the run in 0.1.2; forward schema fixes to 0.2.0.**
 
 ## D5. Context pullers (I2) — confirm the refusal?
 
@@ -60,7 +73,7 @@ means amending the affected plan file first, then working the item per the kit's
     script would be a network client.)*
   - (b) Document a **user-side** pattern in more depth (still no script shipped).
   - (c) Reconsider — would require a charter change (`WHAT-THIS-IS.md`); not recommended.
-- **Decision owner: user.**
+- **Resolved (2026-11-25): refused; add only the boundary line to `docs/EXPORTS.md`.**
 
 ## D6. CI supply chain (if D2 = yes) — which actions?
 
@@ -69,7 +82,9 @@ means amending the affected plan file first, then working the item per the kit's
     `actions/setup-python@<sha>`), no secrets. *(Recommended.)*
   - (b) Shell-only workflow that runs `make` directly with the runner's tooling.
   - (c) Third-party actions (discouraged — supply-chain surface the kit does not need).
-- **Decision owner: user.**
+- **Resolved (2026-11-25): pinned first-party actions only** (`actions/checkout`,
+  `actions/setup-python`, `actions/upload-artifact`), no secrets; SHA-pinning is a hardening
+  follow-up (`[CONFIRM: pin to commit SHA]`).
 
 ## D7. Destination overlay file type & location (I1)
 
@@ -79,7 +94,8 @@ means amending the affected plan file first, then working the item per the kit's
   - (b) A single `my-destinations.md` covering all three.
   - (c) A YAML config (`org-destinations.yaml`) — adds a non-Markdown file class;
     discouraged.
-- **Decision owner: user.**
+- **Resolved (2026-11-25): Markdown overlays outside the kit** (shipped as
+  `docs/DESTINATION-PROFILES.md`).
 
 ## Related
 

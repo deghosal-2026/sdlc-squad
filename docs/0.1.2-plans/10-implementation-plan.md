@@ -1,9 +1,8 @@
 # 10 — Implementation plan: working all of 0.1.2
 
-> **Status (2026-11-25):** **in progress.** Phases 1–3 done and green (trust & correctness,
-> instance & integrations, friction). Phases 4–6 pending; the security scan +
-> release-readiness work happens only when 0.1.2 is implemented and release-ready
-> (Phase 7). Master table: [`README`](README.md).
+> **Status (2026-11-25):** **in progress.** Phases 1–5 done and green (trust, integrations,
+> friction, model, adoption); D2·D4·D5·D7 decided. Phase 6 (carry-over) and Phase 7
+> (release) pending. Master table: [`README`](README.md).
 
 The themed files ([01](01-verification.md)–[09](09-gaps.md)) say **what** and **why**.
 This file says **in what order, touching which files, done when** — the executable form
@@ -20,10 +19,10 @@ column names what proves the step; **new** marks a test this plan adds.
 
 | Seq | Phase | Item | Plan | Target file(s) | Test / verify | Done |
 |---|---|---|---|---|---|---|
-| 0a | 0 Decide | D2 — adopt CI | [06](06-open-decisions.md) | — | — | ❌ |
-| 0b | 0 Decide | D4 — validation run placement | [06](06-open-decisions.md) | — | — | ❌ |
-| 0c | 0 Decide | D5 — context pullers refused | [06](06-open-decisions.md) | — | — | ❌ |
-| 0d | 0 Decide | D7 — overlay file type | [06](06-open-decisions.md) | — | — | ❌ |
+| 0a | 0 Decide | D2 — adopt CI | [06](06-open-decisions.md) | — | — | ✅ |
+| 0b | 0 Decide | D4 — validation run placement | [06](06-open-decisions.md) | — | — | ✅ |
+| 0c | 0 Decide | D5 — context pullers refused | [06](06-open-decisions.md) | — | — | ✅ |
+| 0d | 0 Decide | D7 — overlay file type | [06](06-open-decisions.md) | — | — | ✅ |
 | 1 | 1 Trust | V2 — claim-to-source tagging | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
 | 2 | 1 Trust | V7 — assumption-vs-fact split | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
 | 3 | 1 Trust | V8 — clean-artifact (false-positive) rule | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | ✅ |
@@ -43,16 +42,16 @@ column names what proves the step; **new** marks a test this plan adds.
 | 17 | 3 Friction | W6 — Feature Relay pack | [02](02-workflow.md) | `usage/FEATURE-RELAY.md` *(new)* | link check | ✅ |
 | 18 | 3 Friction | W8 — long-load recipe | [02](02-workflow.md) | `docs/TROUBLESHOOTING.md` | link check | ✅ |
 | 19 | 3 Friction | Phase verify | — | — | `make check-links` | ✅ |
-| 20 | 4 Model | V5 — benchmark + evidence-gated table | [01](01-verification.md) | `docs/MODELS.md` | link check | ❌ |
-| 21 | 5 Adoption | R6 — `LIMITATIONS.md` | [04](04-adoption.md) | `docs/LIMITATIONS.md` *(new)* | link check | ❌ |
-| 22 | 5 Adoption | R7 — docs index | [04](04-adoption.md) | `docs/README.md` *(new)* | — | ❌ |
-| 23 | 5 Adoption | R7b — add docs-index completeness test | [04](04-adoption.md) | `tests/docs/test_docs_index.py` *(new)* | **new test** | ❌ |
-| 24 | 5 Adoption | R2 — pilot kit | [04](04-adoption.md) | `docs/PILOT.md` *(new)* | link check | ❌ |
-| 25 | 5 Adoption | R3 — examples across company sizes | [04](04-adoption.md) | `docs/EXAMPLES.md` | link check | ❌ |
-| 26 | 5 Adoption | R9 — upgrade migration note | [04](04-adoption.md) | `docs/UPGRADING.md` | link check | ❌ |
-| 27 | 5 Adoption | R1 — CI drift checks | [04](04-adoption.md) | `.github/workflows/checks.yml` *(new)* | CI runs the gates | ❌ |
-| 28 | 5 Adoption | I2 — puller boundary line | [03](03-integrations.md) | `docs/EXPORTS.md` | link check | ❌ |
-| 29 | 5 Adoption | Phase verify | — | — | `make test` · `make check-bundles` | ❌ |
+| 20 | 4 Model | V5 — benchmark + evidence-gated table | [01](01-verification.md) | `docs/MODELS.md` | link check | ✅ |
+| 21 | 5 Adoption | R6 — `LIMITATIONS.md` | [04](04-adoption.md) | `docs/LIMITATIONS.md` *(new)* | link check | ✅ |
+| 22 | 5 Adoption | R7 — docs index | [04](04-adoption.md) | `docs/README.md` *(new)* | — | ✅ |
+| 23 | 5 Adoption | R7b — add docs-index completeness test | [04](04-adoption.md) | `tests/docs/test_docs_index.py` *(new)* | **new test** | ✅ |
+| 24 | 5 Adoption | R2 — pilot kit | [04](04-adoption.md) | `docs/PILOT.md` *(new)* | link check | ✅ |
+| 25 | 5 Adoption | R3 — examples across company sizes | [04](04-adoption.md) | `docs/EXAMPLES.md` | link check | ✅ |
+| 26 | 5 Adoption | R9 — upgrade migration note | [04](04-adoption.md) | `docs/UPGRADING.md` | link check | ✅ |
+| 27 | 5 Adoption | R1 — CI checks (commit + release pack) | [04](04-adoption.md) | `.github/workflows/checks.yml` *(new)* | runs `make gate` on push/PR; build + `twine check` on tag/release | ✅ |
+| 28 | 5 Adoption | I2 — puller boundary line | [03](03-integrations.md) | `docs/EXPORTS.md` | link check | ✅ |
+| 29 | 5 Adoption | Phase verify | — | — | `make test` · `make check-bundles` | ✅ |
 | 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `tests/results/run-<date>-v0.1.x-validation.md` *(new)* | recorded run | ❌ |
 | 31 | 6 Carry-over | X4 — landscape refresh *(optional)* | [05](05-carry-over.md) | `docs/LANDSCAPE.md` *(new)* | link check | ❌ |
 | 32 | 7 Release | Security scans | [07](07-scope-and-release.md) | — | `make security` (trufflehog + gitleaks) | ❌ |

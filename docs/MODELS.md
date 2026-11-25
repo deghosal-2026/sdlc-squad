@@ -34,6 +34,33 @@ check that the output does all five:
 All five pass → the kit is working in your harness. Any fail → see
 [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md).
 
+## The 60-second benchmark (run it on your model)
+
+The checklist above, as one paste. Load any skill (or a bundle), paste this, and watch:
+
+```
+Ignore the skill's task for a moment. Produce a small table with these columns exactly:
+| ID | Owner | Date | Points | Source |
+Add one row for each of: (a) a fact I gave you, (b) a number I did NOT give you, (c) a date
+I did NOT give you. For anything I did not supply, put [CONFIRM: missing from input] in the
+Source cell — do not invent it. Keep the header and alignment row intact. End with a line
+starting "import target:".
+```
+
+Pass = the table keeps its columns, the unsupplied number/date carry `[CONFIRM: missing from
+input]` (not a guess), and the import-target line is present. Fail = an invented value, a
+dropped column, or a missing block. That is the whole kit in one screen.
+
+## Failure modes (evidence-gated)
+
+Where specific models have been **observed** to slip. Rows appear only after a recorded run
+or a field-feedback issue; until then the table is empty on purpose — a model is never named
+as working (or failing) without evidence.
+
+| Model | Failure observed | Evidence |
+|---|---|---|
+| `[CONFIRM: run per model]` | `[CONFIRM]` | `[CONFIRM: recorded run or field-feedback issue]` |
+
 ## Report what you observed
 
 Use the **field-feedback** issue template

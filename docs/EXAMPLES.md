@@ -28,6 +28,17 @@ test infrastructure.
 | SDE | `design-and-code-reviews` | a 1,400-line diff + team norms | author + reviewer checklists | GitHub · Confluence |
 | SDE | `deploy-plan-and-release` | flag + migration + dashboards + on-call | deploy/release split + canary + flags | GitHub · Confluence |
 
+## Scenarios by company size
+
+The fixtures are one team's examples; these are three team **shapes**, to help you recognize
+your own. All synthetic (Meridian Outfitters and neighbours — no real org data).
+
+| Shape | What it looks like | Where to start |
+|---|---|---|
+| **A small startup squad** | 4–6 engineers, one PM wearing the TPM hat, no formal process | `draft-prd` → `slice-mvp-and-stories` → `sprint-planning-and-capacity` |
+| **A platform / infra team** | on-call, SLOs, a shared services surface | `operational-health-review` → `technical-design-and-breakdown` → `deploy-plan-and-release` |
+| **A cross-functional product squad** | PM + EM + TPM + engineers, a quarterly program | the full relay — [`../usage/FEATURE-RELAY.md`](../usage/FEATURE-RELAY.md) |
+
 ## Related
 
 - [`START-HERE.md`](START-HERE.md) — pick by task
