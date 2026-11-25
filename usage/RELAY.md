@@ -35,6 +35,27 @@ recipe — **what to paste into the next session**, derived from the role files'
 - A downstream role that needs something the upstream artifact didn't capture: that is the
   cross-artifact-continuity gap, tracked as future work — for now, carry it explicitly.
 
+## The handoff block
+
+To make a hand-off mechanical, end each artifact with a short block the next session can
+use. It is three fields, each derived from the role files' contracts:
+
+```
+## Handoff
+- **From:** <role>/<skill> — <artifact name>
+- **Carried open:** [CONFIRM: …] · [CONFIRM: …]   (blocking ones first)
+- **Next:** <role>/<skill> — paste this artifact + <the glossary facts its Depends-on lists>
+```
+
+- **From** names the artifact and where it came from.
+- **Carried open** lists the `[CONFIRM]`s the next role needs — resolved, or explicitly open;
+  never silently dropped (step 2 above).
+- **Next** names the recommended next role & skill and what to paste (the row above).
+
+The block is a user's habit today; a schema-level carry field is future work (0.2.0), so
+for now you append the block by hand. See it in a full chain in
+[`FEATURE-RELAY.md`](FEATURE-RELAY.md).
+
 ## Related
 
 - [`../roles/`](../roles/) — the handoff contracts

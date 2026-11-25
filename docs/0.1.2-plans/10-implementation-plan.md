@@ -1,9 +1,9 @@
 # 10 — Implementation plan: working all of 0.1.2
 
-> **Status (2026-11-25):** planning artifact — nothing built, nothing run. Every **Done**
-> cell reads `N`. Tests and the release steps are **planned here**; they are authored and
-> run at their own step, and the security scan + release-readiness work happens only when
-> 0.1.2 is implemented and release-ready (Phase 7). Master table: [`README`](README.md).
+> **Status (2026-11-25):** **in progress.** Phases 1–3 done and green (trust & correctness,
+> instance & integrations, friction). Phases 4–6 pending; the security scan +
+> release-readiness work happens only when 0.1.2 is implemented and release-ready
+> (Phase 7). Master table: [`README`](README.md).
 
 The themed files ([01](01-verification.md)–[09](09-gaps.md)) say **what** and **why**.
 This file says **in what order, touching which files, done when** — the executable form
@@ -24,25 +24,25 @@ what proves the step; **new** marks a test this plan adds.
 | 0b | 0 Decide | D4 — validation run placement | [06](06-open-decisions.md) | — | — | N |
 | 0c | 0 Decide | D5 — context pullers refused | [06](06-open-decisions.md) | — | — | N |
 | 0d | 0 Decide | D7 — overlay file type | [06](06-open-decisions.md) | — | — | N |
-| 1 | 1 Trust | V2 — claim-to-source tagging | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | N |
-| 2 | 1 Trust | V7 — assumption-vs-fact split | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | N |
-| 3 | 1 Trust | V8 — clean-artifact (false-positive) rule | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | N |
-| 4 | 1 Trust | V9 — PII / hostname pre-paste check | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | N |
-| 5 | 1 Trust | R5 — anti-pattern cookbook | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` *(new)* | link check | N |
-| 6 | 1 Trust | R8 — cookbook provenance header | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` | link check | N |
-| 7 | 1 Trust | Phase verify | — | — | `make check-links` | N |
-| 8 | 2 Instance | I1 — profile overlays | [03](03-integrations.md) | `docs/DESTINATION-PROFILES.md` *(new)* | link check | N |
-| 9 | 2 Instance | I4 — Confluence compatibility mode | [03](03-integrations.md) | `shared/destinations/confluence.md` | link check | N |
-| 10 | 2 Instance | I6 — destination validation ledger | [03](03-integrations.md) | `shared/destinations/README.md` | link check | N |
-| 11 | 2 Instance | I5 — GitHub SDE template pack | [03](03-integrations.md) | `.github/` templates | — | N |
-| 12 | 2 Instance | I7a — add `check-links` + `check-frontmatter` scripts | [03](03-integrations.md) | `scripts/check-links.py`, `scripts/check-frontmatter.py` *(new)* | — | N |
-| 13 | 2 Instance | I7b — add doc-check tests | [03](03-integrations.md) | `tests/docs/test_doc_checks.py` *(new)* | **new test** (seed-break) | N |
-| 14 | 2 Instance | I7c — wire Makefile targets + extend `make test` | [03](03-integrations.md) | `Makefile` | `make test` | N |
-| 15 | 2 Instance | Phase verify | — | — | `make test` · `check-links` · `check-frontmatter` | N |
-| 16 | 3 Friction | W7 — handoff block | [02](02-workflow.md) | `usage/RELAY.md` | link check | N |
-| 17 | 3 Friction | W6 — Feature Relay pack | [02](02-workflow.md) | `usage/FEATURE-RELAY.md` *(new)* | link check | N |
-| 18 | 3 Friction | W8 — long-load recipe | [02](02-workflow.md) | `docs/TROUBLESHOOTING.md` | link check | N |
-| 19 | 3 Friction | Phase verify | — | — | `make check-links` | N |
+| 1 | 1 Trust | V2 — claim-to-source tagging | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
+| 2 | 1 Trust | V7 — assumption-vs-fact split | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
+| 3 | 1 Trust | V8 — clean-artifact (false-positive) rule | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
+| 4 | 1 Trust | V9 — PII / hostname pre-paste check | [01](01-verification.md) | `docs/REVIEWING-OUTPUT.md` | link check | Y |
+| 5 | 1 Trust | R5 — anti-pattern cookbook | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` *(new)* | link check | Y |
+| 6 | 1 Trust | R8 — cookbook provenance header | [04](04-adoption.md) | `docs/ANTI-PATTERNS.md` | link check | Y |
+| 7 | 1 Trust | Phase verify | — | — | `make check-links` | Y |
+| 8 | 2 Instance | I1 — profile overlays | [03](03-integrations.md) | `docs/DESTINATION-PROFILES.md` *(new)* | link check | Y |
+| 9 | 2 Instance | I4 — Confluence compatibility mode | [03](03-integrations.md) | `shared/destinations/confluence.md` | link check | Y |
+| 10 | 2 Instance | I6 — destination validation ledger | [03](03-integrations.md) | `shared/destinations/README.md` | link check | Y |
+| 11 | 2 Instance | I5 — GitHub SDE template pack | [03](03-integrations.md) | `docs/GITHUB-TEMPLATES.md` *(new)* | link check | Y |
+| 12 | 2 Instance | I7a — add `check-links` + `check-frontmatter` scripts | [03](03-integrations.md) | `scripts/check-links.py`, `scripts/check-frontmatter.py` *(new)* | — | Y |
+| 13 | 2 Instance | I7b — add doc-check tests | [03](03-integrations.md) | `tests/docs/test_doc_checks.py` *(new)* | **new test** (seed-break) | Y |
+| 14 | 2 Instance | I7c — wire Makefile targets + extend `make test` | [03](03-integrations.md) | `Makefile` | `make test` | Y |
+| 15 | 2 Instance | Phase verify | — | — | `make test` · `check-links` · `check-frontmatter` | Y |
+| 16 | 3 Friction | W7 — handoff block | [02](02-workflow.md) | `usage/RELAY.md` | link check | Y |
+| 17 | 3 Friction | W6 — Feature Relay pack | [02](02-workflow.md) | `usage/FEATURE-RELAY.md` *(new)* | link check | Y |
+| 18 | 3 Friction | W8 — long-load recipe | [02](02-workflow.md) | `docs/TROUBLESHOOTING.md` | link check | Y |
+| 19 | 3 Friction | Phase verify | — | — | `make check-links` | Y |
 | 20 | 4 Model | V5 — benchmark + evidence-gated table | [01](01-verification.md) | `docs/MODELS.md` | link check | N |
 | 21 | 5 Adoption | R6 — `LIMITATIONS.md` | [04](04-adoption.md) | `docs/LIMITATIONS.md` *(new)* | link check | N |
 | 22 | 5 Adoption | R7 — docs index | [04](04-adoption.md) | `docs/README.md` *(new)* | — | N |

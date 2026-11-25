@@ -1,8 +1,22 @@
-.PHONY: sync bundles check-bundles test build upload check clean
+.PHONY: sync bundles check-bundles check-links check-frontmatter test security build upload check clean
 
-# test: the G1 CLI test — `sdlc-squad prompt` output == the canonical files in order.
+# test: the CLI test + the doc-check tests.
 test:
 	python3 tests/cli/test_prompt.py
+	python3 tests/docs/test_doc_checks.py
+
+# check-links: fail on any broken relative Markdown link (I7).
+check-links:
+	python3 scripts/check-links.py
+
+# check-frontmatter: fail on any roles/ or skills/ frontmatter violation (I7).
+check-frontmatter:
+	python3 scripts/check-frontmatter.py
+
+# security: scan the tree + git history for secrets (release gate, Phase 7).
+security:
+	trufflehog filesystem --no-update --fail .
+	gitleaks detect --no-banner --redact
 
 # bundles: generate usage/bundles/ (one paste per skill) from the canonical files.
 # Generated artifacts, committed so pip users receive them; `make check-bundles`

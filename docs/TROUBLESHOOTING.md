@@ -37,6 +37,19 @@ header row + alignment row, no HTML, no collapsible sections, no pipes in cell b
 current artifact, and continue — still one role. Long sessions drift; a clean reload is
 cheaper than nursing one.
 
+**When the load itself is too big (the long-load recipe).** A full load is four files
+≈ 340–370 lines, or one bundle. If that plus your input exceeds the model's context, drop in
+this order — **never the last two**:
+
+| Drop first | Keep always |
+|---|---|
+| The **template glossary** — once your `my-org.md` is in the session, the shipped template adds nothing | The **skill playbook** (`SKILL.md`) — it defines the steps and the output binding |
+| The **role file** on a *repeat* run of the same role — its contract is already in the artifact | The **bound schema** (`shared/output-schemas/<schema>.md`) — the artifact's columns |
+
+Never drop the skill or the schema: without them the artifact is unbound, and you are back
+to step 1. If dropping the two optional files still isn't enough, **split the input** — feed
+the skill only the part this artifact needs, and keep the rest for the next.
+
 ## 5. You need a revision after review
 
 **Symptom:** a reviewer asked for changes; you don't want to start over.

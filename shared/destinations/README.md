@@ -17,6 +17,24 @@ story.
   `jira.md`) only in a later minor — schema-shape work is at least a minor version
   (`CONVENTIONS.md`).
 
+## What is observed — the validation ledger
+
+Which paths have been pasted for real, and which are still doc-derived. Every *observed*
+row cites the recorded paste; every *unobserved* row is a `[CONFIRM]` until it is.
+
+| Destination path | State | Evidence |
+|---|---|---|
+| GitHub issue body (GFM) | **Observed** | [`../../tests/results/run-2026-11-23-g3-real-paste.md`](../../tests/results/run-2026-11-23-g3-real-paste.md) |
+| Jira Cloud editor paste | **Observed** | same run |
+| Jira CSV bulk import | **Observed** (3/3 stories; priority P1/P2 → Medium) | same run |
+| Confluence Cloud page paste | **Observed** (headings, lists, tables) | same run |
+| Jira Data Center | Unobserved | `[CONFIRM: verify on your instance]` |
+| Confluence storage format (scripted pages) | Unobserved | `[CONFIRM: out of scope for a manual paste]` |
+| Confluence code-block paste | Unobserved | `[CONFIRM: verify on your instance]` |
+
+A row moves from *unobserved* to *observed* only when a real paste is recorded under
+[`../../tests/results/`](../../tests/results/) — never on a doc read.
+
 ## The files
 
 | File | Destination | Covers |

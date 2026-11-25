@@ -16,6 +16,10 @@ A session load is a multi-file, table-heavy prompt (four files ≈ 340–370 lin
 bundle). The model must hold that context and emit **clean Markdown tables** bound to the
 schema. That is a requirement of the input, not a claim about any model.
 
+If the load plus your input exceeds the model's context, see the long-load recipe in
+[`TROUBLESHOOTING.md`](TROUBLESHOOTING.md) §4 — which files are droppable, and which are
+not.
+
 ## Certify your model in one session
 
 Run the five-minute first run ([`../usage/USER-GUIDE.md`](../usage/USER-GUIDE.md)) and

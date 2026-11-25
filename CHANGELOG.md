@@ -101,6 +101,30 @@ v0.1.0.
 
 ## [Unreleased]
 
+### Added — 2026-11-25 (0.1.2 work in progress)
+
+- `docs/REVIEWING-OUTPUT.md` — claim-to-source tagging (review by exception), the
+  assumption-vs-fact separation, the clean-artifact rule (when zero `[CONFIRM]`s is
+  correct), and a PII/hostname pre-paste check (V2 · V7 · V8 · V9).
+- `docs/ANTI-PATTERNS.md` — the failure-mode catalog mapped to the rule that catches each,
+  seeded from the recorded pass; every entry traces to a recorded run, field feedback, or
+  `EVIDENCE.md` (R5 · R8).
+- `scripts/check-links.py` + `scripts/check-frontmatter.py` + `tests/docs/test_doc_checks.py`
+  and the Makefile's `check-links` / `check-frontmatter` targets; `make test` now runs the
+  doc-check tests alongside the CLI test (I7).
+- `docs/DESTINATION-PROFILES.md` — the instance-profile pattern (`my-jira.md`,
+  `my-confluence.md`, `my-github.md`), kept outside the kit, mapping priority names,
+  estimate unit, and formatting rules (I1).
+- `docs/GITHUB-TEMPLATES.md` — ready-to-copy `.github/` PR and design-issue templates
+  aligned with the SDE skills (I5).
+- `shared/destinations/confluence.md` — callouts / status-badge / code-block guidance (I4);
+  `shared/destinations/README.md` — the observed/unobserved **validation ledger** (I6).
+- `usage/RELAY.md` — the **Handoff Block** (from / carried-open / next), making a role
+  hand-off mechanical (W7); `usage/FEATURE-RELAY.md` — the order-status feature threaded
+  PMT → TPM → SDM → SDE (W6).
+- `docs/TROUBLESHOOTING.md` §4 — the **long-load recipe** (which files are droppable, which
+  are not); `docs/MODELS.md` cross-links it (W8).
+
 ### Added — 2026-11-25 (0.1.2 planning)
 
 - `docs/0.1.2-plans/` — the v0.1.2 plan, split by theme, derived from the external

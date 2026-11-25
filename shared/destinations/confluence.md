@@ -31,6 +31,20 @@ notes, launch checklists, retros. A kit artifact is **pasted into the page edito
   keep them visible as deliberate open items (see `docs/REVIEWING-OUTPUT.md`, when it
   ships).
 
+### Callouts, status badges, code blocks (verify per instance)
+
+These constructs are the ones most likely to differ between instances — treat them as
+`[CONFIRM: verify on your instance]`:
+
+- **Code blocks** — `[CONFIRM: code-block paste unobserved]`. When an artifact needs code,
+  prefer a fenced block and check how it renders after paste.
+- **Callouts / panels** — Confluence callouts are macro-based; a pasted Markdown blockquote
+  becomes a **quote**, not a callout. Keep to blockquotes and do not rely on macros.
+- **Status badges** — not Markdown. A plain `Status: On track` line is the paste-safe
+  substitute for a badge.
+- Keep the `CONVENTIONS.md` rules either way: **no HTML**, **no emoji in tables**, **no
+  collapsible sections**.
+
 ## Where it lands (skills)
 
 - `pmt/draft-prd`, `pmt/define-success-metrics`, `pmt/customer-discovery-and-synthesis`,

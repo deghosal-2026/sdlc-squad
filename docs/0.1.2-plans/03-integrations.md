@@ -85,6 +85,9 @@ script (0.2.0) and a charter refusal (live context).
   duplicating what exists.
 - **Classification — 0.1.2 repo presentation** (the same class as the 0.1.1
   `field-feedback.md`).
+- **Delivered as `docs/GITHUB-TEMPLATES.md`** — ready-to-copy blocks for the *user's* repo.
+  The kit's own `.github/` templates are for contributing to the kit, so the SDE-aligned
+  templates ship as docs, not as the kit's own templates.
 - **Acceptance:** existing templates audited and kept; new/aligned template(s) carry the
   fields the SDE skills already emit; no duplication; the charter checkboxes intact.
 
