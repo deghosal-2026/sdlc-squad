@@ -99,7 +99,7 @@ v0.1.0.
   updated. README, AGENTS, ROADMAP, and this changelog re-framed: v0.1.0 is the major public
   release. Open: v0.1.x end-to-end validation; the dev.to launch article.
 
-## [Unreleased]
+## [0.1.2] — 2026-11-25
 
 ### Changed — 2026-11-25 (0.1.2 schema work — driven by the field test)
 
@@ -180,6 +180,8 @@ deliberate fence exception, like 0.1.1's G1 — schema-shape work would normally
   tracker (`10`). Every review idea is classified **0.1.2 (docs-only)** /
   **0.2.0 (forward-pointer)** / **refused**, per `CONVENTIONS.md` — no schema, skill, or
   CLI change is scheduled in the patch without a decision.
+
+## [Unreleased]
 
 ### Added — 2026-11-22 (PyPI distribution)
 

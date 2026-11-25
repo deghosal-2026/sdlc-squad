@@ -3,8 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![100% Markdown](https://img.shields.io/badge/100%25_Markdown-2ea44f)](#what-it-does)
 [![Privacy](https://img.shields.io/badge/Privacy-local_only,_no_telemetry-8b5cf6)](#what-it-does)
-[![Status: v0.1.1](https://img.shields.io/badge/status-v0.1.1_public-2ea44f)](#status)
-[![Changelog](https://img.shields.io/badge/changelog-0.1.1-2ea44f)](CHANGELOG.md)
+[![Status: v0.1.2](https://img.shields.io/badge/status-v0.1.2_public-2ea44f)](#status)
+[![Changelog](https://img.shields.io/badge/changelog-0.1.2-2ea44f)](CHANGELOG.md)
 [![PyPI](https://img.shields.io/pypi/v/sdlc-squad)](https://pypi.org/project/sdlc-squad/)
 [![Roles](https://img.shields.io/badge/roles-4-2ea44f)](#the-squad)
 [![Skills](https://img.shields.io/badge/skills-20_built-2ea44f)](#skills)
@@ -18,7 +18,7 @@
 
 ## Status
 
-**v0.1.1 — first-run, destinations, and paste-verified targets.** Twenty skills, each with
+**v0.1.2 — the field-test response.** Twenty skills, each with
 its fixture (`tests/<role>/<skill>/fixture.md`) and its recorded run
 (`tests/results/run-2026-11-22-v0.1.0.md`). Since 0.1.0: a five-minute first run and a full
 [`WALKTHROUGH`](usage/WALKTHROUGH.md), one-paste session bundles (`make bundles`), the
@@ -26,7 +26,11 @@ its fixture (`tests/<role>/<skill>/fixture.md`) and its recorded run
 contracts (`shared/destinations/`), the `sdlc-squad prompt` CLI, and a **real-paste spot
 check** — GitHub, Jira, and Confluence all observed
 ([`tests/results/run-2026-11-23-g3-real-paste.md`](tests/results/run-2026-11-23-g3-real-paste.md)).
-Next per [ROADMAP](ROADMAP.md): v0.1.x — one real feature run end-to-end through the loop.
+**0.1.2** adds the **field test** — four real OSS features run end-to-end
+([`field-test/`](field-test/README.md)), with the real-paste results
+([`tests/results/run-2026-11-25-x2-real-paste.md`](tests/results/run-2026-11-25-x2-real-paste.md))
+— and folds the 11 gaps it surfaced into the schemas. Next per [ROADMAP](ROADMAP.md): the dev.to
+launch article.
 
 ## What it does
 

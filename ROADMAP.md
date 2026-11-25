@@ -52,6 +52,20 @@ Every skill shipped with its full step playbook, its fixture
 - [x] `docs/0.1.1-plans/` — the patch plan with a living build status
 - [ ] Launch article — still open (deferred to after this release; below)
 
+### v0.1.2 — the field-test response — DONE 2026-11-25
+
+- [x] The **X2 field test** (`field-test/`): four real OSS features — Kubernetes KEP-1287,
+      Grafana #77704, Deno #8327, Rust RFC 3137 — run through the loop with the project's own
+      record held back as an answer key; the deep review is `field-test/FINDINGS.md`
+- [x] **Real-paste half**: GitHub, Jira (editor + CSV), and Confluence observed —
+      `tests/results/run-2026-11-25-x2-real-paste.md`
+- [x] The **11 kit gaps** folded in (0.1.2): `technical-design-doc`, `confluence-prd-or-rfc`,
+      and `jira-epic-and-stories` amended; **two new schemas** — `program-roadmap.md` (the sixth)
+      and `decision-record.md`; a **cross-team mode** in `usage/RELAY.md`
+- [x] The trust & adoption docs from the external review (V2·V5·V7·V8·V9, W6·W7·W8,
+      I1·I4·I5·I6·I7, R1·R2·R3·R5–R9, CI) — see `docs/0.1.2-plans/`
+- [x] `docs/0.1.2-plans/` — the plan with a living build status and the remediation tracker
+
 ### v0.1.x — end-to-end validation
 
 - [ ] Run one real feature/initiative through the core loop (PRD → roadmap → sprint plan → design
