@@ -101,6 +101,22 @@ v0.1.0.
 
 ## [Unreleased]
 
+### Added — 2026-11-25 (field test — X2)
+
+- `field-test/` — the **X2 validation**: four real, popular OSS features run through the kit's
+  whole loop (PMT → TPM → SDM → SDE) with the project's own record held back as an answer key —
+  Kubernetes **KEP-1287** (in-place Pod resize), Grafana **#77704** (Go back to x), Deno
+  **#8327** (Node-compatible loader API), Rust **RFC 3137** (`let-else`). Each folder carries
+  `input.md`, `answer-key.md`, `artifacts/` (six schema-bound artifacts), and `findings.md`.
+- `field-test/FINDINGS.md` — the deep review: template (T-1…T-5) and RACI (R-1…R-4) findings
+  plus the second-pass corrections and remedy actions.
+- `tests/results/run-2026-11-25-x2-real-paste.md` — the real-paste half of X2: the artifacts
+  pasted into **GitHub, Jira (editor + CSV), and Confluence** and observed. GitHub and Jira
+  render cleanly; **Confluence drops bold, bullet lists, and inline code**; the **Jira CSV
+  import** maps structure but not fields (`Priority` → default, `Size` → `Labels`) and is not
+  idempotent.
+- `.gitignore` — `.firecrawl/` (the local PDF/Word parse cache).
+
 ### Added — 2026-11-25 (0.1.2 work in progress)
 
 - `docs/REVIEWING-OUTPUT.md` — claim-to-source tagging (review by exception), the

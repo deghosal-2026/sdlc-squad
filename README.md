@@ -118,8 +118,10 @@ sdlc-squad/
 ├── PKG-README.md                    # The PyPI-facing page
 ├── MANIFEST.in
 ├── Makefile                         # build / check / upload (PyPI) · bundles / check-bundles
-├── scripts/                          # Build scripts
-│   └── build-bundles.sh              # Generates usage/bundles/ (make bundles)
+├── scripts/                          # Build & check scripts
+│   ├── build-bundles.sh              # Generates usage/bundles/ (make bundles)
+│   ├── check-links.py                # Fails on a broken relative link (make check-links)
+│   └── check-frontmatter.py          # Validates roles/ + skills/ frontmatter
 ├── sdlc_squad/                      # The Python package: kit location CLI only
 │   ├── __init__.py
 │   └── cli.py                       # `sdlc-squad` prints the kit path + load order
@@ -135,22 +137,36 @@ sdlc-squad/
 │   ├── prompts-sde.md                # Ready-to-paste prompts, all 5 SDE skills
 │   └── bundles/                      # Generated session bundles (make bundles) — do not edit
 ├── docs/
-│   ├── EXTENDING.md                  # How to expand/customize: org, skill, role, schema
-│   ├── UPGRADING.md                  # Your files vs the kit's: safe upgrades
+│   ├── README.md                     # Index of every docs/ page
 │   ├── START-HERE.md                 # Find your skill by task + scenario recipes
+│   ├── REVIEWING-OUTPUT.md           # Pre-paste checklist, claim tags, PII check
+│   ├── ANTI-PATTERNS.md              # Failure modes + the rule that catches each
 │   ├── EXPORTS.md                    # Getting input in + the redaction recipe
-│   ├── REVIEWING-OUTPUT.md           # Pre-paste checklist + [CONFIRM] triage
-│   ├── TROUBLESHOOTING.md            # Recovery moves for common failures
-│   ├── MODELS.md                     # Certify your model in one session
+│   ├── TROUBLESHOOTING.md            # Recovery moves + the long-load recipe
+│   ├── MODELS.md                     # Certify your model; the 60-second benchmark
+│   ├── LIMITATIONS.md                # What the kit does not do
 │   ├── EVIDENCE.md                   # How the kit catches itself
-│   ├── EXAMPLES.md                   # All 20 fixtures at a glance
+│   ├── EXAMPLES.md                   # All 20 fixtures + scenarios by company size
 │   ├── TOOLS.md                      # Supported & adaptable matrix
+│   ├── DESTINATION-PROFILES.md       # Map the kit to your Jira/Confluence/GitHub
+│   ├── GITHUB-TEMPLATES.md           # Ready-to-copy PR/issue templates
 │   ├── COMPANION-SKILLS.md           # Wrap other skill sets in kit conventions
+│   ├── UPGRADING.md                  # Your files vs the kit's: safe upgrades
+│   ├── PILOT.md                      # A 2-week, one-team trial
+│   ├── EXTENDING.md                  # How to expand/customize: org, skill, role, schema
 │   ├── 0.1.1-plans/                  # v0.1.1 patch plan, split by theme
+│   ├── 0.1.2-plans/                  # v0.1.2 plan + implementation tracker
 │   └── assets/                       # Repo social-preview card (social-preview.png + .svg)
+├── field-test/                       # X2 validation: 4 real OSS repos run through the kit
+│   ├── 01-kubernetes/                # kubernetes/kubernetes — platform
+│   ├── 02-grafana/                   # grafana/grafana — observability
+│   ├── 03-deno/                      # denoland/deno — runtime
+│   └── 04-rust/                      # rust-lang/rust — language
 ├── LICENSE                           # MIT
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
+│   ├── workflows/
+│   │   └── checks.yml               # CI: make gate on push/PR; release pack on a tag
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── copilot-instructions.md
 ├── shared/
@@ -205,7 +221,8 @@ sdlc-squad/
     ├── tpm/<skill>/fixture.md
     ├── sdm/<skill>/fixture.md
     ├── sde/<skill>/fixture.md
-    ├── cli/test_prompt.py            # the G1 CLI test (make test)
+    ├── cli/test_prompt.py            # the G1 CLI test
+    ├── docs/                         # doc-check + docs-index tests (make test)
     └── results/                      # recorded runs: run-2026-11-22-v0.1.0.md · run-2026-11-23-g3-real-paste.md · run-2026-11-23-v0.1.1.md
 ```
 

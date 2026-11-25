@@ -1,8 +1,8 @@
 # 10 — Implementation plan: working all of 0.1.2
 
 > **Status (2026-11-25):** **in progress.** Phases 1–5 done and green (trust, integrations,
-> friction, model, adoption); D2·D4·D5·D7 decided. Phase 6 (carry-over) and Phase 7
-> (release) pending. Master table: [`README`](README.md).
+> friction, model, adoption); D2·D4·D5·D7 decided. Phase 6 (carry-over **+ the field-test
+> remediation line items**) and Phase 7 (release) pending. Master table: [`README`](README.md).
 
 The themed files ([01](01-verification.md)–[09](09-gaps.md)) say **what** and **why**.
 This file says **in what order, touching which files, done when** — the executable form
@@ -52,7 +52,7 @@ column names what proves the step; **new** marks a test this plan adds.
 | 27 | 5 Adoption | R1 — CI checks (commit + release pack) | [04](04-adoption.md) | `.github/workflows/checks.yml` *(new)* | runs `make gate` on push/PR; build + `twine check` on tag/release | ✅ |
 | 28 | 5 Adoption | I2 — puller boundary line | [03](03-integrations.md) | `docs/EXPORTS.md` | link check | ✅ |
 | 29 | 5 Adoption | Phase verify | — | — | `make test` · `make check-bundles` | ✅ |
-| 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `tests/results/run-<date>-v0.1.x-validation.md` *(new)* | recorded run | ❌ |
+| 30 | 6 Carry-over | X2 — end-to-end validation run | [05](05-carry-over.md) | `field-test/` + `tests/results/run-<date>-v0.1.x-validation.md` *(new)* | recorded run | ❌ |
 | 31 | 6 Carry-over | X4 — landscape refresh *(optional)* | [05](05-carry-over.md) | `docs/LANDSCAPE.md` *(new)* | link check | ❌ |
 | 32 | 7 Release | Security scans | [07](07-scope-and-release.md) | — | `make security` (trufflehog + gitleaks) | ❌ |
 | 33 | 7 Release | Update all relevant docs for release readiness | [07](07-scope-and-release.md) | `README.md`, `PKG-README.md`, `ROADMAP.md`, `CHANGELOG.md`, badges | `make check-links` | ❌ |
@@ -177,6 +177,48 @@ mechanics (S3).
 - **Seq 31 (X4, optional)** — `docs/LANDSCAPE.md`: owner-run, offline, with retrieval
   dates and sources.
 
+### Phase 6 — Field-test remediation (line items — do now)
+
+> **Source:** [`field-test/FINDINGS.md`](../../field-test/FINDINGS.md) — §4 *what needs to
+> change* and §7.5 *remedy actions*. These are the actionable items from the field-test review.
+>
+> **Scope split (the fence still holds):** the **F/C/A items** fix the field-test **sample and
+> its findings** — docs-only, inside the 0.1.2 fence. The **T/R/N items** are **kit changes**
+> (schemas + RACI + relay → **0.2.0** per [`07`](07-scope-and-release.md) S1); they are listed
+> here so they are not lost, and the owner may pull them into 0.1.2 (the 0.1.1 G1 precedent).
+
+| ID | Item | Target | Class | Done |
+|---|---|---|---|---|
+| F-1 | Reconcile §2's "4 of 6 conformant" with §7.2 | `field-test/FINDINGS.md` | 0.1.2 | ✅ |
+| F-2 | Reconcile §3d's recurrence list with §6 / §7.4 | `field-test/FINDINGS.md` | 0.1.2 | ✅ |
+| F-3 | De-duplicate the §4 item numbers | `field-test/FINDINGS.md` | 0.1.2 | ✅ |
+| F-4 | Drop the stale "run 02–04" action (§4.C) | `field-test/FINDINGS.md` | 0.1.2 | ✅ |
+| F-5 | Merge §3 and §7 into one review | `field-test/FINDINGS.md` | 0.1.2 | ✅ |
+| F-6 | Align the four per-repo findings with §7.4 | `field-test/0*/findings.md` | 0.1.2 | ✅ |
+| C-1 | Add the missing **US-3** story block | `field-test/04-rust/artifacts/pmt-stories.md` | 0.1.2 | ✅ |
+| C-2 | Add the missing **US-5** block; re-type the `Epic` row | `field-test/02-grafana/artifacts/pmt-stories.md` | 0.1.2 | ✅ |
+| A-2 | Fill **01's FM-5 Detection** cell | `field-test/01-kubernetes/artifacts/sde-design.md` | 0.1.2 | ✅ |
+| A-3 | Rewrite **01's journey rows 2–3** as user steps | `field-test/01-kubernetes/artifacts/pmt-prd.md` | 0.1.2 | ✅ |
+| A-5 | Real-paste half — **all 3 destinations observed** (01); 02 Confluence | `tests/results/run-2026-11-25-x2-real-paste.md` | 0.1.2 | ✅ |
+| A-6 | Handoff Blocks added to 01 (fresh-session re-run is a recorded method caveat) | `field-test/` | 0.1.2 | ✅ |
+| A-7 | **SDM hop**: synthetic team, or scope out of OSS field tests | `field-test/` | 0.1.2 | ✅ |
+| A-8 | Record **input quality + leakage risk** per run | `field-test/0*/README.md` | 0.1.2 | ✅ |
+| A-10 | **License clearance** before publishing | `field-test/` | 0.1.2 | ✅ |
+| T-1 | Enforce "cite paths/symbols or `[CONFIRM]`" | `shared/output-schemas/technical-design-doc.md` | 0.2.0 | ❌ |
+| T-2 | Add the **program-roadmap schema** (the sixth) | `shared/output-schemas/` | 0.2.0 | ❌ |
+| T-3 | Make failure-mode **Detection** mandatory | `shared/output-schemas/technical-design-doc.md` | 0.2.0 | ❌ |
+| T-4 | Require a **user action** in journey rows | `shared/output-schemas/confluence-prd-or-rfc.md` | 0.2.0 | ❌ |
+| T-5 | Stories table holds **stories only** | `shared/output-schemas/jira-epic-and-stories.md` | 0.2.0 | ❌ |
+| R-1 | **One owner for milestones** (TPM); PRD references | schemas + `shared/raci.md` | 0.2.0 | ❌ |
+| R-2 | **Split** product vs engineering metric | schemas | 0.2.0 | ❌ |
+| R-3 | **Namespace dependency IDs** (TPM owns `DEP-n`) | schemas | 0.2.0 | ❌ |
+| R-4 | Add **REQ-n → US-n → T-n traceability** | schemas | 0.2.0 | ❌ |
+| N-1 | Add a **decision-record (ADR)** artifact | new schema | 0.2.0 | ❌ |
+| N-2 | Add a **cross-team mode** to the relay | `usage/RELAY.md` + role files | 0.2.0 | ❌ |
+
+**Verify:** `make check-links` (sample + findings are docs) — the kit items re-run the field
+test once landed.
+
 ## Phase 7 — Release (runs only when 0.1.2 is implemented and release-ready)
 
 These steps happen at release time — **not** during Phases 0–6. Order as given:
@@ -255,3 +297,5 @@ These steps happen at release time — **not** during Phases 0–6. Order as giv
 - [`README.md`](README.md) — the item list, build status, and work order
 - [`07-scope-and-release.md`](07-scope-and-release.md) — the fence and release gate
 - [`09-gaps.md`](09-gaps.md) — the items this plan adds
+- [`../../field-test/FINDINGS.md`](../../field-test/FINDINGS.md) — the field-test review that
+  feeds the Phase 6 remediation line items

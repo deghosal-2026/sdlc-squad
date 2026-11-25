@@ -6,6 +6,7 @@ Thumbs.db
 !.env.example
 output/
 my-files/
+.firecrawl/
 dist/
 build/
 *.egg-info/

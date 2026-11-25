@@ -46,7 +46,7 @@ sync:
 	rsync -a --delete --exclude '.git/' \
 		README.md WHAT-THIS-IS.md AGENTS.md CONVENTIONS.md ROADMAP.md CHANGELOG.md \
 		CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md SUPPORT.md LICENSE \
-		usage docs roles skills shared tests \
+		usage docs roles skills shared tests field-test \
 		sdlc_squad/kit/
 
 # build: sync, then sdist + wheel

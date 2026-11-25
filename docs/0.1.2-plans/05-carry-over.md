@@ -40,6 +40,10 @@ open list.
 - **Why it belongs near this plan:** it is the same "test against your real instance"
   the review's takeaways urge, and its findings feed I6 (the validation ledger) and the
   0.2.0 destination-binding work.
+- **Field test (2026-11-25):** the four-repo run lives in
+  [`field-test/`](../../field-test/README.md) at the repo root — Kubernetes · Grafana ·
+  Deno · Rust, one feature each; raw input in, the project's own design held back as the
+  answer key.
 - **Acceptance:** the run recorded under `tests/results/`; every artifact pasted into
   its real target; schema misses either fixed (owner's call) or listed as 0.2.0
   forward-pointers in [07](07-scope-and-release.md).
