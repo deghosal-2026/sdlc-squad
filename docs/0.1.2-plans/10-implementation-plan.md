@@ -182,10 +182,10 @@ mechanics (S3).
 > **Source:** [`field-test/FINDINGS.md`](../../field-test/FINDINGS.md) — §4 *what needs to
 > change* and §7.5 *remedy actions*. These are the actionable items from the field-test review.
 >
-> **Scope split (the fence still holds):** the **F/C/A items** fix the field-test **sample and
-> its findings** — docs-only, inside the 0.1.2 fence. The **T/R/N items** are **kit changes**
-> (schemas + RACI + relay → **0.2.0** per [`07`](07-scope-and-release.md) S1); they are listed
-> here so they are not lost, and the owner may pull them into 0.1.2 (the 0.1.1 G1 precedent).
+> **Scope split (the fence was lifted 2026-11-25):** the **F/C/A items** fix the field-test
+> sample and its findings — docs-only. The **T/R/N items** are **kit changes** (schemas + relay)
+> — **moved into 0.1.2** by owner decision, the same deliberate fence exception as 0.1.1's G1
+> (schema-shape work would normally be a minor). They amend `shared/output-schemas/`.
 
 | ID | Item | Target | Class | Done |
 |---|---|---|---|---|
@@ -204,17 +204,17 @@ mechanics (S3).
 | A-7 | **SDM hop**: synthetic team, or scope out of OSS field tests | `field-test/` | 0.1.2 | ✅ |
 | A-8 | Record **input quality + leakage risk** per run | `field-test/0*/README.md` | 0.1.2 | ✅ |
 | A-10 | **License clearance** before publishing | `field-test/` | 0.1.2 | ✅ |
-| T-1 | Enforce "cite paths/symbols or `[CONFIRM]`" | `shared/output-schemas/technical-design-doc.md` | 0.2.0 | ❌ |
-| T-2 | Add the **program-roadmap schema** (the sixth) | `shared/output-schemas/` | 0.2.0 | ❌ |
-| T-3 | Make failure-mode **Detection** mandatory | `shared/output-schemas/technical-design-doc.md` | 0.2.0 | ❌ |
-| T-4 | Require a **user action** in journey rows | `shared/output-schemas/confluence-prd-or-rfc.md` | 0.2.0 | ❌ |
-| T-5 | Stories table holds **stories only** | `shared/output-schemas/jira-epic-and-stories.md` | 0.2.0 | ❌ |
-| R-1 | **One owner for milestones** (TPM); PRD references | schemas + `shared/raci.md` | 0.2.0 | ❌ |
-| R-2 | **Split** product vs engineering metric | schemas | 0.2.0 | ❌ |
-| R-3 | **Namespace dependency IDs** (TPM owns `DEP-n`) | schemas | 0.2.0 | ❌ |
-| R-4 | Add **REQ-n → US-n → T-n traceability** | schemas | 0.2.0 | ❌ |
-| N-1 | Add a **decision-record (ADR)** artifact | new schema | 0.2.0 | ❌ |
-| N-2 | Add a **cross-team mode** to the relay | `usage/RELAY.md` + role files | 0.2.0 | ❌ |
+| T-1 | Enforce "cite paths/symbols or `[CONFIRM]`" | `shared/output-schemas/technical-design-doc.md` | 0.1.2 | ✅ |
+| T-2 | Add the **program-roadmap schema** (the sixth) | `shared/output-schemas/program-roadmap.md` *(new)* | 0.1.2 | ✅ |
+| T-3 | Make failure-mode **Detection** mandatory | `shared/output-schemas/technical-design-doc.md` | 0.1.2 | ✅ |
+| T-4 | Require a **user action** in journey rows | `shared/output-schemas/confluence-prd-or-rfc.md` | 0.1.2 | ✅ |
+| T-5 | Stories table holds **stories only** | `shared/output-schemas/jira-epic-and-stories.md` | 0.1.2 | ✅ |
+| R-1 | **One owner for milestones** (TPM); PRD references | `shared/output-schemas/confluence-prd-or-rfc.md` + `program-roadmap.md` | 0.1.2 | ✅ |
+| R-2 | **Split** product vs engineering metric | `shared/output-schemas/confluence-prd-or-rfc.md` + `technical-design-doc.md` | 0.1.2 | ✅ |
+| R-3 | **Namespace dependency IDs** (TPM owns `DEP-n`) | `shared/output-schemas/jira-epic-and-stories.md` + `program-roadmap.md` | 0.1.2 | ✅ |
+| R-4 | Add **REQ-n → US-n → T-n traceability** | `jira-epic-and-stories.md` + `technical-design-doc.md` | 0.1.2 | ✅ |
+| N-1 | Add a **decision-record (ADR)** artifact | `shared/output-schemas/decision-record.md` *(new)* | 0.1.2 | ✅ |
+| N-2 | Add a **cross-team mode** to the relay | `usage/RELAY.md` | 0.1.2 | ✅ |
 
 **Verify:** `make check-links` (sample + findings are docs) — the kit items re-run the field
 test once landed.

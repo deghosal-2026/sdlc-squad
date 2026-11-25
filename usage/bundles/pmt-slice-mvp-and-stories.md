@@ -324,7 +324,8 @@ created: 2026-11-22
 
 One epic + story set bound to `shared/output-schemas/jira-epic-and-stories.md`: epic summary
 (value, metric), then vertical-slice stories — each with Summary, Type, Priority, Size, story
-points or T-shirt, Description, Given/When/Then acceptance criteria, Dependencies.
+points or T-shirt, **Serves (`REQ-n`)**, Description, Given/When/Then acceptance criteria,
+Dependencies. The stories table holds **stories only** — no epic rows.
 
 ## RACI row
 
@@ -356,10 +357,12 @@ points or T-shirt, Description, Given/When/Then acceptance criteria, Dependencie
    same standard as `REQ-n` in the PRD.
 5. **Size honestly.** In the user's supplied scale only; `[CONFIRM: scale legend]` if none
    was given. An epic with no sizes shown is a defect, not a plan.
-6. **Dependency rows.** `DEP-n`: on what, from which team, blocks which `US-n`. Every row a
-   named owner or `[CONFIRM]`.
+6. **Dependency rows — reference, don't mint.** Point at the **TPM's `DEP-n`** from the program
+   roadmap (`shared/output-schemas/program-roadmap.md`); do not create new dependency IDs here
+   (*Cross-team dependency commitments* are TPM A/R). Every row a named owner or `[CONFIRM]`.
 7. **Read-back pass.** Every story vertical or explicitly labeled a task; ACs Given/When/Then;
-   sizes in the user's scale or CONFIRM; pipes kept out of cell bodies (CSV-ready).
+   every story names the `REQ-n` it **Serves**; sizes in the user's scale or CONFIRM; pipes kept
+   out of cell bodies (CSV-ready).
 8. **Hand over.** Emit the artifact ending with its Import-target block. CSV of the story
    table on request. Wait.
 

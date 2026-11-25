@@ -56,6 +56,22 @@ The block is a user's habit today; a schema-level carry field is future work (0.
 for now you append the block by hand. See it in a full chain in
 [`FEATURE-RELAY.md`](FEATURE-RELAY.md).
 
+## Cross-team features (a mode, not a different relay)
+
+The relay above assumes **one squad**. A feature that spans multiple teams or SIGs — a
+cross-cutting initiative — uses the same relay in a **cross-team mode**:
+
+- The **TPM** owns the cross-team plan: the program roadmap
+  (`../shared/output-schemas/program-roadmap.md`) — **milestones** and the **`DEP-n`** IDs.
+- The **PMT PRD references** the roadmap's milestones; it does not assert release dates.
+- The **SDM sprint plan is scoped to one squad**, or marked **`N/A — cross-team feature`** when no
+  single squad owns the work. **Never fabricate a roster** to fill a capacity table.
+- Downstream artifacts (`jira-epic-and-stories`, `technical-design-doc`) **reference** the
+  roadmap's `DEP-n`; they do not mint their own.
+
+So a cross-team feature exercises the same four roles — the TPM hop simply carries more, and the
+SDM hop says `N/A` rather than inventing a team.
+
 ## Related
 
 - [`../roles/`](../roles/) — the handoff contracts

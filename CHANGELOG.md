@@ -101,6 +101,25 @@ v0.1.0.
 
 ## [Unreleased]
 
+### Changed — 2026-11-25 (0.1.2 schema work — driven by the field test)
+
+The X2 field test surfaced 11 kit gaps; by owner decision they are folded into **0.1.2** (a
+deliberate fence exception, like 0.1.1's G1 — schema-shape work would normally be a minor).
+
+- `shared/output-schemas/technical-design-doc.md` — **T-1/T-3**: "cite file paths/symbols or
+  `[CONFIRM]`" and mandatory failure-mode **Detection** made explicit; sub-tasks carry
+  `REQ-n → US-n → T-n` **traceability** (R-4).
+- `shared/output-schemas/confluence-prd-or-rfc.md` — **T-4/R-1/R-2**: journey rows require a
+  user action; **milestones are TPM-owned** (the PRD references the roadmap, not asserts);
+  the PRD carries the **product** metric, the design the engineering one.
+- `shared/output-schemas/jira-epic-and-stories.md` — **T-5/R-3/R-4**: the stories table holds
+  **stories only**; dependencies reference the TPM's `DEP-n`; a **`Serves`** column adds `REQ-n`.
+- `shared/output-schemas/program-roadmap.md` *(new)* — **T-2**: the TPM program plan
+  (milestones + `DEP-n` + critical path) — the sixth schema, previously unbound.
+- `shared/output-schemas/decision-record.md` *(new)* — **N-1**: a lightweight ADR schema.
+- `usage/RELAY.md` — **N-2**: a **cross-team mode** (TPM owns the roadmap; the SDM sprint plan is
+  scoped to one squad or `N/A`).
+
 ### Added — 2026-11-25 (field test — X2)
 
 - `field-test/` — the **X2 validation**: four real, popular OSS features run through the kit's

@@ -358,8 +358,9 @@ Ask up to 3, then draft with `[CONFIRM]`:
    tickets ≥ 50%", not "improve CX").
 5. **Non-goals — same specificity as goals.** What is out this phase, and why it stays out.
    A courtesy non-goal ("be all things") is a defect.
-6. **User journeys.** Table per schema: Step · User action · System behavior · Notes. The
-   journey starts at the user's trigger, not at the feature.
+6. **User journeys.** Table per schema: Step · User action · System behavior · Notes. Every row
+   names a **user action** — a system-only step goes in a System-flow paragraph, not a journey
+   row. The journey starts at the user's trigger, not at the feature.
 7. **Requirements.** Functional `REQ-n` — each testable as an observable behavior.
    Non-functional — performance, privacy, cost, compliance — each with its source or
    `[CONFIRM]`. "Seamless" is not a requirement.
@@ -367,8 +368,11 @@ Ask up to 3, then draft with `[CONFIRM]`:
    identified yet — [CONFIRM]" only after asking, never by skipping the section.
 9. **Open questions.** `Q-n`: question · owner · needed-by. Questions are deliverables, not
    apologies.
-10. **Rollout & metrics.** Phasing, the flag, the metric this ships against (with baseline or
-    `[CONFIRM: baseline]`), and the guardrail that must not degrade.
+10. **Rollout & metrics.** Phasing and the flag; the **product** metric this ships against
+    (with baseline or `[CONFIRM: baseline]`) and the guardrail that must not degrade.
+    **Milestones are TPM-owned** — reference the program roadmap
+    (`shared/output-schemas/program-roadmap.md`); the **engineering** metric belongs in the
+    design, not here.
 11. **Read-back pass.** Every number sourced or `[CONFIRM]`; every REQ testable; non-goals as
     specific as goals; no invented names/dates/companies; edge-case section present.
 12. **Hand over.** Emit the artifact ending with its Import-target block. Answer questions.

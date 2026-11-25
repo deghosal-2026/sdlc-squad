@@ -44,7 +44,13 @@ as sub-tasks.
 
 ## Rules
 
-- Design sections cite the repository they read: file paths and symbols, quoted where it
-  matters. Unread code is `[CONFIRM]`, never described from vibes.
+- **Cite or `[CONFIRM]` (enforced).** Every claim about existing code names a **file path and a
+  symbol** (or quotes the code). An *Affected modules* row that names only a component or
+  service — no path, no symbol — is **incomplete**: add the path/symbol, or mark
+  `[CONFIRM: read the code]`. A design with **zero file paths and zero `[CONFIRM]`s** is a defect.
+- **Detection is mandatory (enforced).** Every failure-mode row carries a **detection path** — a
+  metric, condition, log, or event. A row whose *Detection* cell is `—` is an **incomplete row**:
+  fill it or split the row.
+- **Traceability.** Every sub-task names the **story (`US-n`)** or **requirement (`REQ-n`)** it
+  serves, so `REQ-n → US-n → T-n` is followable; `[CONFIRM: source]` if none was supplied.
 - Every task has a Definition of Done that is observable by someone other than its author.
-- Failure modes without detection paths are incomplete rows.

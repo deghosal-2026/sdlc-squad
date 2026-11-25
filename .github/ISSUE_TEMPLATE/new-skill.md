@@ -14,7 +14,7 @@ labels: enhancement
 **Import target** — Confluence page / Jira issue set / GitHub issue or PR
 
 **Which existing schema it binds to** (`shared/output-schemas/` — or "needs a new schema" with the
-reason none of the five fit)
+reason none of the schemas fit)
 
 **Clarifying questions it should ask when inputs are missing**
 

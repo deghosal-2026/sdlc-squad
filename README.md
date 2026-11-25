@@ -183,7 +183,9 @@ sdlc-squad/
 │       ├── jira-epic-and-stories.md
 │       ├── sprint-plan-and-capacity.md
 │       ├── technical-design-doc.md
-│       └── test-plan-and-cases.md
+│       ├── test-plan-and-cases.md
+│       ├── program-roadmap.md        # 0.1.2 — the TPM program plan (milestones + DEP-n)
+│       └── decision-record.md        # 0.1.2 — a lightweight ADR
 ├── roles/                            # Persona definitions (_TEMPLATE.md is the format)
 │   ├── pmt.md
 │   ├── tpm.md

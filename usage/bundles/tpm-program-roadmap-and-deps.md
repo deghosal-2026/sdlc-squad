@@ -316,9 +316,9 @@ created: 2026-11-22
 
 ## What it produces
 
-A program plan bound to a roadmap table set: phases/milestones with dates and slack,
-cross-team dependency table (Upstream/Downstream Team, Dependency Type, Target Date, Status,
-Owner), and critical-path callouts naming the chain.
+A program plan bound to `shared/output-schemas/program-roadmap.md`: a **Milestones** table, a
+**Dependencies** table (`DEP-n` · depends on · owning team · needed by · slack · notes), the
+**critical path** named end to end, and the top **program risks**.
 
 ## RACI row
 
@@ -364,8 +364,8 @@ Ask up to 3, then draft with `[CONFIRM]`:
 
 ## Output binding
 
-Roadmap tables follow `shared/output-schemas/confluence-prd-or-rfc.md` table standards; the
-dependency table follows the ID/column rules in `shared/system-conventions.md`.
+`shared/output-schemas/program-roadmap.md` — verbatim structure, all rules. This page **owns**
+the milestones and the `DEP-n` IDs; the PRD and downstream artifacts reference them.
 
 ## Import target
 
