@@ -42,10 +42,10 @@ deliberate fence exception, like 0.1.1's G1 — schema-shape work would normally
 - `field-test/FINDINGS.md` — the deep review: template (T-1…T-5) and RACI (R-1…R-4) findings
   plus the second-pass corrections and remedy actions.
 - `tests/results/run-2026-11-25-x2-real-paste.md` — the real-paste half of X2: the artifacts
-  pasted into **GitHub, Jira (editor + CSV), and Confluence** and observed. GitHub and Jira
-  render cleanly; **Confluence drops bold, bullet lists, and inline code**; the **Jira CSV
-  import** maps structure but not fields (`Priority` → default, `Size` → `Labels`) and is not
-  idempotent.
+  pasted into **GitHub, Jira (editor + CSV), and Confluence** and observed. All render; the
+  **Jira CSV import** maps structure (8/8) but not fields (`Priority` → default, `Size` →
+  `Labels`) and is not idempotent. (An apparent Confluence "styling loss" in the PDF exports was
+  an **export/extraction artifact**, not a render defect — see the file's corrected caveat.)
 - `.gitignore` — `.firecrawl/` (the local PDF/Word parse cache).
 
 ### Added — 2026-11-25 (0.1.2 work in progress)

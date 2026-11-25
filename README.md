@@ -102,8 +102,7 @@ and the full chain in [`usage/FEATURE-RELAY.md`](usage/FEATURE-RELAY.md).
 > (a Jira issue, a Confluence page, a GitHub PR). **GitHub, the Jira editor, the Jira CSV
 > import, and Confluence are all paste-verified** (spot checks, Nov 2026 —
 > `tests/results/run-2026-11-23-g3-real-paste.md`, `run-2026-11-25-x2-real-paste.md`); see
-> [`shared/destinations/`](shared/destinations/) for the ledger. Note: **Confluence drops bold,
-> bullet lists, and inline code** on paste.
+> [`shared/destinations/`](shared/destinations/) for the ledger.
 
 ## Layout
 

@@ -17,37 +17,36 @@
 - **Agent:** cannot read PDFs, so each export was **text-extracted** (`firecrawl parse`,
   local) and assessed. The extraction is the rendered, stored page text — which is what the
   paste produced. Extracted files live in git-ignored `.firecrawl/` (never committed).
-- **Caveat (honest):** some artifacts below — split tables, stray `---`, word drift — may be
-  **PDF→text extraction artifacts** rather than genuine render changes. The **styling loss**
-  (bold/lists/code) is document-wide and consistent across exports, so it is treated as real.
+- **Caveat (honest, corrected):** this run reads **PDF exports** through `firecrawl`, which
+  **reconstructs `##` markers and drops inline formatting** — so it **cannot speak to Confluence's
+  inline styling**. The earlier **G3** run (a careful observation,
+  `run-2026-11-23-g3-real-paste.md`) flagged exactly this artifact class and found Confluence
+  **converting** headings, bullet lists, and tables (no `#`/`-`/`|` markers). Treat the
+  "styling" reading below as a **likely extraction artifact**, not a render defect.
 
-## Confluence — OBSERVED (01, 02)
+## Confluence — content observed; **styling reading unreliable**
 
-| Repo | Artifact | Headings | Paragraphs | Tables | Bold | Bullet lists | Inline `code` | Notes |
-|---|---|---|---|---|---|---|---|---|
-| 01-kubernetes | `pmt-prd.md` | ✅ | ✅ | ⚠️ 2 of 3 intact | ❌ lost | ❌ flattened | ❌ lost | *Edge cases* (full export) / *Open questions* (partial) split |
-| 02-grafana | `pmt-prd.md` | ✅ | ✅ | ⚠️ 2 of 3 intact | ❌ lost | ❌ flattened | ❌ lost | *User journeys* split; **`$$ \mathbf{x} $$` math corruption**; *Non-goals* text scrambled |
+| Repo | Artifact | Headings | Paragraphs | Tables | Inline styling | Notes |
+|---|---|---|---|---|---|---|
+| 01-kubernetes | `pmt-prd.md` | ✅ | ✅ | ✅ *(extraction reorders cells)* | **unverified** | extraction inserted `---` / `##`; the apparent "table split" is a flattening artifact |
+| 02-grafana | `pmt-prd.md` | ✅ | ✅ | ✅ | **unverified** | extraction showed `$$ \mathbf{x} $$` and reordered *Non-goals* — extraction artifacts |
 
-**What survived:** all `##` section headings; all paragraph text; two of the three tables per
-page; the `## Handoff` block; the field-test wrapper (when the whole file was pasted).
+**Reliable from this run:** the content is **present and complete**; `[CONFIRM: …]` renders as
+**literal text**.
 
-**What broke (consistent across both):**
+**Not reliable from this run:** "bold lost", "lists flattened", "inline code lost", "table
+split", "stray `---`", "sub-heading promoted", "word drift" — **all extraction artifacts.** The
+G3 method note warned about exactly this: flattening a rendered page to text is not the render.
 
-1. **Bold lost** — `**immutable**`, `**stateful or batch workloads**` → plain text.
-2. **Bullet / numbered lists flattened to paragraphs** — the Goals, Non-goals, and REQ-1…10
-   lists lost their bullets.
-3. **Inline `code` lost** — `` `/resize` ``, `` `PodResizePending` `` → plain text.
-4. **A table split in two** — a header+some-rows table, then `---`, then the remaining rows
-   **headerless**. (01: *Open questions* / *Edge cases*; 02: *User journeys*.)
-5. **Stray `---` horizontal rules** inserted between sections.
-6. **Sub-heading level promoted** — `### Functional` / `### Non-functional` → `##`.
-7. **Occasional content corruption** — 02: the "**x**" in *Go back to **x*** rendered as a
-   **LaTeX math block `$$ \mathbf{x} $$`**; the *Non-goals* sentence order scrambled.
-8. **Possible word drift** — 01 EC-7 "resize **retried**" appeared as "retired" / "retrieved"
-   in the two exports — **likely an extraction artifact** (it differed between runs).
+**Verdict: Confluence is paste-clean** (per G3, the careful observation). This X2 export adds
+**no styling evidence** either way — it should not have been read as a styling defect.
 
-**`[CONFIRM: …]` markers:** rendered as **literal text** (not parsed) — the discipline
-survives the paste, matching the G3 finding.
+**Definitive confirmation (2026-11-25, visual):** the live page was exported and **rendered to
+an image and inspected directly**. Pages 2–3 show **bold** (*immutable*, *increased*,
+*stateful or batch workloads*), **bullet lists** (the Goals / Non-goals / Target-users `•`
+bullets), **inline code** (`UpdateContainerResources`, monospace), headings, and the
+`[CONFIRM: …]` markers — **all render correctly.** The page is clean; the "styling loss" was a
+**PDF-export / extraction artifact**, not a Confluence render defect.
 
 ## Confluence — 03, 04
 
@@ -111,29 +110,28 @@ survives the paste, matching the G3 finding.
 - **Rendered:** headings (every `##`); **all three tables** (affected modules, failure modes,
   sub-tasks); **bold** (`**immutable QoS class**`, `**external**`); **inline `code`**
   (`` `kube-apiserver` ``, `` `/resize` ``); bullet + numbered lists; `[CONFIRM: …]` literal.
-- **Verdict: paste-clean** — GitHub renders bold, lists, tables, and inline code that Confluence
-  drops.
+- **Verdict: paste-clean** — headings, tables, bold, lists, and inline code all render.
 
 ## Verdict
 
-**Destination-dependent — and the gap is large.** GitHub and Jira render the artifacts
-**cleanly**; Confluence drops bold, bullet lists, and inline code and splits some tables.
+**All destinations accept the artifacts; the only real defect is the CSV import's field
+mapping.** GitHub and Jira render cleanly; **Confluence's page is paste-clean (G3)** — the
+apparent "styling loss" in this run is a **Confluence PDF-export / `firecrawl` extraction
+artifact**, not a render defect.
 
-| Element | GitHub | Jira | Confluence |
+| Element | GitHub | Jira | Confluence (page) |
 |---|---|---|---|
-| Headings | ✅ | ✅ | ✅ |
-| **Bold** | ✅ | ✅ | ❌ lost |
-| **Bullet lists** | ✅ | ✅ | ❌ flattened |
-| **Tables** | ✅ all | ✅ all | ⚠️ some split |
-| Inline `code` | ✅ | ⚠️ no `<code>` | ❌ lost |
+| Headings | ✅ | ✅ | ✅ (G3) |
+| Bold | ✅ | ✅ | ✅ (G3) — the X2 *export* dropped it |
+| Bullet lists | ✅ | ✅ | ✅ (G3) |
+| Tables | ✅ all | ✅ all | ✅ (G3) |
+| Inline `code` | ✅ | ⚠️ no `<code>` | unverified |
 | `[CONFIRM: …]` literal | ✅ | ✅ | ✅ |
 
-So the schemas' assumption that bold and bulleted lists survive the paste **holds on GitHub and
-Jira, not on Confluence** — a **destination-contract** note, not a kit defect. The CSV import is
-the one place **structure is fine but field mapping fails** (priority default, `Size` → `Labels`,
-no re-import guard).
+The real X2 finding: the **Jira CSV import** imports structure (8/8) but **field mapping fails**
+(priority → default, `Size` → `Labels`) and a **re-import duplicates**.
 
-`[CONFIRM: confirm the Confluence render visually — PDF extraction may understate it.]`
+`[CONFIRM: confirm the Confluence PDF export vs. the page — the export may lose inline styling.]`
 
 ## Still to do
 

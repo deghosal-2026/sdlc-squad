@@ -21,14 +21,13 @@ what you paste in. **Mitigation:** session bundles and `sdlc-squad prompt` cut t
 [`../usage/RELAY.md`](../usage/RELAY.md) and [`../usage/FEATURE-RELAY.md`](../usage/FEATURE-RELAY.md)
 make the carry explicit.
 
-## Destination fit is now largely observed — with one styling gap
+## Destination fit is largely observed
 
 Import behavior varies by instance. The observed/unobserved state is recorded in the
 [`../shared/destinations/`](../shared/destinations/) ledger. **GitHub, the Jira editor, the Jira
-CSV import, and Confluence are all paste-verified** (Nov 2026) — but **Confluence drops bold,
-bullet lists, and inline code**, and Jira Data Center / Confluence's storage-format and
-code-block paths remain unvalidated. **Mitigation:** the ledger marks each unobserved path
-`[CONFIRM]`; test against your own instance first.
+CSV import, and Confluence are all paste-verified** (Nov 2026); Jira Data Center and
+Confluence's storage-format and code-block paths remain unvalidated. **Mitigation:** the
+ledger marks each unobserved path `[CONFIRM]`; test against your own instance first.
 
 ## Static artifacts drift from live systems
 

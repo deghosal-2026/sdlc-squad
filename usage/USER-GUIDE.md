@@ -64,8 +64,7 @@ statement; [`../SECURITY.md`](../SECURITY.md) links here rather than repeat it.)
 > **Import target = the paste destination.** The artifact names where it is meant to be
 > pasted. **GitHub, the Jira editor, the Jira CSV import, and Confluence are all paste-verified**
 > (spot checks, Nov 2026 — `tests/results/run-2026-11-23-g3-real-paste.md` and
-> `tests/results/run-2026-11-25-x2-real-paste.md`). One caveat: **Confluence drops bold, bullet
-> lists, and inline code** on paste; GitHub and Jira render them.
+> `tests/results/run-2026-11-25-x2-real-paste.md`).
 
 ## Copy-paste prompts for every task
 
