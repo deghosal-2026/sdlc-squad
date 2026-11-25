@@ -99,10 +99,11 @@ One role per session; the artifact is the hand-off — see [`usage/RELAY.md`](us
 and the full chain in [`usage/FEATURE-RELAY.md`](usage/FEATURE-RELAY.md).
 
 > **Import target = paste destination.** Artifacts name where they are meant to be pasted
-> (a Jira issue, a Confluence page, a GitHub PR). GitHub and the Jira editor are
-> paste-verified (spot check, Nov 2026 — `tests/results/run-2026-11-23-g3-real-paste.md`);
-> Confluence and the Jira CSV import remain intended destinations until v0.1.x validates
-> them ([`shared/destinations/`](shared/destinations/)).
+> (a Jira issue, a Confluence page, a GitHub PR). **GitHub, the Jira editor, the Jira CSV
+> import, and Confluence are all paste-verified** (spot checks, Nov 2026 —
+> `tests/results/run-2026-11-23-g3-real-paste.md`, `run-2026-11-25-x2-real-paste.md`); see
+> [`shared/destinations/`](shared/destinations/) for the ledger. Note: **Confluence drops bold,
+> bullet lists, and inline code** on paste.
 
 ## Layout
 
@@ -229,7 +230,7 @@ sdlc-squad/
     ├── sde/<skill>/fixture.md
     ├── cli/test_prompt.py            # the G1 CLI test
     ├── docs/                         # doc-check + docs-index tests (make test)
-    └── results/                      # recorded runs: run-2026-11-22-v0.1.0.md · run-2026-11-23-g3-real-paste.md · run-2026-11-23-v0.1.1.md
+    └── results/                      # recorded runs: run-2026-11-22-v0.1.0.md · run-2026-11-23-g3-real-paste.md · run-2026-11-23-v0.1.1.md · run-2026-11-25-x2-real-paste.md
 ```
 
 ## Skills

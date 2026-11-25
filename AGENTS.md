@@ -7,8 +7,8 @@ format standards.
 ## What this repo is
 
 A Markdown-only kit of AI personas (roles) and work skills for the SDLC. No code runs
-here. Every `SKILL.md` states its `status` — all twenty are `built` at
-[`v0.1.0`](https://github.com/deghosal-2026/sdlc-squad/releases/tag/v0.1.0).
+here. Every `SKILL.md` states its `status` — all twenty are `built` (see
+[`ROADMAP.md`](ROADMAP.md) for the release history).
 
 ## Working WITH the kit (producing artifacts for a user)
 

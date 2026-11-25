@@ -43,8 +43,8 @@ One skill, end to end, using the fictional sample in the prompt book — the com
 
 **Pre-flight for real runs:** four files in order (or one bundle) · glossary state known
 (template is fine to try; your `my-org.md` for real work, see
-[`../docs/UPGRADING.md`](../docs/UPGRADING.md)) · inputs redacted (the redaction recipe
-ships in `docs/EXPORTS.md` §Redaction, once that item lands).
+[`../docs/UPGRADING.md`](../docs/UPGRADING.md)) · inputs redacted (the redaction recipe ships
+in [`../docs/EXPORTS.md`](../docs/EXPORTS.md) §Redaction).
 
 ## Two ways to run
 
@@ -62,9 +62,10 @@ inputs in the prompt books exist so a first run needs **no real data**. (This is
 statement; [`../SECURITY.md`](../SECURITY.md) links here rather than repeat it.)
 
 > **Import target = the paste destination.** The artifact names where it is meant to be
-> pasted. GitHub and the Jira editor are paste-verified (spot check, Nov 2026 —
-> `tests/results/run-2026-11-23-g3-real-paste.md`); Confluence and the Jira CSV import
-> remain intended destinations until v0.1.x validates them.
+> pasted. **GitHub, the Jira editor, the Jira CSV import, and Confluence are all paste-verified**
+> (spot checks, Nov 2026 — `tests/results/run-2026-11-23-g3-real-paste.md` and
+> `tests/results/run-2026-11-25-x2-real-paste.md`). One caveat: **Confluence drops bold, bullet
+> lists, and inline code** on paste; GitHub and Jira render them.
 
 ## Copy-paste prompts for every task
 
@@ -105,8 +106,7 @@ of this repo, use the git-ignored `output/` folder — its contents are never co
 
 ## Skill status
 
-Every `SKILL.md` says `status` in its frontmatter. All twenty are `built` at
-[`v0.1.0`](https://github.com/deghosal-2026/sdlc-squad/releases/tag/v0.1.0) — each with its
+Every `SKILL.md` says `status` in its frontmatter. All twenty are `built` — each with its
 fixture under `tests/` and its recorded run under `tests/results/`.
 
 ## Extending and customizing

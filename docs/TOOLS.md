@@ -29,7 +29,7 @@ Paste-ready Markdown artifacts, with a `## Import target` block naming where the
 |---|---|
 | **A new artifact shape** | New schema in `shared/output-schemas/`, then bind the skill (`EXTENDING.md` Path 4). |
 | **A new role** | A new RACI column, mirrored across all role files (`EXTENDING.md` Path 3). |
-| **A validated Jira bulk-import CSV** | The CSV contract in [`../shared/destinations/jira.md`](../shared/destinations/jira.md) is doc-derived until a real import is observed. |
+| **A Jira bulk-import CSV that maps to *your* fields** | The contract is **observed** (`run-2026-11-25-x2-real-paste.md`), but priority names and `Size` must map to your instance's scheme/fields — unmapped, priority defaults and `Size` lands in `Labels`. See [`../shared/destinations/jira.md`](../shared/destinations/jira.md). |
 
 ## Never (a hard boundary, not a gap)
 

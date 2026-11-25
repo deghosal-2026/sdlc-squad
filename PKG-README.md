@@ -34,8 +34,10 @@ glossary **outside** the kit (`my-org.md`; see `docs/UPGRADING.md`) so it surviv
 
 `usage/WALKTHROUGH.md` — one full run, start to finish. `usage/prompts-<role>.md` — a
 ready-to-paste prompt for **every** skill (20). `docs/START-HERE.md` — find your skill by
-task. `docs/EVIDENCE.md` — how the kit catches itself. `docs/EXTENDING.md` — customize for
-your org, add skills, roles, and schemas. Upgrade safely: `docs/UPGRADING.md`.
+task. `docs/REVIEWING-OUTPUT.md` — the pre-paste checklist. `docs/EVIDENCE.md` — how the kit
+catches itself. `docs/LIMITATIONS.md` — what it does not do. `docs/PILOT.md` — a 2-week trial.
+`docs/EXTENDING.md` — customize for your org, add skills, roles, and schemas. Upgrade safely:
+`docs/UPGRADING.md`. The field test — four real projects run end-to-end — is `field-test/`.
 
 ## What it never does
 

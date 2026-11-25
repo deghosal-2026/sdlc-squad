@@ -26,14 +26,18 @@ row cites the recorded paste; every *unobserved* row is a `[CONFIRM]` until it i
 |---|---|---|
 | GitHub issue body (GFM) | **Observed** | [`../../tests/results/run-2026-11-23-g3-real-paste.md`](../../tests/results/run-2026-11-23-g3-real-paste.md) |
 | Jira Cloud editor paste | **Observed** | same run |
-| Jira CSV bulk import | **Observed** (3/3 stories; priority P1/P2 → Medium) | same run |
-| Confluence Cloud page paste | **Observed** (headings, lists, tables) | same run |
+| Jira CSV bulk import | **Observed** (G3: 3/3 stories, priority P1/P2 → Medium; **X2: 8/8 but priority → default and `Size` → `Labels`; a re-import duplicates**) | G3 + X2 |
+| Confluence Cloud page paste | **Observed** (headings, paragraphs, tables; **bold, bullet lists, and inline code are dropped**) | G3 + X2 |
 | Jira Data Center | Unobserved | `[CONFIRM: verify on your instance]` |
 | Confluence storage format (scripted pages) | Unobserved | `[CONFIRM: out of scope for a manual paste]` |
 | Confluence code-block paste | Unobserved | `[CONFIRM: verify on your instance]` |
 
 A row moves from *unobserved* to *observed* only when a real paste is recorded under
-[`../../tests/results/`](../../tests/results/) — never on a doc read.
+[`../../tests/results/`](../../tests/results/) — never on a doc read. The **X2** run
+([`run-2026-11-25-x2-real-paste.md`](../../tests/results/run-2026-11-25-x2-real-paste.md))
+re-observed GitHub, Jira (editor + CSV), and Confluence on the field-test artifacts, adding the
+**styling** finding: **GitHub and Jira render bold, bullet lists, and inline code; Confluence
+does not.**
 
 ## The files
 
